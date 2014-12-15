@@ -1,0 +1,140 @@
+.out
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  min-width: 320px
+
+.intro
+  background-image: url('../img/bg.jpg')
+  background-repeat: no-repeat
+  background-position: bottom left
+  // background-size: 1024px 768px
+  background-size: cover
+  color: #FFF
+  width: 100%
+  height: 100%
+  display: table
+  table-layout: fixed
+
+.intro__outer
+  display: table-cell
+  width: 100%
+  height: 100%
+  vertical-align: middle
+  text-align: center
+  background: rgba(0,0,0,0.3)
+
+.intro__inner
+  display: inline-block
+  width: 100%
+  max-width: 560px
+  padding: 0 10px
+  box-sizing: border-box
+
+
+// begin logo
+.logo
+  text-align: center
+  fill: #FFF
+
+.logo__top
+  width: 96px
+  height: 50px
+  margin: 0 auto percentage(-34/540)
+  position: relative
+
+.logo__main
+  position: relative
+  left: -4px
+  width: 100%
+  max-width: 540px
+  margin: auto
+//end logo
+
+.curved-text
+  font-size: 18px
+  line-height: 1
+  +lunch-b
+  text-transform: uppercase
+  letter-spacing: 0.13em
+
+.lang
+  position: relative
+  max-width: 280px
+  margin: percentage(-27/540) auto 0
+  +clr
+  fill: #FFF
+  &:before
+    content: ""
+    position: absolute
+    bottom: 2px
+    left: 50%
+    width: 8px
+    height: 8px
+    margin-left: -3px
+    background: #FFF
+    border-radius: 50%
+  .icon-line-left,
+  .icon-line-right
+    width: 100px
+    height: 16px
+    line-height: 1
+    &:first-child
+      width: 86px
+  .icon-logo-bottom
+    width: 80px
+    height: 76px
+    line-height: 1
+    margin: 0 auto -43px
+
+
+.lang__left,
+.lang__right
+  position: relative
+  width: 50%
+  box-sizing: border-box
+  fill: #FFF
+  color: #FFF
+  line-height: 56px
+  +tr(0.2s linear)
+  cursor: pointer
+  &:hover, &:focus
+    fill: orange
+    color: orange
+
+.lang__left
+  float: left
+  text-align: right
+  padding-right: 48px
+  .icon-line-left
+    position: absolute
+    bottom: -2px
+    right: 15px
+    &:first-child
+      top: -5px
+      right: 45px
+      bottom: auto
+
+.lang__right
+  float: right
+  text-align: left
+  padding-left: 48px
+  .icon-line-right
+    position: absolute
+    bottom: -2px
+    left: 15px
+    &:first-child
+      top: -5px
+      left: 45px
+      bottom: auto
+
+.lang__link
+  font-size: 18px
+  +lunch-b
+  text-transform: uppercase
+  color: inherit
+  text-decoration: none
+  letter-spacing: 0.13em
+

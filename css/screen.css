@@ -20,9 +20,52 @@ ul, ol { list-style-type: none; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) { * { -webkit-text-size-adjust: none; } }
 table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 
-body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; }
+@font-face { font-family: "lunchbox"; src: url("../fonts/lunchbox.eot"); src: url("../fonts/lunchbox.eot?#iefix") format("embedded-opentype"), url("../fonts/lunchbox.woff2") format("woff2"), url("../fonts/lunchbox.woff") format("woff"), url("../fonts/lunchbox.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "lunchbox_bold"; src: url("../fonts/lunchbox_bold.eot"); src: url("../fonts/lunchbox_bold.eot?#iefix") format("embedded-opentype"), url("../fonts/lunchbox_bold.woff2") format("woff2"), url("../fonts/lunchbox_bold.woff") format("woff"), url("../fonts/lunchbox_bold.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "wisdom_script"; src: url("../fonts/wisdom_script.eot"); src: url("../fonts/wisdom_script.eot?#iefix") format("embedded-opentype"), url("../fonts/wisdom_script.woff2") format("woff2"), url("../fonts/wisdom_script.woff") format("woff"), url("../fonts/wisdom_script.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; min-width: 320px; }
+
+.svg-icon { width: 100%; height: 100%; background: inherit; fill: inherit; }
 
 .l { *zoom: 1; }
 .l:after { content: " "; display: table; clear: both; }
 .l .l-col1 { float: left; width: 20%; }
 .l .l-col2 { float: right; width: 70%; }
+
+.out { position: fixed; top: 0; left: 0; right: 0; bottom: 0; min-width: 320px; }
+
+.intro { background-image: url("../img/bg.jpg"); background-repeat: no-repeat; background-position: bottom left; background-size: cover; color: #FFF; width: 100%; height: 100%; display: table; table-layout: fixed; }
+
+.intro__outer { display: table-cell; width: 100%; height: 100%; vertical-align: middle; text-align: center; background: rgba(0, 0, 0, 0.3); }
+
+.intro__inner { display: inline-block; width: 100%; max-width: 560px; padding: 0 10px; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+.logo { text-align: center; fill: #FFF; }
+
+.logo__top { width: 96px; height: 50px; margin: 0 auto -6.2963%; position: relative; }
+
+.logo__main { position: relative; left: -4px; width: 100%; max-width: 540px; margin: auto; }
+
+.curved-text { font-size: 18px; line-height: 1; font-family: "lunchbox_bold", Arial, sans-serif; font-weight: normal; text-transform: uppercase; letter-spacing: 0.13em; }
+
+.lang { position: relative; max-width: 280px; margin: -5% auto 0; *zoom: 1; fill: #FFF; }
+.lang:after { content: " "; display: table; clear: both; }
+.lang:before { content: ""; position: absolute; bottom: 2px; left: 50%; width: 8px; height: 8px; margin-left: -3px; background: #FFF; border-radius: 50%; }
+.lang .icon-line-left, .lang .icon-line-right { width: 100px; height: 16px; line-height: 1; }
+.lang .icon-line-left:first-child, .lang .icon-line-right:first-child { width: 86px; }
+.lang .icon-logo-bottom { width: 80px; height: 76px; line-height: 1; margin: 0 auto -43px; }
+
+.lang__left, .lang__right { position: relative; width: 50%; -moz-box-sizing: border-box; box-sizing: border-box; fill: #FFF; color: #FFF; line-height: 56px; -webkit-transition: linear 0.2s; transition: linear 0.2s; cursor: pointer; }
+.lang__left:hover, .lang__left:focus, .lang__right:hover, .lang__right:focus { fill: orange; color: orange; }
+
+.lang__left { float: left; text-align: right; padding-right: 48px; }
+.lang__left .icon-line-left { position: absolute; bottom: -2px; right: 15px; }
+.lang__left .icon-line-left:first-child { top: -5px; right: 45px; bottom: auto; }
+
+.lang__right { float: right; text-align: left; padding-left: 48px; }
+.lang__right .icon-line-right { position: absolute; bottom: -2px; left: 15px; }
+.lang__right .icon-line-right:first-child { top: -5px; left: 45px; bottom: auto; }
+
+.lang__link { font-size: 18px; font-family: "lunchbox_bold", Arial, sans-serif; font-weight: normal; text-transform: uppercase; color: inherit; text-decoration: none; letter-spacing: 0.13em; }
+
+/*# sourceMappingURL=screen.css.map */

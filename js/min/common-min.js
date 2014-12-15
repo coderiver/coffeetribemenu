@@ -1,0 +1,2 @@
+head.ready(function(){!function(){if($(".curved-text").length){for(var t=$(".curved-text").html(),e="",n=0,a=t.length;a>n;n++)e+='<span class="char',e+=n,e+='">',e+=t[n],e+="</span>";$(".curved-text").html(e)}}()});
+//# sourceMappingURL=./common-min.js.map
