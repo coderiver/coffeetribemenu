@@ -16,8 +16,7 @@ body
       .intro__outer
         .intro__inner
           .curved-container
-            h1.curved-text
-              | coffeeshop & restaurant
+            include ../img/svg/text.svg
 
           .logo
             .logo__top
@@ -52,11 +51,14 @@ body
 
           .lang-extra
             .icon-arrows-left
+              svg.svg-icon
+                use(xlink:href="#icon-arrows-left")
             a(href="#").lang-extra__link
               | ภาษาไทย
             .icon-arrows-right
+              svg.svg-icon
+                use(xlink:href="#icon-arrows-right")
     //end intro
-
   //end out
 
   //load scripts

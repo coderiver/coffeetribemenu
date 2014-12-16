@@ -1,11 +1,3 @@
-.out
-  position: fixed
-  top: 0
-  left: 0
-  right: 0
-  bottom: 0
-  min-width: 320px
-
 .intro
   background-image: url('../img/bg.jpg')
   background-repeat: no-repeat
@@ -29,8 +21,8 @@
 .intro__inner
   display: inline-block
   width: 100%
-  max-width: 560px
-  padding: 0 10px
+  max-width: 580px
+  padding: 20px
   box-sizing: border-box
 
 
@@ -53,13 +45,43 @@
   margin: auto
 //end logo
 
+
+.curved-container
+  position: relative
+  text-align: center
+  margin-bottom: -20px
+  .svg-text
+    fill: #fff
+    width: 230px
+    height: 60px
+    line-height: 1
+    font-size: 18px
+    letter-spacing: 0.12em
+    text-transform: uppercase
+    +lunch
+
+
 .curved-text
+  display: inline-block
+  margin-bottom: 40px
+  position: relative
+  right: 15px
   font-size: 18px
   line-height: 1
   +lunch-b
   text-transform: uppercase
   letter-spacing: 0.13em
+  span
+    height: 150px
+    position: absolute
+    width: 20px
+    left: 0
+    top: 0
+    transform-origin: bottom center
+  +rotated-text(23, 90deg, -45deg)
 
+
+//begin lang
 .lang
   position: relative
   max-width: 280px
@@ -88,7 +110,6 @@
     height: 76px
     line-height: 1
     margin: 0 auto -43px
-
 
 .lang__left,
 .lang__right
@@ -121,6 +142,7 @@
   float: right
   text-align: left
   padding-left: 48px
+
   .icon-line-right
     position: absolute
     bottom: -2px
@@ -137,4 +159,52 @@
   color: inherit
   text-decoration: none
   letter-spacing: 0.13em
+  +tap
+//end lang
 
+//begin lang-extra
+.lang-extra
+  position: relative
+  margin-top: 20px
+  line-height: 1
+  fill: #FFF
+  &:before
+    content: ""
+    position: absolute
+    bottom: -3px
+    left: 50%
+    width: 10px
+    height: 10px
+    margin-left: -5px
+    background: #FFF
+    border-radius: 50%
+  &:after
+    content: ""
+    display: block
+    width: 70px
+    height: 3px
+    margin: 18px auto 0
+    background: #FFF
+    border-radius: 50%
+
+  .icon-arrows-left,
+  .icon-arrows-right
+    display: inline-block
+    vertical-align: middle
+    width: 29px
+    height: 11px
+    line-height: 1
+
+.lang-extra__link
+  display: inline-block
+  vertical-align: middle
+  margin: 0 15px
+  +book
+  font-size: 20px
+  color: #FFF
+  text-decoration: none
+  +tr(color 0.2s linear)
+  +tap
+  &:hover
+    color: orange
+//end lang extra

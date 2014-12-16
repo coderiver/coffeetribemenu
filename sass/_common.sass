@@ -19,10 +19,26 @@
   font-family: "book_akhanake", Arial, sans-serif
   font-weight: normal
 
+=tap
+  -webkit-tap-highlight-color: transparent
+
+=rotated-text($num-letters: 100, $angle-span: 180deg, $angle-offset: 0deg)
+  $angle-per-char: $angle-span / $num-letters
+  @for $i from 1 through $num-letters
+    .char#{$i}
+      +transform(rotate($angle-offset + $angle-per-char * $i))
+
 body
   font-family: Arial, sans-serif
   font-size: 12px
   line-height: 1.4
+  min-width: 320px
+  width: 100%
+  height: 100%
+
+.out
+  width: 100%
+  height: 100%
   min-width: 320px
 
 .svg-icon

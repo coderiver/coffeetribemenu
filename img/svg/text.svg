@@ -1,0 +1,8 @@
+<svg class="svg-text" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 -20 230 60" enable-background="new 0 -20 230 60">
+  <path d="M0.5,50.9980469 C0.5,50.9980469 40.7202073,0.998046875 113,0.998046875 C185.279793,0.998046875 225.5,50.9980469 225.5,50.9980469" id="Line" fill="none"></path>
+  <text text-anchor="middle">
+    <textPath xlink:href="#Line" startOffset="50%">
+      coffeeshop &amp; restaurant
+    </textPath>
+  </text>
+</svg>

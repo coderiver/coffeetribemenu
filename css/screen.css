@@ -23,7 +23,10 @@ table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 @font-face { font-family: "lunchbox"; src: url("../fonts/lunchbox.eot"); src: url("../fonts/lunchbox.eot?#iefix") format("embedded-opentype"), url("../fonts/lunchbox.woff2") format("woff2"), url("../fonts/lunchbox.woff") format("woff"), url("../fonts/lunchbox.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: "lunchbox_bold"; src: url("../fonts/lunchbox_bold.eot"); src: url("../fonts/lunchbox_bold.eot?#iefix") format("embedded-opentype"), url("../fonts/lunchbox_bold.woff2") format("woff2"), url("../fonts/lunchbox_bold.woff") format("woff"), url("../fonts/lunchbox_bold.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: "wisdom_script"; src: url("../fonts/wisdom_script.eot"); src: url("../fonts/wisdom_script.eot?#iefix") format("embedded-opentype"), url("../fonts/wisdom_script.woff2") format("woff2"), url("../fonts/wisdom_script.woff") format("woff"), url("../fonts/wisdom_script.ttf") format("truetype"); font-weight: normal; font-style: normal; }
-body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; min-width: 320px; }
+@font-face { font-family: "book_akhanake"; src: url("../fonts/book_akhanake.eot"); src: url("../fonts/book_akhanake.eot?#iefix") format("embedded-opentype"), url("../fonts/book_akhanake.woff2") format("woff2"), url("../fonts/book_akhanake.woff") format("woff"), url("../fonts/book_akhanake.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; min-width: 320px; width: 100%; height: 100%; }
+
+.out { width: 100%; height: 100%; min-width: 320px; }
 
 .svg-icon { width: 100%; height: 100%; background: inherit; fill: inherit; }
 
@@ -32,13 +35,11 @@ body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; min-wi
 .l .l-col1 { float: left; width: 20%; }
 .l .l-col2 { float: right; width: 70%; }
 
-.out { position: fixed; top: 0; left: 0; right: 0; bottom: 0; min-width: 320px; }
-
 .intro { background-image: url("../img/bg.jpg"); background-repeat: no-repeat; background-position: bottom left; background-size: cover; color: #FFF; width: 100%; height: 100%; display: table; table-layout: fixed; }
 
 .intro__outer { display: table-cell; width: 100%; height: 100%; vertical-align: middle; text-align: center; background: rgba(0, 0, 0, 0.3); }
 
-.intro__inner { display: inline-block; width: 100%; max-width: 560px; padding: 0 10px; -moz-box-sizing: border-box; box-sizing: border-box; }
+.intro__inner { display: inline-block; width: 100%; max-width: 580px; padding: 20px; -moz-box-sizing: border-box; box-sizing: border-box; }
 
 .logo { text-align: center; fill: #FFF; }
 
@@ -46,7 +47,34 @@ body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; min-wi
 
 .logo__main { position: relative; left: -4px; width: 100%; max-width: 540px; margin: auto; }
 
-.curved-text { font-size: 18px; line-height: 1; font-family: "lunchbox_bold", Arial, sans-serif; font-weight: normal; text-transform: uppercase; letter-spacing: 0.13em; }
+.curved-container { position: relative; text-align: center; margin-bottom: -20px; }
+.curved-container .svg-text { fill: #fff; width: 230px; height: 60px; line-height: 1; font-size: 18px; letter-spacing: 0.12em; text-transform: uppercase; font-family: "lunchbox", Arial, sans-serif; font-weight: normal; }
+
+.curved-text { display: inline-block; margin-bottom: 40px; position: relative; right: 15px; font-size: 18px; line-height: 1; font-family: "lunchbox_bold", Arial, sans-serif; font-weight: normal; text-transform: uppercase; letter-spacing: 0.13em; }
+.curved-text span { height: 150px; position: absolute; width: 20px; left: 0; top: 0; -webkit-transform-origin: bottom center; -ms-transform-origin: bottom center; transform-origin: bottom center; }
+.curved-text .char1 { -ms-transform: rotate(-41.08696deg); -webkit-transform: rotate(-41.08696deg); transform: rotate(-41.08696deg); }
+.curved-text .char2 { -ms-transform: rotate(-37.17391deg); -webkit-transform: rotate(-37.17391deg); transform: rotate(-37.17391deg); }
+.curved-text .char3 { -ms-transform: rotate(-33.26087deg); -webkit-transform: rotate(-33.26087deg); transform: rotate(-33.26087deg); }
+.curved-text .char4 { -ms-transform: rotate(-29.34783deg); -webkit-transform: rotate(-29.34783deg); transform: rotate(-29.34783deg); }
+.curved-text .char5 { -ms-transform: rotate(-25.43478deg); -webkit-transform: rotate(-25.43478deg); transform: rotate(-25.43478deg); }
+.curved-text .char6 { -ms-transform: rotate(-21.52174deg); -webkit-transform: rotate(-21.52174deg); transform: rotate(-21.52174deg); }
+.curved-text .char7 { -ms-transform: rotate(-17.6087deg); -webkit-transform: rotate(-17.6087deg); transform: rotate(-17.6087deg); }
+.curved-text .char8 { -ms-transform: rotate(-13.69565deg); -webkit-transform: rotate(-13.69565deg); transform: rotate(-13.69565deg); }
+.curved-text .char9 { -ms-transform: rotate(-9.78261deg); -webkit-transform: rotate(-9.78261deg); transform: rotate(-9.78261deg); }
+.curved-text .char10 { -ms-transform: rotate(-5.86957deg); -webkit-transform: rotate(-5.86957deg); transform: rotate(-5.86957deg); }
+.curved-text .char11 { -ms-transform: rotate(-1.95652deg); -webkit-transform: rotate(-1.95652deg); transform: rotate(-1.95652deg); }
+.curved-text .char12 { -ms-transform: rotate(1.95652deg); -webkit-transform: rotate(1.95652deg); transform: rotate(1.95652deg); }
+.curved-text .char13 { -ms-transform: rotate(5.86957deg); -webkit-transform: rotate(5.86957deg); transform: rotate(5.86957deg); }
+.curved-text .char14 { -ms-transform: rotate(9.78261deg); -webkit-transform: rotate(9.78261deg); transform: rotate(9.78261deg); }
+.curved-text .char15 { -ms-transform: rotate(13.69565deg); -webkit-transform: rotate(13.69565deg); transform: rotate(13.69565deg); }
+.curved-text .char16 { -ms-transform: rotate(17.6087deg); -webkit-transform: rotate(17.6087deg); transform: rotate(17.6087deg); }
+.curved-text .char17 { -ms-transform: rotate(21.52174deg); -webkit-transform: rotate(21.52174deg); transform: rotate(21.52174deg); }
+.curved-text .char18 { -ms-transform: rotate(25.43478deg); -webkit-transform: rotate(25.43478deg); transform: rotate(25.43478deg); }
+.curved-text .char19 { -ms-transform: rotate(29.34783deg); -webkit-transform: rotate(29.34783deg); transform: rotate(29.34783deg); }
+.curved-text .char20 { -ms-transform: rotate(33.26087deg); -webkit-transform: rotate(33.26087deg); transform: rotate(33.26087deg); }
+.curved-text .char21 { -ms-transform: rotate(37.17391deg); -webkit-transform: rotate(37.17391deg); transform: rotate(37.17391deg); }
+.curved-text .char22 { -ms-transform: rotate(41.08696deg); -webkit-transform: rotate(41.08696deg); transform: rotate(41.08696deg); }
+.curved-text .char23 { -ms-transform: rotate(45deg); -webkit-transform: rotate(45deg); transform: rotate(45deg); }
 
 .lang { position: relative; max-width: 280px; margin: -5% auto 0; *zoom: 1; fill: #FFF; }
 .lang:after { content: " "; display: table; clear: both; }
@@ -66,6 +94,14 @@ body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; min-wi
 .lang__right .icon-line-right { position: absolute; bottom: -2px; left: 15px; }
 .lang__right .icon-line-right:first-child { top: -5px; left: 45px; bottom: auto; }
 
-.lang__link { font-size: 18px; font-family: "lunchbox_bold", Arial, sans-serif; font-weight: normal; text-transform: uppercase; color: inherit; text-decoration: none; letter-spacing: 0.13em; }
+.lang__link { font-size: 18px; font-family: "lunchbox_bold", Arial, sans-serif; font-weight: normal; text-transform: uppercase; color: inherit; text-decoration: none; letter-spacing: 0.13em; -webkit-tap-highlight-color: transparent; }
+
+.lang-extra { position: relative; margin-top: 20px; line-height: 1; fill: #FFF; }
+.lang-extra:before { content: ""; position: absolute; bottom: -3px; left: 50%; width: 10px; height: 10px; margin-left: -5px; background: #FFF; border-radius: 50%; }
+.lang-extra:after { content: ""; display: block; width: 70px; height: 3px; margin: 18px auto 0; background: #FFF; border-radius: 50%; }
+.lang-extra .icon-arrows-left, .lang-extra .icon-arrows-right { display: inline-block; vertical-align: middle; width: 29px; height: 11px; line-height: 1; }
+
+.lang-extra__link { display: inline-block; vertical-align: middle; margin: 0 15px; font-family: "book_akhanake", Arial, sans-serif; font-weight: normal; font-size: 20px; color: #FFF; text-decoration: none; -webkit-transition: color 0.2s linear; transition: color 0.2s linear; -webkit-tap-highlight-color: transparent; }
+.lang-extra__link:hover { color: orange; }
 
 /*# sourceMappingURL=screen.css.map */
