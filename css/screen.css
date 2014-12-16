@@ -50,32 +50,6 @@ body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; min-wi
 .curved-container { position: relative; text-align: center; margin-bottom: -20px; }
 .curved-container .svg-text { fill: #fff; width: 230px; height: 60px; line-height: 1; font-size: 18px; letter-spacing: 0.12em; text-transform: uppercase; font-family: "lunchbox", Arial, sans-serif; font-weight: normal; }
 
-.curved-text { display: inline-block; margin-bottom: 40px; position: relative; right: 15px; font-size: 18px; line-height: 1; font-family: "lunchbox_bold", Arial, sans-serif; font-weight: normal; text-transform: uppercase; letter-spacing: 0.13em; }
-.curved-text span { height: 150px; position: absolute; width: 20px; left: 0; top: 0; -webkit-transform-origin: bottom center; -ms-transform-origin: bottom center; transform-origin: bottom center; }
-.curved-text .char1 { -ms-transform: rotate(-41.08696deg); -webkit-transform: rotate(-41.08696deg); transform: rotate(-41.08696deg); }
-.curved-text .char2 { -ms-transform: rotate(-37.17391deg); -webkit-transform: rotate(-37.17391deg); transform: rotate(-37.17391deg); }
-.curved-text .char3 { -ms-transform: rotate(-33.26087deg); -webkit-transform: rotate(-33.26087deg); transform: rotate(-33.26087deg); }
-.curved-text .char4 { -ms-transform: rotate(-29.34783deg); -webkit-transform: rotate(-29.34783deg); transform: rotate(-29.34783deg); }
-.curved-text .char5 { -ms-transform: rotate(-25.43478deg); -webkit-transform: rotate(-25.43478deg); transform: rotate(-25.43478deg); }
-.curved-text .char6 { -ms-transform: rotate(-21.52174deg); -webkit-transform: rotate(-21.52174deg); transform: rotate(-21.52174deg); }
-.curved-text .char7 { -ms-transform: rotate(-17.6087deg); -webkit-transform: rotate(-17.6087deg); transform: rotate(-17.6087deg); }
-.curved-text .char8 { -ms-transform: rotate(-13.69565deg); -webkit-transform: rotate(-13.69565deg); transform: rotate(-13.69565deg); }
-.curved-text .char9 { -ms-transform: rotate(-9.78261deg); -webkit-transform: rotate(-9.78261deg); transform: rotate(-9.78261deg); }
-.curved-text .char10 { -ms-transform: rotate(-5.86957deg); -webkit-transform: rotate(-5.86957deg); transform: rotate(-5.86957deg); }
-.curved-text .char11 { -ms-transform: rotate(-1.95652deg); -webkit-transform: rotate(-1.95652deg); transform: rotate(-1.95652deg); }
-.curved-text .char12 { -ms-transform: rotate(1.95652deg); -webkit-transform: rotate(1.95652deg); transform: rotate(1.95652deg); }
-.curved-text .char13 { -ms-transform: rotate(5.86957deg); -webkit-transform: rotate(5.86957deg); transform: rotate(5.86957deg); }
-.curved-text .char14 { -ms-transform: rotate(9.78261deg); -webkit-transform: rotate(9.78261deg); transform: rotate(9.78261deg); }
-.curved-text .char15 { -ms-transform: rotate(13.69565deg); -webkit-transform: rotate(13.69565deg); transform: rotate(13.69565deg); }
-.curved-text .char16 { -ms-transform: rotate(17.6087deg); -webkit-transform: rotate(17.6087deg); transform: rotate(17.6087deg); }
-.curved-text .char17 { -ms-transform: rotate(21.52174deg); -webkit-transform: rotate(21.52174deg); transform: rotate(21.52174deg); }
-.curved-text .char18 { -ms-transform: rotate(25.43478deg); -webkit-transform: rotate(25.43478deg); transform: rotate(25.43478deg); }
-.curved-text .char19 { -ms-transform: rotate(29.34783deg); -webkit-transform: rotate(29.34783deg); transform: rotate(29.34783deg); }
-.curved-text .char20 { -ms-transform: rotate(33.26087deg); -webkit-transform: rotate(33.26087deg); transform: rotate(33.26087deg); }
-.curved-text .char21 { -ms-transform: rotate(37.17391deg); -webkit-transform: rotate(37.17391deg); transform: rotate(37.17391deg); }
-.curved-text .char22 { -ms-transform: rotate(41.08696deg); -webkit-transform: rotate(41.08696deg); transform: rotate(41.08696deg); }
-.curved-text .char23 { -ms-transform: rotate(45deg); -webkit-transform: rotate(45deg); transform: rotate(45deg); }
-
 .lang { position: relative; max-width: 280px; margin: -5% auto 0; *zoom: 1; fill: #FFF; }
 .lang:after { content: " "; display: table; clear: both; }
 .lang:before { content: ""; position: absolute; bottom: 2px; left: 50%; width: 8px; height: 8px; margin-left: -3px; background: #FFF; border-radius: 50%; }
@@ -83,8 +57,8 @@ body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; min-wi
 .lang .icon-line-left:first-child, .lang .icon-line-right:first-child { width: 86px; }
 .lang .icon-logo-bottom { width: 80px; height: 76px; line-height: 1; margin: 0 auto -43px; }
 
-.lang__left, .lang__right { position: relative; width: 50%; -moz-box-sizing: border-box; box-sizing: border-box; fill: #FFF; color: #FFF; line-height: 56px; -webkit-transition: linear 0.2s; transition: linear 0.2s; cursor: pointer; }
-.lang__left:hover, .lang__left:focus, .lang__right:hover, .lang__right:focus { fill: orange; color: orange; }
+.lang__left, .lang__right { position: relative; width: 50%; -moz-box-sizing: border-box; box-sizing: border-box; fill: #FFF; color: #FFF; line-height: 56px; -webkit-transition: linear 0.1s; transition: linear 0.1s; cursor: pointer; }
+.lang__left:hover, .lang__left:focus, .lang__right:hover, .lang__right:focus { fill: #EF5A28; color: #EF5A28; }
 
 .lang__left { float: left; text-align: right; padding-right: 48px; }
 .lang__left .icon-line-left { position: absolute; bottom: -2px; right: 15px; }
@@ -101,7 +75,7 @@ body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; min-wi
 .lang-extra:after { content: ""; display: block; width: 70px; height: 3px; margin: 18px auto 0; background: #FFF; border-radius: 50%; }
 .lang-extra .icon-arrows-left, .lang-extra .icon-arrows-right { display: inline-block; vertical-align: middle; width: 29px; height: 11px; line-height: 1; }
 
-.lang-extra__link { display: inline-block; vertical-align: middle; margin: 0 15px; font-family: "book_akhanake", Arial, sans-serif; font-weight: normal; font-size: 20px; color: #FFF; text-decoration: none; -webkit-transition: color 0.2s linear; transition: color 0.2s linear; -webkit-tap-highlight-color: transparent; }
-.lang-extra__link:hover { color: orange; }
+.lang-extra__link { display: inline-block; vertical-align: middle; margin: 0 15px; font-family: "book_akhanake", Arial, sans-serif; font-weight: normal; font-size: 20px; color: #FFF; text-decoration: none; -webkit-transition: color 0.1s linear; transition: color 0.1s linear; -webkit-tap-highlight-color: transparent; }
+.lang-extra__link:hover { color: #EF5A28; }
 
 /*# sourceMappingURL=screen.css.map */

@@ -20,13 +20,13 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/img\/bg-all.jpg": {
+	"\/img\/bg-original.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 1.3837e+06,
-		"inputAbbreviatedPath": "\/img\/bg-all.jpg",
-		"outputAbbreviatedPath": "\/img\/bg-all.jpg",
+		"inputAbbreviatedPath": "\/img\/bg-original.jpg",
+		"outputAbbreviatedPath": "\/img\/bg-original.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -38,6 +38,28 @@
 		"initialSize": 577936,
 		"inputAbbreviatedPath": "\/img\/bg.jpg",
 		"outputAbbreviatedPath": "\/img\/bg.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons\/breakfast-h.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 432,
+		"inputAbbreviatedPath": "\/img\/icons\/breakfast-h.png",
+		"outputAbbreviatedPath": "\/img\/icons\/breakfast-h.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons\/breakfast.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 429,
+		"inputAbbreviatedPath": "\/img\/icons\/breakfast.png",
+		"outputAbbreviatedPath": "\/img\/icons\/breakfast.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -64,6 +86,215 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/icons\/coffee-h.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 817,
+		"inputAbbreviatedPath": "\/img\/icons\/coffee-h.png",
+		"outputAbbreviatedPath": "\/img\/icons\/coffee-h.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons\/coffee.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 805,
+		"inputAbbreviatedPath": "\/img\/icons\/coffee.png",
+		"outputAbbreviatedPath": "\/img\/icons\/coffee.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons\/deserts-h.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 360,
+		"inputAbbreviatedPath": "\/img\/icons\/deserts-h.png",
+		"outputAbbreviatedPath": "\/img\/icons\/deserts-h.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons\/deserts.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 357,
+		"inputAbbreviatedPath": "\/img\/icons\/deserts.png",
+		"outputAbbreviatedPath": "\/img\/icons\/deserts.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons\/drinks-h.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 327,
+		"inputAbbreviatedPath": "\/img\/icons\/drinks-h.png",
+		"outputAbbreviatedPath": "\/img\/icons\/drinks-h.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons\/drinks.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 331,
+		"inputAbbreviatedPath": "\/img\/icons\/drinks.png",
+		"outputAbbreviatedPath": "\/img\/icons\/drinks.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons\/juices-h.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 433,
+		"inputAbbreviatedPath": "\/img\/icons\/juices-h.png",
+		"outputAbbreviatedPath": "\/img\/icons\/juices-h.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons\/juices.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 433,
+		"inputAbbreviatedPath": "\/img\/icons\/juices.png",
+		"outputAbbreviatedPath": "\/img\/icons\/juices.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons\/logo-small.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3058,
+		"inputAbbreviatedPath": "\/img\/icons\/logo-small.png",
+		"outputAbbreviatedPath": "\/img\/icons\/logo-small.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons\/menu-h.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1370,
+		"inputAbbreviatedPath": "\/img\/icons\/menu-h.png",
+		"outputAbbreviatedPath": "\/img\/icons\/menu-h.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons\/menu.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1399,
+		"inputAbbreviatedPath": "\/img\/icons\/menu.png",
+		"outputAbbreviatedPath": "\/img\/icons\/menu.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons\/salad-h.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1294,
+		"inputAbbreviatedPath": "\/img\/icons\/salad-h.png",
+		"outputAbbreviatedPath": "\/img\/icons\/salad-h.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons\/salad.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1274,
+		"inputAbbreviatedPath": "\/img\/icons\/salad.png",
+		"outputAbbreviatedPath": "\/img\/icons\/salad.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons\/soups-h.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 397,
+		"inputAbbreviatedPath": "\/img\/icons\/soups-h.png",
+		"outputAbbreviatedPath": "\/img\/icons\/soups-h.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons\/soups.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 394,
+		"inputAbbreviatedPath": "\/img\/icons\/soups.png",
+		"outputAbbreviatedPath": "\/img\/icons\/soups.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons\/thai-h.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1820,
+		"inputAbbreviatedPath": "\/img\/icons\/thai-h.png",
+		"outputAbbreviatedPath": "\/img\/icons\/thai-h.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons\/thai.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1820,
+		"inputAbbreviatedPath": "\/img\/icons\/thai.png",
+		"outputAbbreviatedPath": "\/img\/icons\/thai.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons\/wellcome.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 11890,
+		"inputAbbreviatedPath": "\/img\/icons\/wellcome.png",
+		"outputAbbreviatedPath": "\/img\/icons\/wellcome.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/logo-small.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3058,
+		"inputAbbreviatedPath": "\/img\/logo-small.png",
+		"outputAbbreviatedPath": "\/img\/logo-small.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/Screen.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -85,6 +316,37 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
+		},
+	"\/index.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/jade\/_head.jade": {
+		"compileDebug": 1,
+		"fileType": 512,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/jade\/_head.jade",
+		"outputAbbreviatedPath": "\/_head.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0
+		},
+	"\/jade\/_layout.jade": {
+		"compileDebug": 1,
+		"fileType": 512,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/jade\/_layout.jade",
+		"outputAbbreviatedPath": "\/_layout.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0
 		},
 	"\/jade\/index.jade": {
 		"compileDebug": 1,

@@ -1,65 +1,56 @@
-doctype html
-html
-  head
-    meta(charset="utf-8")
-    title Title
-    meta(name="viewport" content="initial-scale=1")
-    meta(name="format-detection" content="telephone=no, user-scalable=no")
-    link(rel="stylesheet" media="all" href="css/screen.css")
-    <!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
-body
+extends _layout
+
+block title
+  title Intro
+
+block sprite
   include ../img/svgdefs.svg
-  //begin out
-  .out
-    //begin intro
-    .intro
-      .intro__outer
-        .intro__inner
-          .curved-container
-            include ../img/svg/text.svg
 
-          .logo
-            .logo__top
-              //- include ../img/svg/logo-top.svg
-              svg.svg-icon
-                use(xlink:href="#icon-logo-top")
-            .logo__main
-              include ../img/svg/logo.svg
+block content
+  //begin intro
+  .intro
+    .intro__outer
+      .intro__inner
+        .curved-container
+          include ../img/svg/text.svg
 
-          .lang
-            .icon-logo-bottom
-              svg.svg-icon
-                use(xlink:href="#icon-logo-bottom")
-            .lang__left
-              .icon-line-left
-                svg.svg-icon
-                  use(xlink:href="#icon-line-left")
-              a(href="#").lang__link
-                | english
-              .icon.icon-line-left
-                svg.svg-icon
-                  use(xlink:href="#icon-line-left")
-            .lang__right
-              .icon-line-right
-                svg.svg-icon
-                  use(xlink:href="#icon-line-right")
-              a(href="#").lang__link
-                | русский
-              .icon.icon-line-right
-                svg.svg-icon
-                  use(xlink:href="#icon-line-right")
+        .logo
+          .logo__top
+            svg.svg-icon
+              use(xlink:href="#icon-logo-top")
+          .logo__main
+            include ../img/svg/logo.svg
 
-          .lang-extra
-            .icon-arrows-left
+        .lang
+          .icon-logo-bottom
+            svg.svg-icon
+              use(xlink:href="#icon-logo-bottom")
+          .lang__left
+            .icon-line-left
               svg.svg-icon
-                use(xlink:href="#icon-arrows-left")
-            a(href="#").lang-extra__link
-              | ภาษาไทย
-            .icon-arrows-right
+                use(xlink:href="#icon-line-left")
+            a(href="#").lang__link
+              | english
+            .icon.icon-line-left
               svg.svg-icon
-                use(xlink:href="#icon-arrows-right")
-    //end intro
-  //end out
+                use(xlink:href="#icon-line-left")
+          .lang__right
+            .icon-line-right
+              svg.svg-icon
+                use(xlink:href="#icon-line-right")
+            a(href="#").lang__link
+              | русский
+            .icon.icon-line-right
+              svg.svg-icon
+                use(xlink:href="#icon-line-right")
 
-  //load scripts
-  script(src="js/lib/head.js" data-headjs-load="js/init.js")
+        .lang-extra
+          .icon-arrows-left
+            svg.svg-icon
+              use(xlink:href="#icon-arrows-left")
+          a(href="#").lang-extra__link
+            | ภาษาไทย
+          .icon-arrows-right
+            svg.svg-icon
+              use(xlink:href="#icon-arrows-right")
+  //end intro
