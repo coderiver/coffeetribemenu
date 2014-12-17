@@ -35,7 +35,7 @@ body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; min-wi
 .l .l-col1 { float: left; width: 20%; }
 .l .l-col2 { float: right; width: 70%; }
 
-.intro { background-image: url("../img/bg.jpg"); background-repeat: no-repeat; background-position: bottom left; background-size: cover; color: #FFF; width: 100%; height: 100%; display: table; table-layout: fixed; }
+.intro { background-image: url("../img/bg-intro.jpg"); background-repeat: no-repeat; background-position: bottom left; background-size: cover; color: #FFF; width: 100%; height: 100%; display: table; table-layout: fixed; }
 
 .intro__outer { display: table-cell; width: 100%; height: 100%; vertical-align: middle; text-align: center; background: rgba(0, 0, 0, 0.3); }
 
@@ -77,5 +77,85 @@ body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; min-wi
 
 .lang-extra__link { display: inline-block; vertical-align: middle; margin: 0 15px; font-family: "book_akhanake", Arial, sans-serif; font-weight: normal; font-size: 20px; color: #FFF; text-decoration: none; -webkit-transition: color 0.1s linear; transition: color 0.1s linear; -webkit-tap-highlight-color: transparent; }
 .lang-extra__link:hover { color: #EF5A28; }
+
+.bg { position: absolute; background-image: url("../img/bg-menu.jpg"); background-repeat: no-repeat; background-position: bottom left; background-size: cover; color: #FFF; width: 100%; height: 100%; }
+.bg:before { content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.3); }
+.bg.bg_welcome:after { content: ""; position: absolute; background: url('../img/icons.png') 0 -1510px no-repeat; width: 348px; height: 256px; top: 50%; left: 50%; -webkit-transform: translateX(-50%) translateY(-50%); -ms-transform: translateX(-50%) translateY(-50%); transform: translateX(-50%) translateY(-50%); }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .bg.bg_welcome:after { background: url('../img/icons2x.png') 0 -3031px no-repeat; background-position: 0 -1516px; width: 346.5px; height: 256.5px; background-size: 347px 1772px; } }
+
+.category-list { position: absolute; top: 0; right: 0; bottom: 0; width: 13.4%; }
+
+.category-list__cell { position: relative; height: 12.5%; -moz-box-sizing: border-box; box-sizing: border-box; background: rgba(0, 0, 0, 0.4); border-top: 1px solid rgba(255, 255, 255, 0.05); }
+.category-list__cell:before { content: ""; position: absolute; top: -2px; left: 50%; margin-left: -39px; background: url('../img/icons.png') 0 -206px no-repeat; width: 78px; height: 3px; }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .category-list__cell:before { background: url('../img/icons2x.png') 0 -512px no-repeat; background-position: 0 -256px; width: 78.5px; height: 3px; background-size: 347px 1772px; } }
+.category-list__cell:first-child { border-top: none; }
+.category-list__cell:first-child:before { display: none; }
+
+.category { display: block; width: 100%; height: 100%; font-family: "lunchbox_bold", Arial, sans-serif; font-weight: normal; color: #FFF; text-decoration: none; text-align: center; text-transform: uppercase; white-space: nowrap; line-height: 1; text-align: center; font-size: 0; }
+.category:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
+.category:after { display: none; content: ""; position: absolute; top: 50%; left: 0; width: 0px; height: 0px; border-style: solid; border-width: 11px 0 11px 11px; border-color: transparent transparent transparent #FFF; margin-top: -11px; }
+.category .icon { display: block; margin: 0 auto 10px; }
+.category:hover .icon:before { opacity: 1; }
+.category.is-active:after { display: block; }
+.category.is-active .icon:before { opacity: 1; }
+
+.category__in { display: inline-block; vertical-align: middle; font-size: 17px; white-space: normal; max-width: 80px; }
+
+.icon { display: inline-block; position: relative; }
+.icon:before { content: ""; position: absolute; top: 0; left: 0; opacity: 0; -webkit-transition: opacity 0.1s linear; transition: opacity 0.1s linear; }
+.icon:hover:before { opacity: 1; }
+
+.icon-coffee { background: url('../img/icons.png') 0 -115px no-repeat; width: 27px; height: 21px; }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .icon-coffee { background: url('../img/icons2x.png') 0 -362px no-repeat; background-position: 0 -181px; width: 26px; height: 21px; background-size: 347px 1772px; } }
+.icon-coffee:before { background: url('../img/icons.png') 0 -84px no-repeat; width: 27px; height: 21px; }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .icon-coffee:before { background: url('../img/icons2x.png') 0 -310px no-repeat; background-position: 0 -155px; width: 26px; height: 21px; background-size: 347px 1772px; } }
+
+.icon-breakfast { background: url('../img/icons.png') 0 -27px no-repeat; width: 30px; height: 17px; }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .icon-breakfast { background: url('../img/icons2x.png') 0 -46px no-repeat; background-position: 0 -23px; width: 30.5px; height: 18px; background-size: 347px 1772px; } }
+.icon-breakfast:before { background: url('../img/icons.png') 0 0 no-repeat; width: 30px; height: 17px; }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .icon-breakfast:before { background: url('../img/icons2x.png') 0 0 no-repeat; background-position: 0 0; width: 30.5px; height: 18px; background-size: 347px 1772px; } }
+
+.icon-salad { background: url('../img/icons.png') 0 -1319px no-repeat; width: 33px; height: 25px; }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .icon-salad { background: url('../img/icons2x.png') 0 -2701px no-repeat; background-position: 0 -1351px; width: 32.5px; height: 24px; background-size: 347px 1772px; } }
+.icon-salad:before { background: url('../img/icons.png') 0 -1284px no-repeat; width: 33px; height: 25px; }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .icon-salad:before { background: url('../img/icons2x.png') 0 -2643px no-repeat; background-position: 0 -1322px; width: 32.5px; height: 24px; background-size: 347px 1772px; } }
+
+.icon-soups { background: url('../img/icons.png') 0 -1390px no-repeat; width: 27px; height: 26px; }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .icon-soups { background: url('../img/icons2x.png') 0 -2821px no-repeat; background-position: 0 -1411px; width: 27px; height: 26px; background-size: 347px 1772px; } }
+.icon-soups:before { background: url('../img/icons.png') 0 -1354px no-repeat; width: 27px; height: 26px; }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .icon-soups:before { background: url('../img/icons2x.png') 0 -2759px no-repeat; background-position: 0 -1380px; width: 27px; height: 26px; background-size: 347px 1772px; } }
+
+.icon-thai { background: url('../img/icons.png') 0 -1468px no-repeat; width: 38px; height: 32px; }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .icon-thai { background: url('../img/icons2x.png') 0 -2957px no-repeat; background-position: 0 -1479px; width: 37px; height: 32px; background-size: 347px 1772px; } }
+.icon-thai:before { background: url('../img/icons.png') 0 -1426px no-repeat; width: 38px; height: 32px; }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .icon-thai:before { background: url('../img/icons2x.png') 0 -2883px no-repeat; background-position: 0 -1442px; width: 37px; height: 32px; background-size: 347px 1772px; } }
+
+.icon-juices { background: url('../img/icons.png') 0 -1010px no-repeat; width: 25px; height: 25px; }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .icon-juices { background: url('../img/icons2x.png') 0 -2137px no-repeat; background-position: 0 -1069px; width: 25.5px; height: 25.5px; background-size: 347px 1772px; } }
+.icon-juices:before { background: url('../img/icons.png') 0 -975px no-repeat; width: 25px; height: 25px; }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .icon-juices:before { background: url('../img/icons2x.png') 0 -2076px no-repeat; background-position: 0 -1038px; width: 25.5px; height: 25.5px; background-size: 347px 1772px; } }
+
+.icon-deserts { background: url('../img/icons.png') 0 -176px no-repeat; width: 20px; height: 20px; }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .icon-deserts { background: url('../img/icons2x.png') 0 -463px no-repeat; background-position: 0 -232px; width: 19px; height: 19.5px; background-size: 347px 1772px; } }
+.icon-deserts:before { background: url('../img/icons.png') 0 -146px no-repeat; width: 20px; height: 20px; }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .icon-deserts:before { background: url('../img/icons2x.png') 0 -414px no-repeat; background-position: 0 -207px; width: 19px; height: 19.5px; background-size: 347px 1772px; } }
+
+.icon-drinks { background: url('../img/icons.png') 0 -261px no-repeat; width: 11px; height: 32px; }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .icon-drinks { background: url('../img/icons2x.png') 0 -604px no-repeat; background-position: 0 -302px; width: 11px; height: 33px; background-size: 347px 1772px; } }
+.icon-drinks:before { background: url('../img/icons.png') 0 -219px no-repeat; width: 11px; height: 32px; }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .icon-drinks:before { background: url('../img/icons2x.png') 0 -528px no-repeat; background-position: 0 -264px; width: 11px; height: 33px; background-size: 347px 1772px; } }
+
+.logo-small { position: absolute; top: 6.83594%; left: 5.85938%; background: url('../img/icons.png') 0 -1045px no-repeat; width: 128px; height: 111px; }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .logo-small { background: url('../img/icons2x.png') 0 -2198px no-repeat; background-position: 0 -1099px; width: 128px; height: 111.5px; background-size: 347px 1772px; } }
+
+.menu-btn { position: absolute; top: 8px; left: 8px; background: url('../img/icons.png') 0 -1225px no-repeat; width: 48px; height: 49px; }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .menu-btn { background: url('../img/icons2x.png') 0 -2537px no-repeat; background-position: 0 -1269px; width: 48px; height: 48px; background-size: 347px 1772px; } }
+
+.menu-container { position: absolute; top: 0; bottom: 0; right: 13.4%; width: 256px; background: #FFF; }
+
+.menu { position: relative; }
+
+.menu__header { background: url('../img/icons.png') 0 -303px no-repeat; width: 257px; height: 74px; }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .menu__header { background: url('../img/icons2x.png') 0 -804px no-repeat; background-position: 0 -402px; width: 257px; height: 74.5px; background-size: 347px 1772px; } }
 
 /*# sourceMappingURL=screen.css.map */

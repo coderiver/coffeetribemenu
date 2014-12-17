@@ -1,0 +1,56 @@
+extends _layout
+
+block title
+  title Intro
+
+block sprite
+  include ../img/svgdefs.svg
+
+block content
+  //begin intro
+  .out.intro
+    .intro__outer
+      .intro__inner
+        .curved-container
+          include ../img/svg/text.svg
+
+        .logo
+          .logo__top
+            svg.svg-icon
+              use(xlink:href="#icon-logo-top")
+          .logo__main
+            include ../img/svg/logo.svg
+
+        .lang
+          .icon-logo-bottom
+            svg.svg-icon
+              use(xlink:href="#icon-logo-bottom")
+          .lang__left
+            .icon-line-left
+              svg.svg-icon
+                use(xlink:href="#icon-line-left")
+            a(href="#").lang__link
+              | english
+            .icon.icon-line-left
+              svg.svg-icon
+                use(xlink:href="#icon-line-left")
+          .lang__right
+            .icon-line-right
+              svg.svg-icon
+                use(xlink:href="#icon-line-right")
+            a(href="#").lang__link
+              | русский
+            .icon.icon-line-right
+              svg.svg-icon
+                use(xlink:href="#icon-line-right")
+
+        .lang-extra
+          .icon-arrows-left
+            svg.svg-icon
+              use(xlink:href="#icon-arrows-left")
+          a(href="#").lang-extra__link
+            | ภาษาไทย
+          .icon-arrows-right
+            svg.svg-icon
+              use(xlink:href="#icon-arrows-right")
+  //end intro

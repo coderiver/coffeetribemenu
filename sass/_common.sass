@@ -30,6 +30,11 @@ $orange: #EF5A28
     .char#{$i}
       +transform(rotate($angle-offset + $angle-per-char * $i))
 
+=sprite($name)
+  +s(#{$name})
+  +retina
+    +sr(#{$name})
+
 body
   font-family: Arial, sans-serif
   font-size: 12px

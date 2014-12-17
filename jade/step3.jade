@@ -1,0 +1,73 @@
+extends _layout
+
+block title
+  title menu
+
+block content
+  //begin out
+  .out
+    .bg.bg_welcome
+
+    button.menu-btn
+
+    .logo-small
+
+    //begin category
+    ul.category-list
+      li.category-list__cell
+        a(href="#").category
+          .category__in
+            i.icon.icon-coffee
+            span coffee
+      li.category-list__cell
+        a(href="#").category
+          .category__in
+            i.icon.icon-breakfast
+            span breakfast
+      li.category-list__cell
+        a(href="#").category.is-active
+          .category__in
+            i.icon.icon-salad
+            span salad bar
+      li.category-list__cell
+        a(href="#").category
+          .category__in
+            i.icon.icon-soups
+            span soups& sandwiches
+      li.category-list__cell
+        a(href="#").category
+          .category__in
+            i.icon.icon-thai
+            span thai corner
+      li.category-list__cell
+        a(href="#").category
+          .category__in
+            i.icon.icon-juices
+            span juices& smoothies
+      li.category-list__cell
+        a(href="#").category
+          .category__in
+            i.icon.icon-deserts
+            span deserts& gelato
+      li.category-list__cell
+        a(href="#").category
+          .category__in
+            i.icon.icon-drinks
+            span drinks
+    //end category
+
+    //begin menu
+    .menu-container
+      .menu.menu_coffee
+        header.menu__header
+        strong.menu__title
+          | Breakfast
+        ul.menu__list
+          li.menu-item
+            span.menu-item__price
+              | 159
+            span.menu-item__name
+              | «Short Stack Jack»
+
+    //end menu
+  //end out

@@ -1,5 +1,6 @@
 //	sprites with padding
 $icons: sprite-map("icons/*.png", $spacing: 10px)
+$icons-retina: sprite-map("icons2x/*.png", $spacing: 10px)
 
 // sized sprites
 =image-size($path)
@@ -30,7 +31,7 @@ $icons: sprite-map("icons/*.png", $spacing: 10px)
 	+image-size(sprite-file($map, $sprite))
 
 //for retina
-=sr($sprite, $map: $icons)
+=sr($sprite, $map: $icons-retina)
 	background: sprite($map, $sprite) no-repeat
 	$ypos: round(nth(sprite-position($map, $sprite), 2) / 2)
 	background-position: 0 $ypos

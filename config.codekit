@@ -20,24 +20,46 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/img\/bg-original.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 1.3837e+06,
-		"inputAbbreviatedPath": "\/img\/bg-original.jpg",
-		"outputAbbreviatedPath": "\/img\/bg-original.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/img\/bg.jpg": {
+	"\/img\/bg-intro.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 577936,
-		"inputAbbreviatedPath": "\/img\/bg.jpg",
-		"outputAbbreviatedPath": "\/img\/bg.jpg",
+		"inputAbbreviatedPath": "\/img\/bg-intro.jpg",
+		"outputAbbreviatedPath": "\/img\/bg-intro.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/bg-menu.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2.64980e+06,
+		"inputAbbreviatedPath": "\/img\/bg-menu.jpg",
+		"outputAbbreviatedPath": "\/img\/bg-menu.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons-s6e4d41a051.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 0,
+		"inputAbbreviatedPath": "\/img\/icons-s6e4d41a051.png",
+		"outputAbbreviatedPath": "\/img\/icons-s6e4d41a051.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 44572,
+		"inputAbbreviatedPath": "\/img\/icons.png",
+		"outputAbbreviatedPath": "\/img\/icons.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -130,6 +152,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/icons\/divider.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 327,
+		"inputAbbreviatedPath": "\/img\/icons\/divider.png",
+		"outputAbbreviatedPath": "\/img\/icons\/divider.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/icons\/drinks-h.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -148,6 +181,94 @@
 		"initialSize": 331,
 		"inputAbbreviatedPath": "\/img\/icons\/drinks.png",
 		"outputAbbreviatedPath": "\/img\/icons\/drinks.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons\/header-breakfast.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 17307,
+		"inputAbbreviatedPath": "\/img\/icons\/header-breakfast.png",
+		"outputAbbreviatedPath": "\/img\/icons\/header-breakfast.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons\/header-coffee.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 18117,
+		"inputAbbreviatedPath": "\/img\/icons\/header-coffee.png",
+		"outputAbbreviatedPath": "\/img\/icons\/header-coffee.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons\/header-desserts.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 17230,
+		"inputAbbreviatedPath": "\/img\/icons\/header-desserts.png",
+		"outputAbbreviatedPath": "\/img\/icons\/header-desserts.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons\/header-drinks.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 17555,
+		"inputAbbreviatedPath": "\/img\/icons\/header-drinks.png",
+		"outputAbbreviatedPath": "\/img\/icons\/header-drinks.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons\/header-juices.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 17311,
+		"inputAbbreviatedPath": "\/img\/icons\/header-juices.png",
+		"outputAbbreviatedPath": "\/img\/icons\/header-juices.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons\/header-salad.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 17831,
+		"inputAbbreviatedPath": "\/img\/icons\/header-salad.png",
+		"outputAbbreviatedPath": "\/img\/icons\/header-salad.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons\/header-soups.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 17461,
+		"inputAbbreviatedPath": "\/img\/icons\/header-soups.png",
+		"outputAbbreviatedPath": "\/img\/icons\/header-soups.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons\/header-thai.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 18113,
+		"inputAbbreviatedPath": "\/img\/icons\/header-thai.png",
+		"outputAbbreviatedPath": "\/img\/icons\/header-thai.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -273,13 +394,387 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/icons\/wellcome.png": {
+	"\/img\/icons\/welcome.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 11890,
-		"inputAbbreviatedPath": "\/img\/icons\/wellcome.png",
-		"outputAbbreviatedPath": "\/img\/icons\/wellcome.png",
+		"inputAbbreviatedPath": "\/img\/icons\/welcome.png",
+		"outputAbbreviatedPath": "\/img\/icons\/welcome.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons2x-s244fde49aa.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 0,
+		"inputAbbreviatedPath": "\/img\/icons2x-s244fde49aa.png",
+		"outputAbbreviatedPath": "\/img\/icons2x-s244fde49aa.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons2x.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 106482,
+		"inputAbbreviatedPath": "\/img\/icons2x.png",
+		"outputAbbreviatedPath": "\/img\/icons2x.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons2x\/breakfast-h.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 720,
+		"inputAbbreviatedPath": "\/img\/icons2x\/breakfast-h.png",
+		"outputAbbreviatedPath": "\/img\/icons2x\/breakfast-h.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons2x\/breakfast.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 684,
+		"inputAbbreviatedPath": "\/img\/icons2x\/breakfast.png",
+		"outputAbbreviatedPath": "\/img\/icons2x\/breakfast.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons2x\/close-h.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2626,
+		"inputAbbreviatedPath": "\/img\/icons2x\/close-h.png",
+		"outputAbbreviatedPath": "\/img\/icons2x\/close-h.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons2x\/close.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2639,
+		"inputAbbreviatedPath": "\/img\/icons2x\/close.png",
+		"outputAbbreviatedPath": "\/img\/icons2x\/close.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons2x\/coffee-h.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1301,
+		"inputAbbreviatedPath": "\/img\/icons2x\/coffee-h.png",
+		"outputAbbreviatedPath": "\/img\/icons2x\/coffee-h.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons2x\/coffee.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1282,
+		"inputAbbreviatedPath": "\/img\/icons2x\/coffee.png",
+		"outputAbbreviatedPath": "\/img\/icons2x\/coffee.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons2x\/deserts-h.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 509,
+		"inputAbbreviatedPath": "\/img\/icons2x\/deserts-h.png",
+		"outputAbbreviatedPath": "\/img\/icons2x\/deserts-h.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons2x\/deserts.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 480,
+		"inputAbbreviatedPath": "\/img\/icons2x\/deserts.png",
+		"outputAbbreviatedPath": "\/img\/icons2x\/deserts.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons2x\/divider.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 405,
+		"inputAbbreviatedPath": "\/img\/icons2x\/divider.png",
+		"outputAbbreviatedPath": "\/img\/icons2x\/divider.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons2x\/drinks-h.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 473,
+		"inputAbbreviatedPath": "\/img\/icons2x\/drinks-h.png",
+		"outputAbbreviatedPath": "\/img\/icons2x\/drinks-h.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons2x\/drinks.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 478,
+		"inputAbbreviatedPath": "\/img\/icons2x\/drinks.png",
+		"outputAbbreviatedPath": "\/img\/icons2x\/drinks.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons2x\/footer.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 8945,
+		"inputAbbreviatedPath": "\/img\/icons2x\/footer.png",
+		"outputAbbreviatedPath": "\/img\/icons2x\/footer.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons2x\/header-breakfast.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 7971,
+		"inputAbbreviatedPath": "\/img\/icons2x\/header-breakfast.png",
+		"outputAbbreviatedPath": "\/img\/icons2x\/header-breakfast.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons2x\/header-coffee.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 8203,
+		"inputAbbreviatedPath": "\/img\/icons2x\/header-coffee.png",
+		"outputAbbreviatedPath": "\/img\/icons2x\/header-coffee.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons2x\/header-desserts.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 7775,
+		"inputAbbreviatedPath": "\/img\/icons2x\/header-desserts.png",
+		"outputAbbreviatedPath": "\/img\/icons2x\/header-desserts.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons2x\/header-drinks.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 7980,
+		"inputAbbreviatedPath": "\/img\/icons2x\/header-drinks.png",
+		"outputAbbreviatedPath": "\/img\/icons2x\/header-drinks.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons2x\/header-juices.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 661,
+		"inputAbbreviatedPath": "\/img\/icons2x\/header-juices.png",
+		"outputAbbreviatedPath": "\/img\/icons2x\/header-juices.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons2x\/header-salad.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 8130,
+		"inputAbbreviatedPath": "\/img\/icons2x\/header-salad.png",
+		"outputAbbreviatedPath": "\/img\/icons2x\/header-salad.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons2x\/header-soups.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 7934,
+		"inputAbbreviatedPath": "\/img\/icons2x\/header-soups.png",
+		"outputAbbreviatedPath": "\/img\/icons2x\/header-soups.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons2x\/header-thai.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 8165,
+		"inputAbbreviatedPath": "\/img\/icons2x\/header-thai.png",
+		"outputAbbreviatedPath": "\/img\/icons2x\/header-thai.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons2x\/juices-h.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 695,
+		"inputAbbreviatedPath": "\/img\/icons2x\/juices-h.png",
+		"outputAbbreviatedPath": "\/img\/icons2x\/juices-h.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons2x\/juices.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 661,
+		"inputAbbreviatedPath": "\/img\/icons2x\/juices.png",
+		"outputAbbreviatedPath": "\/img\/icons2x\/juices.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons2x\/logo-small.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 8512,
+		"inputAbbreviatedPath": "\/img\/icons2x\/logo-small.png",
+		"outputAbbreviatedPath": "\/img\/icons2x\/logo-small.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons2x\/menu-h.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2579,
+		"inputAbbreviatedPath": "\/img\/icons2x\/menu-h.png",
+		"outputAbbreviatedPath": "\/img\/icons2x\/menu-h.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons2x\/menu.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2892,
+		"inputAbbreviatedPath": "\/img\/icons2x\/menu.png",
+		"outputAbbreviatedPath": "\/img\/icons2x\/menu.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons2x\/salad-h.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2148,
+		"inputAbbreviatedPath": "\/img\/icons2x\/salad-h.png",
+		"outputAbbreviatedPath": "\/img\/icons2x\/salad-h.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons2x\/salad.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2122,
+		"inputAbbreviatedPath": "\/img\/icons2x\/salad.png",
+		"outputAbbreviatedPath": "\/img\/icons2x\/salad.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons2x\/soups-h.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 601,
+		"inputAbbreviatedPath": "\/img\/icons2x\/soups-h.png",
+		"outputAbbreviatedPath": "\/img\/icons2x\/soups-h.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons2x\/soups.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 574,
+		"inputAbbreviatedPath": "\/img\/icons2x\/soups.png",
+		"outputAbbreviatedPath": "\/img\/icons2x\/soups.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons2x\/thai-h.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3070,
+		"inputAbbreviatedPath": "\/img\/icons2x\/thai-h.png",
+		"outputAbbreviatedPath": "\/img\/icons2x\/thai-h.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons2x\/thai.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3041,
+		"inputAbbreviatedPath": "\/img\/icons2x\/thai.png",
+		"outputAbbreviatedPath": "\/img\/icons2x\/thai.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/icons2x\/welcome.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 27615,
+		"inputAbbreviatedPath": "\/img\/icons2x\/welcome.png",
+		"outputAbbreviatedPath": "\/img\/icons2x\/welcome.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -326,6 +821,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/intro.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/intro.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/jade\/_head.jade": {
 		"compileDebug": 1,
 		"fileType": 512,
@@ -355,6 +859,28 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/jade\/index.jade",
 		"outputAbbreviatedPath": "\/index.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0
+		},
+	"\/jade\/intro.jade": {
+		"compileDebug": 1,
+		"fileType": 512,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/jade\/intro.jade",
+		"outputAbbreviatedPath": "\/intro.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0
+		},
+	"\/jade\/step3.jade": {
+		"compileDebug": 1,
+		"fileType": 512,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/jade\/step3.jade",
+		"outputAbbreviatedPath": "\/step3.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0
@@ -794,6 +1320,15 @@
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
 		"useLibsass": false
+		},
+	"\/step3.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/step3.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
 		}
 	},
 "hooks": [
