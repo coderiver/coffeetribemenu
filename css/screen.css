@@ -80,82 +80,115 @@ body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; min-wi
 
 .bg { position: absolute; background-image: url("../img/bg-menu.jpg"); background-repeat: no-repeat; background-position: bottom left; background-size: cover; color: #FFF; width: 100%; height: 100%; }
 .bg:before { content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.3); }
-.bg.bg_welcome:after { content: ""; position: absolute; background: url('../img/icons.png') 0 -1510px no-repeat; width: 348px; height: 256px; top: 50%; left: 50%; -webkit-transform: translateX(-50%) translateY(-50%); -ms-transform: translateX(-50%) translateY(-50%); transform: translateX(-50%) translateY(-50%); }
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .bg.bg_welcome:after { background: url('../img/icons2x.png') 0 -3031px no-repeat; background-position: 0 -1516px; width: 346.5px; height: 256.5px; background-size: 347px 1772px; } }
+.bg.bg_welcome:after { content: ""; position: absolute; background: url('../img/icons.png') 0 -1435px no-repeat; width: 348px; height: 256px; top: 50%; left: 50%; -webkit-transform: translateX(-50%) translateY(-50%); -ms-transform: translateX(-50%) translateY(-50%); transform: translateX(-50%) translateY(-50%); }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .bg.bg_welcome:after { background: url('../img/icons2x.png') 0 -2629px no-repeat; background-position: 0 -1315px; width: 346.5px; height: 256.5px; background-size: 347px 1571px; } }
 
 .category-list { position: absolute; top: 0; right: 0; bottom: 0; width: 13.4%; }
 
 .category-list__cell { position: relative; height: 12.5%; -moz-box-sizing: border-box; box-sizing: border-box; background: rgba(0, 0, 0, 0.4); border-top: 1px solid rgba(255, 255, 255, 0.05); }
-.category-list__cell:before { content: ""; position: absolute; top: -2px; left: 50%; margin-left: -39px; background: url('../img/icons.png') 0 -206px no-repeat; width: 78px; height: 3px; }
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .category-list__cell:before { background: url('../img/icons2x.png') 0 -512px no-repeat; background-position: 0 -256px; width: 78.5px; height: 3px; background-size: 347px 1772px; } }
+.category-list__cell:before { content: ""; position: absolute; top: -2px; left: 50%; margin-left: -39px; background: url('../img/icons.png') 0 -324px no-repeat; width: 78px; height: 3px; }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .category-list__cell:before { background: url('../img/icons2x.png') 0 -512px no-repeat; background-position: 0 -256px; width: 78.5px; height: 3px; background-size: 347px 1571px; } }
 .category-list__cell:first-child { border-top: none; }
 .category-list__cell:first-child:before { display: none; }
 
 .category { display: block; width: 100%; height: 100%; font-family: "lunchbox_bold", Arial, sans-serif; font-weight: normal; color: #FFF; text-decoration: none; text-align: center; text-transform: uppercase; white-space: nowrap; line-height: 1; text-align: center; font-size: 0; }
 .category:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
 .category:after { display: none; content: ""; position: absolute; top: 50%; left: 0; width: 0px; height: 0px; border-style: solid; border-width: 11px 0 11px 11px; border-color: transparent transparent transparent #FFF; margin-top: -11px; }
-.category .icon { display: block; margin: 0 auto 10px; }
-.category:hover .icon:before { opacity: 1; }
+.category span { display: block; margin-top: 10px; }
+.category:hover .icon:before { opacity: 0; }
+.category:hover .icon:after { opacity: 1; }
 .category.is-active:after { display: block; }
-.category.is-active .icon:before { opacity: 1; }
+.category.is-active .icon:before { opacity: 0; }
+.category.is-active .icon:after { opacity: 1; }
 
 .category__in { display: inline-block; vertical-align: middle; font-size: 17px; white-space: normal; max-width: 80px; }
 
 .icon { display: inline-block; position: relative; }
-.icon:before { content: ""; position: absolute; top: 0; left: 0; opacity: 0; -webkit-transition: opacity 0.1s linear; transition: opacity 0.1s linear; }
-.icon:hover:before { opacity: 1; }
+.icon:before { content: ""; display: block; opacity: 1; -webkit-transition: all 0.1s linear; transition: all 0.1s linear; }
+.icon:after { content: ""; position: absolute; top: 0; left: 0; opacity: 0; -webkit-transition: all 0.1s linear; transition: all 0.1s linear; }
+.icon:hover:before { opacity: 0; }
+.icon:hover:after { opacity: 1; }
 
-.icon-coffee { background: url('../img/icons.png') 0 -115px no-repeat; width: 27px; height: 21px; }
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .icon-coffee { background: url('../img/icons2x.png') 0 -362px no-repeat; background-position: 0 -181px; width: 26px; height: 21px; background-size: 347px 1772px; } }
-.icon-coffee:before { background: url('../img/icons.png') 0 -84px no-repeat; width: 27px; height: 21px; }
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .icon-coffee:before { background: url('../img/icons2x.png') 0 -310px no-repeat; background-position: 0 -155px; width: 26px; height: 21px; background-size: 347px 1772px; } }
+.icon-coffee:before { background: url('../img/icons.png') 0 -233px no-repeat; width: 27px; height: 21px; }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .icon-coffee:before { background: url('../img/icons2x.png') 0 -362px no-repeat; background-position: 0 -181px; width: 26px; height: 21px; background-size: 347px 1571px; } }
+.icon-coffee:after { background: url('../img/icons.png') 0 -202px no-repeat; width: 27px; height: 21px; }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .icon-coffee:after { background: url('../img/icons2x.png') 0 -310px no-repeat; background-position: 0 -155px; width: 26px; height: 21px; background-size: 347px 1571px; } }
 
-.icon-breakfast { background: url('../img/icons.png') 0 -27px no-repeat; width: 30px; height: 17px; }
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .icon-breakfast { background: url('../img/icons2x.png') 0 -46px no-repeat; background-position: 0 -23px; width: 30.5px; height: 18px; background-size: 347px 1772px; } }
-.icon-breakfast:before { background: url('../img/icons.png') 0 0 no-repeat; width: 30px; height: 17px; }
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .icon-breakfast:before { background: url('../img/icons2x.png') 0 0 no-repeat; background-position: 0 0; width: 30.5px; height: 18px; background-size: 347px 1772px; } }
+.icon-breakfast:before { background: url('../img/icons.png') 0 -27px no-repeat; width: 30px; height: 17px; }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .icon-breakfast:before { background: url('../img/icons2x.png') 0 -46px no-repeat; background-position: 0 -23px; width: 30.5px; height: 18px; background-size: 347px 1571px; } }
+.icon-breakfast:after { background: url('../img/icons.png') 0 0 no-repeat; width: 30px; height: 17px; }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .icon-breakfast:after { background: url('../img/icons2x.png') 0 0 no-repeat; background-position: 0 0; width: 30.5px; height: 18px; background-size: 347px 1571px; } }
 
-.icon-salad { background: url('../img/icons.png') 0 -1319px no-repeat; width: 33px; height: 25px; }
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .icon-salad { background: url('../img/icons2x.png') 0 -2701px no-repeat; background-position: 0 -1351px; width: 32.5px; height: 24px; background-size: 347px 1772px; } }
-.icon-salad:before { background: url('../img/icons.png') 0 -1284px no-repeat; width: 33px; height: 25px; }
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .icon-salad:before { background: url('../img/icons2x.png') 0 -2643px no-repeat; background-position: 0 -1322px; width: 32.5px; height: 24px; background-size: 347px 1772px; } }
+.icon-salad:before { background: url('../img/icons.png') 0 -1197px no-repeat; width: 33px; height: 25px; }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .icon-salad:before { background: url('../img/icons2x.png') 0 -2215px no-repeat; background-position: 0 -1108px; width: 32.5px; height: 24px; background-size: 347px 1571px; } }
+.icon-salad:after { background: url('../img/icons.png') 0 -1162px no-repeat; width: 33px; height: 25px; }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .icon-salad:after { background: url('../img/icons2x.png') 0 -2157px no-repeat; background-position: 0 -1079px; width: 32.5px; height: 24px; background-size: 347px 1571px; } }
 
-.icon-soups { background: url('../img/icons.png') 0 -1390px no-repeat; width: 27px; height: 26px; }
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .icon-soups { background: url('../img/icons2x.png') 0 -2821px no-repeat; background-position: 0 -1411px; width: 27px; height: 26px; background-size: 347px 1772px; } }
-.icon-soups:before { background: url('../img/icons.png') 0 -1354px no-repeat; width: 27px; height: 26px; }
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .icon-soups:before { background: url('../img/icons2x.png') 0 -2759px no-repeat; background-position: 0 -1380px; width: 27px; height: 26px; background-size: 347px 1772px; } }
+.icon-soups:before { background: url('../img/icons.png') 0 -1268px no-repeat; width: 27px; height: 26px; }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .icon-soups:before { background: url('../img/icons2x.png') 0 -2335px no-repeat; background-position: 0 -1168px; width: 27px; height: 26px; background-size: 347px 1571px; } }
+.icon-soups:after { background: url('../img/icons.png') 0 -1232px no-repeat; width: 27px; height: 26px; }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .icon-soups:after { background: url('../img/icons2x.png') 0 -2273px no-repeat; background-position: 0 -1137px; width: 27px; height: 26px; background-size: 347px 1571px; } }
 
-.icon-thai { background: url('../img/icons.png') 0 -1468px no-repeat; width: 38px; height: 32px; }
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .icon-thai { background: url('../img/icons2x.png') 0 -2957px no-repeat; background-position: 0 -1479px; width: 37px; height: 32px; background-size: 347px 1772px; } }
-.icon-thai:before { background: url('../img/icons.png') 0 -1426px no-repeat; width: 38px; height: 32px; }
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .icon-thai:before { background: url('../img/icons2x.png') 0 -2883px no-repeat; background-position: 0 -1442px; width: 37px; height: 32px; background-size: 347px 1772px; } }
+.icon-thai:before { background: url('../img/icons.png') 0 -1393px no-repeat; width: 38px; height: 32px; }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .icon-thai:before { background: url('../img/icons2x.png') 0 -2555px no-repeat; background-position: 0 -1278px; width: 37px; height: 32px; background-size: 347px 1571px; } }
+.icon-thai:after { background: url('../img/icons.png') 0 -1351px no-repeat; width: 38px; height: 32px; }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .icon-thai:after { background: url('../img/icons2x.png') 0 -2481px no-repeat; background-position: 0 -1241px; width: 37px; height: 32px; background-size: 347px 1571px; } }
 
-.icon-juices { background: url('../img/icons.png') 0 -1010px no-repeat; width: 25px; height: 25px; }
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .icon-juices { background: url('../img/icons2x.png') 0 -2137px no-repeat; background-position: 0 -1069px; width: 25.5px; height: 25.5px; background-size: 347px 1772px; } }
-.icon-juices:before { background: url('../img/icons.png') 0 -975px no-repeat; width: 25px; height: 25px; }
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .icon-juices:before { background: url('../img/icons2x.png') 0 -2076px no-repeat; background-position: 0 -1038px; width: 25.5px; height: 25.5px; background-size: 347px 1772px; } }
+.icon-juices:before { background: url('../img/icons.png') 0 -888px no-repeat; width: 25px; height: 25px; }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .icon-juices:before { background: url('../img/icons2x.png') 0 -1651px no-repeat; background-position: 0 -826px; width: 25.5px; height: 25.5px; background-size: 347px 1571px; } }
+.icon-juices:after { background: url('../img/icons.png') 0 -853px no-repeat; width: 25px; height: 25px; }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .icon-juices:after { background: url('../img/icons2x.png') 0 -1590px no-repeat; background-position: 0 -795px; width: 25.5px; height: 25.5px; background-size: 347px 1571px; } }
 
-.icon-deserts { background: url('../img/icons.png') 0 -176px no-repeat; width: 20px; height: 20px; }
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .icon-deserts { background: url('../img/icons2x.png') 0 -463px no-repeat; background-position: 0 -232px; width: 19px; height: 19.5px; background-size: 347px 1772px; } }
-.icon-deserts:before { background: url('../img/icons.png') 0 -146px no-repeat; width: 20px; height: 20px; }
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .icon-deserts:before { background: url('../img/icons2x.png') 0 -414px no-repeat; background-position: 0 -207px; width: 19px; height: 19.5px; background-size: 347px 1772px; } }
+.icon-deserts:before { background: url('../img/icons.png') 0 -294px no-repeat; width: 20px; height: 20px; }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .icon-deserts:before { background: url('../img/icons2x.png') 0 -463px no-repeat; background-position: 0 -232px; width: 19px; height: 19.5px; background-size: 347px 1571px; } }
+.icon-deserts:after { background: url('../img/icons.png') 0 -264px no-repeat; width: 20px; height: 20px; }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .icon-deserts:after { background: url('../img/icons2x.png') 0 -414px no-repeat; background-position: 0 -207px; width: 19px; height: 19.5px; background-size: 347px 1571px; } }
 
-.icon-drinks { background: url('../img/icons.png') 0 -261px no-repeat; width: 11px; height: 32px; }
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .icon-drinks { background: url('../img/icons2x.png') 0 -604px no-repeat; background-position: 0 -302px; width: 11px; height: 33px; background-size: 347px 1772px; } }
-.icon-drinks:before { background: url('../img/icons.png') 0 -219px no-repeat; width: 11px; height: 32px; }
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .icon-drinks:before { background: url('../img/icons2x.png') 0 -528px no-repeat; background-position: 0 -264px; width: 11px; height: 33px; background-size: 347px 1772px; } }
+.icon-drinks:before { background: url('../img/icons.png') 0 -379px no-repeat; width: 11px; height: 32px; }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .icon-drinks:before { background: url('../img/icons2x.png') 0 -604px no-repeat; background-position: 0 -302px; width: 11px; height: 33px; background-size: 347px 1571px; } }
+.icon-drinks:after { background: url('../img/icons.png') 0 -337px no-repeat; width: 11px; height: 32px; }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .icon-drinks:after { background: url('../img/icons2x.png') 0 -528px no-repeat; background-position: 0 -264px; width: 11px; height: 33px; background-size: 347px 1571px; } }
 
-.logo-small { position: absolute; top: 6.83594%; left: 5.85938%; background: url('../img/icons.png') 0 -1045px no-repeat; width: 128px; height: 111px; }
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .logo-small { background: url('../img/icons2x.png') 0 -2198px no-repeat; background-position: 0 -1099px; width: 128px; height: 111.5px; background-size: 347px 1772px; } }
+.logo-small { position: absolute; top: 6.83594%; left: 5.85938%; background: url('../img/icons.png') 0 -923px no-repeat; width: 128px; height: 111px; }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .logo-small { background: url('../img/icons2x.png') 0 -1712px no-repeat; background-position: 0 -856px; width: 128px; height: 111.5px; background-size: 347px 1571px; } }
 
-.menu-btn { position: absolute; top: 8px; left: 8px; background: url('../img/icons.png') 0 -1225px no-repeat; width: 48px; height: 49px; }
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .menu-btn { background: url('../img/icons2x.png') 0 -2537px no-repeat; background-position: 0 -1269px; width: 48px; height: 48px; background-size: 347px 1772px; } }
+.menu-btn { position: absolute; top: 8px; left: 8px; background: url('../img/icons.png') 0 -1103px no-repeat; width: 48px; height: 49px; }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .menu-btn { background: url('../img/icons2x.png') 0 -2051px no-repeat; background-position: 0 -1026px; width: 48px; height: 48px; background-size: 347px 1571px; } }
 
-.menu-container { position: absolute; top: 0; bottom: 0; right: 13.4%; width: 256px; background: #FFF; }
+.menu-container { position: absolute; z-index: 1; top: 0; bottom: 0; right: 13.4%; width: 25%; min-width: 256px; background: #FFF; }
 
-.menu { position: relative; }
+.menu-container__header { position: absolute; top: 0; left: 0; right: 0; z-index: 2; height: 75px; background: url("../img/svg/header.svg") no-repeat 50% 100%; background-size: cover; }
+.menu-container__header:before { content: ""; position: absolute; z-index: -1; top: 0; left: 0; right: 0; bottom: 3px; background: #FBB040; }
 
-.menu__header { background: url('../img/icons.png') 0 -303px no-repeat; width: 257px; height: 74px; }
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .menu__header { background: url('../img/icons2x.png') 0 -804px no-repeat; background-position: 0 -402px; width: 257px; height: 74.5px; background-size: 347px 1772px; } }
+.menu-container__footer { position: absolute; z-index: 2; bottom: 0; left: 0; right: 0; height: 7px; background: #FBB040; }
+.menu-container__footer:before { content: ""; position: absolute; bottom: 4px; right: 46.875%; background: url('../img/icons.png') 0 -1304px no-repeat; width: 75px; height: 37px; margin-right: -38px; }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .menu-container__footer:before { background: url('../img/icons2x.png') 0 -2397px no-repeat; background-position: 0 -1199px; width: 75.5px; height: 37px; background-size: 347px 1571px; } }
+.menu-container__footer:after { content: ""; position: absolute; bottom: 0; left: 0; right: 0; height: 10px; background: url("../img/svg/footer.svg") no-repeat 50% 0%; background-size: cover; }
+
+.menu-container__content { height: 100%; overflow: auto; -webkit-overflow-scrolling: touch; }
+
+.menu-container__close { position: absolute; z-index: 4; top: 50px; left: -25px; background: url('../img/icons.png') 0 -113px no-repeat; width: 65px; height: 49px; }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .menu-container__close { background: url('../img/icons2x.png') 0 -201px no-repeat; background-position: 0 -101px; width: 65.5px; height: 49.5px; background-size: 347px 1571px; } }
+.menu-container__close:before { opacity: 0; content: ""; position: absolute; top: 0; left: 0; background: url('../img/icons.png') 0 -54px no-repeat; width: 65px; height: 49px; -webkit-transition: opacity 0.1s linear; transition: opacity 0.1s linear; }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .menu-container__close:before { background: url('../img/icons2x.png') 0 -92px no-repeat; background-position: 0 -46px; width: 65.5px; height: 49.5px; background-size: 347px 1571px; } }
+.menu-container__close:hover:before, .menu-container__close:active:before { opacity: 1; }
+
+.menu { padding: 75px 0 50px; }
+
+.menu__head { position: absolute; z-index: 3; top: 0; left: 0; right: 0; height: 75px; line-height: 70px; text-align: center; }
+.menu__head:before { content: ""; display: inline-block; vertical-align: middle; background: url('../img/icons.png') 0 -421px no-repeat; width: 235px; height: 44px; }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .menu__head:before { background: url('../img/icons2x.png') 0 -804px no-repeat; background-position: 0 -402px; width: 235.5px; height: 44.5px; background-size: 347px 1571px; } }
+
+.menu__title { position: relative; padding: 13px 15px; font-family: "wisdom_script", Arial, sans-serif; font-weight: normal; font-size: 20px; text-align: center; line-height: 1.1; }
+.menu__title > strong { display: inline-block; font-weight: normal; position: relative; min-width: 110px; background: #fff; }
+
+.menu__list { border: dashed #FDE5C6; border-width: 1px 0; border-bottom-color: #FBD196; }
+
+.menu-item { display: table; table-layout: fixed; width: 100%; -moz-box-sizing: border-box; box-sizing: border-box; padding: 15px; border: dashed #FBD196; border-width: 1px 0; border-bottom-color: #FDE5C6; font-family: "lunchbox_bold", Arial, sans-serif; font-weight: normal; font-size: 15px; line-height: 1.1; text-transform: uppercase; }
+
+.menu-item__price { display: table-cell; text-align: right; width: 30px; }
+
+.menu-item__name { display: table-cell; }
+.menu-item__name small { font-size: 15px; text-transform: none; }
 
 /*# sourceMappingURL=screen.css.map */
