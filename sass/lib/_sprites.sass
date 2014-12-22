@@ -1,6 +1,6 @@
 //	sprites with padding
 $icons: sprite-map("icons/*.png", $spacing: 10px)
-$icons-retina: sprite-map("icons2x/*.png", $spacing: 10px)
+$icons-retina: sprite-map("icons@2x/*.png", $spacing: 10px)
 
 // sized sprites
 =image-size($path)
@@ -39,6 +39,12 @@ $icons-retina: sprite-map("icons2x/*.png", $spacing: 10px)
 	+background-size(ceil(image-width(sprite-path($map)) / 2), ceil(image-height(sprite-path($map)) / 2))
 
 //only image, when dimensions are useless
+=sri($sprite, $map: $icons-retina)
+	background: sprite($map, $sprite) no-repeat
+	$ypos: round(nth(sprite-position($map, $sprite), 2) / 2)
+	background-position: 0 $ypos
+	+background-size(ceil(image-width(sprite-path($map)) / 2), ceil(image-height(sprite-path($map)) / 2))
+
 =si($sprite, $map: $icons)
 	background: sprite($map, $sprite) no-repeat
 

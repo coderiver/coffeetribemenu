@@ -1,1 +1,1 @@
-{"version":3,"file":"common-min.js","sources":["../common.js"],"names":["head","ready","$","lettering"],"mappings":"AAAAA,KAAKC,MAAM,WAgCTC,EAAE,gBAAgBC"}
+{"version":3,"file":"common-min.js","sources":["../common.js"],"names":["head","ready","$","on","removeClass","this","addClass"],"mappings":"AAAAA,KAAKC,MAAM,WAETC,EAAE,cAAcC,GAAG,QAAS,WAC1BD,EAAE,cAAcE,YAAY,aAC5BF,EAAEG,MAAMC,SAAS"}

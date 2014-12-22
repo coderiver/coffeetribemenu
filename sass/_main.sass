@@ -159,18 +159,22 @@
   left: 0
   right: 0
   z-index: 2
-  height: 75px
-  background: url('../img/svg/header.svg') no-repeat 50% 100%
-  background-size: cover
+  height: 72px
+  margin-bottom: 3px
+  background-color: #FBB040
   &:before
     content: ""
     position: absolute
-    z-index: -1
-    top: 0
+    top: 100%
     left: 0
     right: 0
-    bottom: 3px
-    background: #FBB040
+    height: 3px
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAADBAMAAAC30eh4AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAMFBMVEX7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED///9YO3W5AAAADnRSTlMAse3mrxO1oAoCa8zFWdaHlTYAAAABYktHRA8YugDZAAAACXBIWXMAAAsSAAALEgHS3X78AAAAHklEQVQI12MQevfu3WMHBta8d+8qGBgYZm0+y8AAAGr9COHi16J8AAAAAElFTkSuQmCC')
+    background-repeat: repeat-x
+    background-position: top left
+    +retina
+      background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAFCAMAAACdH1c/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAWlBMVEX7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED////a77EOAAAAHHRSTlMAXZPtx3RVFa7zWwGB/t4tTOOmFAtjqs/Ywo82hAOaHwAAAAFiS0dEHesDcZEAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAA4SURBVAjXY2BkYpZBBSysbAwMDOwcyGKcXAwQwM3DCxfk42eAAwFBqKCQMAMSEBEVE5eQlJKGcgGJaQYvFcq+EgAAAABJRU5ErkJggg==')
+      background-size: 11px 3px
 
 .menu-container__footer
   position: absolute
@@ -180,8 +184,7 @@
   right: 0
   height: 7px
   background: #FBB040
-  &:before
-    content: ""
+  .sun
     position: absolute
     bottom: 4px
     right: percentage(120/256)
@@ -190,16 +193,19 @@
   &:after
     content: ""
     position: absolute
-    bottom: 0
+    bottom: 100%
     left: 0
     right: 0
-    height: 10px
-    background: url('../img/svg/footer.svg') no-repeat 50% 0%
-    background-size: cover
+    height: 3px
+    background-image: url('../img/wave-bottom.png')
+    background-repeat: repeat-x
+    background-position: bottom left
+    +retina
+      background-image: url('../img/wave-bottom@2x.png')
+      background-size: 11px 3px
 
 .menu-container__content
   height: 100%
-  overflow: auto
   -webkit-overflow-scrolling: touch
 
 .menu-container__close
@@ -241,16 +247,32 @@
 
 .menu__title
   position: relative
-  padding: 13px 15px
+  padding: 13px 16px
   +wisdom
   font-size: 20px
   text-align: center
   line-height: 1.1
+  &:before
+    content: ""
+    position: absolute
+    top: 50%
+    left: 16px
+    right: 16px
+    height: 4px
+    margin-top: -2px
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAECAMAAABvJDXBAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAVFBMVEX7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED///8Xk/46AAAAG3RSTlMAAj1lVQ8bveq40exPMuejDFjxlj7eyl0mqeTKVND0AAAAAWJLR0QbAmDUpAAAAAlwSFlzAAALEgAACxIB0t1+/AAAADBJREFUCNdjYGBgYGRiZmFlAAM2dg5OLm4eIIuXmY9fgIFBUEhYhEFUTBwsKyEpBQAWIwFjCIqrtwAAAABJRU5ErkJggg==')
+    // background-image: url('../img/wave.png')
+    background-repeat: repeat-x
+    background-position: 0 50%
+    +retina
+      background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAHCAMAAADQ1/Y0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAmVBMVEX7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED///+ZUh9iAAAAMXRSTlMABlyp0d3KnEYBQNvEIm37+qxxZnq/7UQQn80rSOd3BGqW66cJHIrzcP3Xt3YWKYjAEQTjGgAAAAFiS0dEMkDSTMgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAABmSURBVAjXY2CAAEYmZhZWNnYOTgYkwMVtCAE8vAhBPn5DAUEhYRFRQ0MxcaiYhKShoZQ0mCkja8gvJ8/AIKygqGRoqKwCVaEqZWjIrcYAMkxdA2GJiqKmoSEDt5a2ji6yxQx6+gYAexUJoAAP8NsAAAAASUVORK5CYII=')
+      // background-image: url('../img/wave@2x.png')
+      background-size: 11px 4px
   & > strong
     display: inline-block
     font-weight: normal
     position: relative
-    min-width: 110px
+    padding: 0 16px
     background: #fff
 
 
@@ -261,11 +283,9 @@
 
 
 .menu-item
-  display: table
-  table-layout: fixed
-  width: 100%
+  position: relative
   box-sizing: border-box
-  padding: 15px
+  padding: 15px 16px
   border: dashed #FBD196
   border-width: 1px 0
   border-bottom-color: #FDE5C6
@@ -273,14 +293,23 @@
   font-size: 15px
   line-height: 1.1
   text-transform: uppercase
+  &.is-active
+    background: #f47134
+    &:before
+      content: ""
+      position: absolute
+      top: 50%
+      right: 100%
+      +arr(5,14,#f47134,l)
+      margin-top: -7px
 
 .menu-item__price
-  display: table-cell
+  float: right
+  width: 32px
   text-align: right
-  width: 30px
 
 .menu-item__name
-  display: table-cell
+  margin-right: 37px
   small
     font-size: 15px
     text-transform: none
