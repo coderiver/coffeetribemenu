@@ -15,14 +15,15 @@
     right: 0
     bottom: 0
     background: rgba(0,0,0,0.3)
-  &.bg_welcome
-    &:after
-      content: ""
-      position: absolute
-      +sprite(welcome)
-      top: 50%
-      left: 50%
-      transform: translateX(-50%) translateY(-50%)
+
+.center-logo
+  position: absolute
+  +sprite(welcome)
+  top: 50%
+  left: 50%
+  transform: translateX(-50%) translateY(-50%)
+  .menu-is-open &
+    left: 35%
 
 
 .category-list
@@ -184,28 +185,45 @@
   right: 0
   height: 7px
   background: #FBB040
-  .sun
+  &:before
+    content: ""
     position: absolute
+    z-index: 1
     bottom: 4px
     right: percentage(120/256)
     +sprite(sun)
     margin-right: -38px
-  &:after
-    content: ""
+  .wave
     position: absolute
-    bottom: 100%
+    z-index: 2
+    bottom: 0
     left: 0
     right: 0
-    height: 3px
-    background-image: url('../img/wave-bottom.png')
-    background-repeat: repeat-x
-    background-position: bottom left
-    +retina
-      background-image: url('../img/wave-bottom@2x.png')
-      background-size: 11px 3px
+    height: 7px
+    background: #FBB040
+    &:before
+      content: ""
+      position: absolute
+      bottom: 100%
+      left: 0
+      right: 0
+      height: 3px
+      background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAADBAMAAABYE4NGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAALVBMVEX7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED///8p3G2RAAAADXRSTlMAFZzj568nRPRiyv7VCedRxAAAAAFiS0dEDm+9ME8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAbSURBVAjXY2AQMgljYGD3vXtjAsPqu3fv3gEAKq4HVKztdg8AAAAASUVORK5CYII=')
+      // background-image: url('../img/wave-bottom.png')
+      background-repeat: repeat-x
+      background-position: bottom left
+      +retina
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAFCAMAAACdH1c/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAXVBMVEX7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED///88KWGCAAAAHXRSTlMAIITE4eTLjy0DfPj9lQsQuM8eNNjoSXu1/MaAZyoVYIQAAAABYktHRB5yCiArAAAACXBIWXMAAAsSAAALEgHS3X78AAAAOklEQVQI12NgAANGJmYWVjZ2DgYkwMnFLQsGPLx8cEF+AVk4EBSCCgqLyCIBUTGQmLiEpCwqkJKWAQD10gZ2rl7PtgAAAABJRU5ErkJggg==')
+        // background-image: url('../img/wave-bottom@2x.png')
+        background-size: 11px 3px
 
 .menu-container__content
   height: 100%
+  padding: 75px 0 50px
+  box-sizing: border-box
+  max-height: 100%
+  overflow-x: visible
+  overflow-y: auto
   -webkit-overflow-scrolling: touch
 
 .menu-container__close
@@ -226,9 +244,10 @@
     &:before
       opacity: 1
 
-
 .menu
-  padding: 75px 0 50px
+  // padding: 75px 0 50px
+  // box-sizing: border-box
+  // max-height: 100%
 
 .menu__head
   position: absolute
