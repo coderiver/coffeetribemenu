@@ -9,9 +9,20 @@ block content
     .bg
       .center-logo
 
+    .overlay
+
     button.menu-btn
 
     .logo-small
+
+    .info
+      .info__name
+        | « <small>Les</small> Plaisirs Simples <small>de la</small> Vie »
+      | French toast with maple syrup
+      | Volume 150gr., Calories 155.15 kkg
+      | Hot Serving, Not Spice.
+
+    .photo(style="background-image:url('img/photo.jpg')")
 
     //begin category
     ul.category-list
@@ -26,7 +37,7 @@ block content
             i.icon.icon-breakfast
             span breakfast
       li.category-list__cell
-        a(href="#").category.is-active
+        a(href="#").category
           .category__in
             i.icon.icon-salad
             span salad bar
@@ -59,11 +70,13 @@ block content
 
     //begin menu
     .menu-container
-      button.menu-container__close
+      button.menu-container__close.js-hide-menu
       header.menu-container__header
+        span.header-breakfast
+        img(src="img/headers/breakfast.png", alt="breakfast")
       .menu-container__content
-        .menu.menu_coffee
-          .menu__head
+        .menu
+          //- .menu__head
           .menu__title
             strong Breakfast
           ul.menu__list
@@ -123,6 +136,6 @@ block content
                 | 45
       footer.menu-container__footer
         span.wave
-
     //end menu
+
   //end out
