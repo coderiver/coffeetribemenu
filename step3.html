@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>menu</title>
-    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
@@ -25,32 +25,56 @@
       Hot Serving, Not Spice.
     </div>
     <div style="background-image:url('img/photo.jpg')" class="photo"></div>
-    <!--begin category-->
+    <!--begin categories-->
     <ul class="category-list">
-      <li class="category-list__cell"><a href="#" class="category">
-          <div class="category__in"><i class="icon icon-coffee"></i><span>coffee</span></div></a></li>
-      <li class="category-list__cell"><a href="#" class="category">
-          <div class="category__in"><i class="icon icon-breakfast"></i><span>breakfast</span></div></a></li>
-      <li class="category-list__cell"><a href="#" class="category">
-          <div class="category__in"><i class="icon icon-salad"></i><span>salad bar</span></div></a></li>
-      <li class="category-list__cell"><a href="#" class="category">
-          <div class="category__in"><i class="icon icon-soups"></i><span>soups& sandwiches</span></div></a></li>
-      <li class="category-list__cell"><a href="#" class="category">
-          <div class="category__in"><i class="icon icon-thai"></i><span>thai corner</span></div></a></li>
-      <li class="category-list__cell"><a href="#" class="category">
-          <div class="category__in"><i class="icon icon-juices"></i><span>juices& smoothies</span></div></a></li>
-      <li class="category-list__cell"><a href="#" class="category">
-          <div class="category__in"><i class="icon icon-deserts"></i><span>deserts& gelato</span></div></a></li>
-      <li class="category-list__cell"><a href="#" class="category">
-          <div class="category__in"><i class="icon icon-drinks"></i><span>drinks</span></div></a></li>
+      <li class="category-list__cell">
+        <div data-menu="coffee" class="category">
+          <div class="category__in"><i class="icon icon-coffee"></i><span>coffee</span></div>
+        </div>
+      </li>
+      <li class="category-list__cell">
+        <div data-menu="breakfast" class="category">
+          <div class="category__in"><i class="icon icon-breakfast"></i><span>breakfast</span></div>
+        </div>
+      </li>
+      <li class="category-list__cell">
+        <div data-menu="salad-bar" class="category">
+          <div class="category__in"><i class="icon icon-salad"></i><span>salad bar</span></div>
+        </div>
+      </li>
+      <li class="category-list__cell">
+        <div data-menu="soups-sandwiches" class="category">
+          <div class="category__in"><i class="icon icon-soups"></i><span>soups& sandwiches</span></div>
+        </div>
+      </li>
+      <li class="category-list__cell">
+        <div data-menu="thai-corner" class="category">
+          <div class="category__in"><i class="icon icon-thai"></i><span>thai corner</span></div>
+        </div>
+      </li>
+      <li class="category-list__cell">
+        <div data-menu="juices-smoothies" class="category">
+          <div class="category__in"><i class="icon icon-juices"></i><span>juices& smoothies</span></div>
+        </div>
+      </li>
+      <li class="category-list__cell">
+        <div data-menu="deserts-gelato" class="category">
+          <div class="category__in"><i class="icon icon-deserts"></i><span>deserts& gelato</span></div>
+        </div>
+      </li>
+      <li class="category-list__cell">
+        <div data-menu="drinks" class="category">
+          <div class="category__in"><i class="icon icon-drinks"></i><span>drinks</span></div>
+        </div>
+      </li>
     </ul>
-    <!--end category-->
+    <!--end categories-->
     <!--begin menu-->
     <div class="menu-container">
       <button class="menu-container__close js-hide-menu"></button>
       <header class="menu-container__header"><span class="header-breakfast"></span><img src="img/headers/breakfast.png" alt="breakfast"></header>
-      <div class="menu-container__content">
-        <div class="menu">
+      <div data-menu="coffee" class="menu">
+        <div class="menu__inner">
           <div class="menu__title"><strong>Breakfast</strong></div>
           <ul class="menu__list">
             <li class="menu-item"><span class="menu-item__price">159</span><span class="menu-item__name">«Short Stack Jack»</span></li>
@@ -66,6 +90,81 @@
           <div class="menu__title"><strong>Fresh</strong></div>
           <ul class="menu__list">
             <li class="menu-item"><span class="menu-item__name">Plain Croissant, Pain Au Chocolat, Pain Au Raisin, Cinnamon Roll, Apple, Blueberry or Cherry Danish</span><span class="menu-item__price">45</span></li>
+          </ul>
+        </div>
+      </div>
+      <div data-menu="breakfast" class="menu">
+        <div class="menu__inner">
+          <div class="menu__title"><strong>Breakfast</strong></div>
+          <ul class="menu__list">
+            <li class="menu-item"><span class="menu-item__price">159</span><span class="menu-item__name">«Short Stack Jack»</span></li>
+            <li class="menu-item is-active"><span class="menu-item__price">159</span><span class="menu-item__name">«<small>Les</small> Plaisirs Simples <small>de la</small> Vie»</span></li>
+            <li class="menu-item"><span class="menu-item__price">454</span><span class="menu-item__name">«Good Morning, Amigo!»</span></li>
+            <li class="menu-item"><span class="menu-item__price">454</span><span class="menu-item__name">«Wake Up and Go»</span></li>
+            <li class="menu-item"><span class="menu-item__price">3450</span><span class="menu-item__name">«Sabai Sabai Breakfast»</span></li>
+            <li class="menu-item"><span class="menu-item__price">99999</span><span class="menu-item__name">«Hangover Paradisee»</span></li>
+          </ul>
+        </div>
+      </div>
+      <div data-menu="salad-bar" class="menu">
+        <div class="menu__inner">
+          <div class="menu__title"><strong>Breakfast</strong></div>
+          <ul class="menu__list">
+            <li class="menu-item"><span class="menu-item__price">159</span><span class="menu-item__name">«Short Stack Jack»</span></li>
+            <li class="menu-item is-active"><span class="menu-item__price">159</span><span class="menu-item__name">«<small>Les</small> Plaisirs Simples <small>de la</small> Vie»</span></li>
+            <li class="menu-item"><span class="menu-item__price">1259</span><span class="menu-item__name">«Energizer  Bunny»</span></li>
+            <li class="menu-item"><span class="menu-item__price">9</span><span class="menu-item__name">«Rise and Shine»</span></li>
+            <li class="menu-item"><span class="menu-item__price">2290</span><span class="menu-item__name">«Northern Exposure»</span></li>
+            <li class="menu-item"><span class="menu-item__price">454</span><span class="menu-item__name">«Good Morning, Amigo!»</span></li>
+            <li class="menu-item"><span class="menu-item__price">454</span><span class="menu-item__name">«Wake Up and Go»</span></li>
+            <li class="menu-item"><span class="menu-item__price">3450</span><span class="menu-item__name">«Sabai Sabai Breakfast»</span></li>
+            <li class="menu-item"><span class="menu-item__price">99999</span><span class="menu-item__name">«Hangover Paradisee»</span></li>
+          </ul>
+          <div class="menu__title"><strong>Fresh</strong></div>
+          <ul class="menu__list">
+            <li class="menu-item"><span class="menu-item__name">Plain Croissant, Pain Au Chocolat, Pain Au Raisin, Cinnamon Roll, Apple, Blueberry or Cherry Danish</span><span class="menu-item__price">45</span>
+              <li class="menu-item"><span class="menu-item__price">2290</span><span class="menu-item__name">«Northern Exposure»</span></li>
+              <li class="menu-item"><span class="menu-item__price">454</span><span class="menu-item__name">«Good Morning, Amigo!»</span></li>
+              <li class="menu-item"><span class="menu-item__price">454</span><span class="menu-item__name">«Wake Up and Go»</span></li>
+              <li class="menu-item"><span class="menu-item__price">3450</span><span class="menu-item__name">«Sabai Sabai Breakfast»</span></li>
+              <li class="menu-item"><span class="menu-item__price">99999</span><span class="menu-item__name">«Hangover Paradisee»</span></li>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div data-menu="soups-sandwiches" class="menu">
+        <div class="menu__inner">
+          <div class="menu__title"><strong>Breakfast</strong></div>
+          <ul class="menu__list">
+            <li class="menu-item"><span class="menu-item__price">454</span><span class="menu-item__name">«Wake Up and Go»</span></li>
+            <li class="menu-item"><span class="menu-item__price">3450</span><span class="menu-item__name">«Sabai Sabai Breakfast»</span></li>
+            <li class="menu-item"><span class="menu-item__price">99999</span><span class="menu-item__name">«Hangover Paradisee»</span></li>
+          </ul>
+          <div class="menu__title"><strong>Fresh</strong></div>
+          <ul class="menu__list">
+            <li class="menu-item"><span class="menu-item__name">Plain Croissant, Pain Au Chocolat, Pain Au Raisin, Cinnamon Roll, Apple, Blueberry or Cherry Danish</span><span class="menu-item__price">45</span>
+              <li class="menu-item"><span class="menu-item__price">2290</span><span class="menu-item__name">«Northern Exposure»</span></li>
+              <li class="menu-item"><span class="menu-item__price">454</span><span class="menu-item__name">«Good Morning, Amigo!»</span></li>
+              <li class="menu-item"><span class="menu-item__price">454</span><span class="menu-item__name">«Wake Up and Go»</span></li>
+              <li class="menu-item"><span class="menu-item__price">3450</span><span class="menu-item__name">«Sabai Sabai Breakfast»</span></li>
+              <li class="menu-item"><span class="menu-item__price">99999</span><span class="menu-item__name">«Hangover Paradisee»</span></li>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div data-menu="soups-sandwiches" class="menu">
+        <div class="menu__inner">
+          <div class="menu__title"><strong>Breakfast</strong></div>
+          <ul class="menu__list">
+            <li class="menu-item"><span class="menu-item__price">454</span><span class="menu-item__name">«Wake Up and Go»</span></li>
+            <li class="menu-item"><span class="menu-item__price">3450</span><span class="menu-item__name">«Sabai Sabai Breakfast»</span></li>
+            <li class="menu-item"><span class="menu-item__price">99999</span><span class="menu-item__name">«Hangover Paradisee»</span></li>
+          </ul>
+          <div class="menu__title"><strong>Fresh</strong></div>
+          <ul class="menu__list">
+            <li class="menu-item">
+              <li class="menu-item"><span class="menu-item__price">454</span><span class="menu-item__name">«Good Morning, Amigo!»</span></li>
+            </li>
           </ul>
         </div>
       </div>

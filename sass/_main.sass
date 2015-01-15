@@ -21,8 +21,8 @@
   +sprite(welcome)
   top: 50%
   left: 50%
-  transform: translateX(-50%) translateY(-50%)
-  +tr(all 0.2s linear)
+  +transform(translate3d(-50%, -50%, 0))
+  +tr(all 0.7s linear)
   .menu-is-open &
     left: 35%
 
@@ -67,6 +67,8 @@
   text-transform: uppercase
   white-space: nowrap
   line-height: 1
+  cursor: pointer
+  +user-select(none)
   +vertical
   &:after
     display: none
@@ -155,14 +157,14 @@
   bottom: 0
   right: 13.4%
   width: 25%
-  min-width: 256px
+  // min-width: 256px
   background: #FFF
   color: #1A1818
-  +tr(all 0.2s linear)
-  +transform(translateX(200%))
+  +tr(all 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55))
+  +transform(translate3d(200%, 0, 0))
   opacity: 0
   &.is-visible
-    +transform(translateX(0))
+    +transform(translate3d(0, 0, 0))
     opacity: 1
 
 .menu-container__header
@@ -233,14 +235,14 @@
         // background-image: url('../img/wave-bottom@2x.png')
         background-size: 11px 3px
 
-.menu-container__content
-  height: 100%
-  padding: 75px 0 50px
-  box-sizing: border-box
-  max-height: 100%
-  overflow-x: visible
-  overflow-y: auto
-  -webkit-overflow-scrolling: touch
+// .menu-container__content
+//   height: 100%
+//   margin-left: -6px
+//   padding: 75px 0 50px 6px
+//   box-sizing: border-box
+//   overflow-x: visible
+//   overflow-y: auto
+//   -webkit-overflow-scrolling: touch
 
 .menu-container__close
   position: absolute
@@ -260,10 +262,26 @@
     &:before
       opacity: 1
 
-// .menu
-  // padding: 75px 0 50px
-  // box-sizing: border-box
-  // max-height: 100%
+.menu
+  position: absolute
+  z-index: -1
+  top: 70px
+  left: 0
+  right: 0
+  bottom: 0
+  opacity: 0
+  margin-left: -6px
+  padding: 0 0 50px 6px
+  overflow-x: visible
+  overflow-y: auto
+  -webkit-overflow-scrolling: touch
+  +tr(all 0.2s linear)
+  +transform(scale(0.8))
+  &.is-visible
+    opacity: 1
+    z-index: 1
+    +transform(scale(1))
+
 
 // .menu__head
 //   position: absolute
