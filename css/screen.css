@@ -159,8 +159,8 @@ body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; min-wi
 .menu-btn { position: absolute; z-index: 2; top: 8px; left: 8px; background: url('../img/icons.png') 0 -684px no-repeat; width: 48px; height: 49px; }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .menu-btn { background: url('../img/icons@2x.png') 0 -1282px no-repeat; background-position: 0 -641px; width: 48px; height: 48px; background-size: 347px 1187px; } }
 
-.menu-container { position: absolute; z-index: 2; top: 0; bottom: 0; right: 13.4%; width: 25%; background: #FFF; color: #1A1818; -webkit-transition: all 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55); transition: all 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55); -ms-transform: translate3d(200%, 0, 0); -webkit-transform: translate3d(200%, 0, 0); transform: translate3d(200%, 0, 0); opacity: 0; }
-.menu-container.is-visible { -ms-transform: translate3d(0, 0, 0); -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); opacity: 1; }
+.menu-container { position: absolute; z-index: 2; top: 0; bottom: 0; right: 13.4%; width: 25%; background: #FFF; color: #1A1818; -webkit-transition: all 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55); transition: all 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55); -ms-transform: translate3d(200%, 0, 0) scale(0.1); -webkit-transform: translate3d(200%, 0, 0) scale(0.1); transform: translate3d(200%, 0, 0) scale(0.1); -webkit-transform-origin: 100% 100%; -ms-transform-origin: 100% 100%; transform-origin: 100% 100%; opacity: 0; }
+.menu-container.is-visible { -ms-transform: translate3d(0, 0, 0) scale(1); -webkit-transform: translate3d(0, 0, 0) scale(1); transform: translate3d(0, 0, 0) scale(1); opacity: 1; }
 
 .menu-container__header { position: absolute; top: 0; left: 0; right: 0; z-index: 2; height: 72px; line-height: 72px; margin-bottom: 3px; background-color: #FBB040; text-align: center; font-size: 0; }
 .menu-container__header:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
@@ -199,6 +199,8 @@ body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; min-wi
 
 .menu-item__name { margin-right: 37px; }
 .menu-item__name small { font-size: 15px; text-transform: none; }
+
+.menu-item__about { display: none; }
 
 .overlay { opacity: 0; position: absolute; z-index: 0; top: 0; left: 0; bottom: 0; right: 38%; background: #000; color: #FFF; -webkit-transition: opacity 0.2s linear; transition: opacity 0.2s linear; }
 .overlay.is-visible { opacity: 1; }

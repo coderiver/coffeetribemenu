@@ -1,85 +1,47 @@
 head.ready(function() {
 
-    // if ( $('html').hasClass('touch') ) {
-    //     // $('.menu-item').on('touchstart', function() {
-    //     //   $('.menu-item').removeClass('is-active');
-    //     //   $(this).addClass('is-active');
-    //     // });
-    //     $('.category').on('touchstart', function() {
-    //         $('.category').removeClass('is-active');
-    //         $(this).addClass('is-active');
-    //         $('.menu-container').addClass('is-visible');
-    //         $('.out').addClass('menu-is-open');
-    //     });
-
-    // } else {
-
-    //     $('.category').on('click', function() {
-    //         $('.category').removeClass('is-active');
-    //         $(this).addClass('is-active');
-    //         $('.menu-container').addClass('is-visible');
-    //         $('.out').addClass('menu-is-open');
-    //     });
-    // }
-
-    // $('.menu-item').on('click', function() {
-    //     $('.menu-item').removeClass('is-active');
-    //     $(this).addClass('is-active');
-    //     $('.overlay').addClass('is-visible');
-    //     $('.photo').addClass('is-visible');
-    //     $('.info').addClass('is-visible');
-    // });
-
-    // $('.js-hide-menu').on('click', function() {
-    //     $('.overlay').removeClass('is-visible');
-    //     $('.photo').removeClass('is-visible');
-    //     $('.info').removeClass('is-visible');
-    //     $('.menu-container').removeClass('is-visible');
-    //     $('.out').removeClass('menu-is-open');
-    //     $('.category').removeClass('is-active');
-    // });
-
     (function() {
-        var root          = $('.out'),
-            category      = $('.category'),
-            menuContainer = $('.menu-container'),
-            closeBtn      = menuContainer.find('.menu-container__close'),
-            menu          = $('.menu'),
-            menuList      = [],
-            info          = {
-                main: $('.info'),
-                name: $('.info__name'),
-                text: $('.info__text')
-            },
+        var app              = $('.out'),
+            category         = $('.category'),
+            menuContainer    = $('.menu-container'),
+            closeBtn         = menuContainer.find('.menu-container__close'),
+            menu             = $('.menu'),
+            menuItemSelector = '.menu-item',
+            menuList         = [],
+            infoBlock        = $('.info'),
+            infoBlockName    = infoBlock.find('.info__name'),
+            infoBlockText    = infoBlock.find('.info__text'),
+            photo            = $('.photo'),
+            overlay          = $('.overlay'),
+            activeMenu,
+            menuItems,
             classes = {
                 visible  : 'is-visible',
                 active   : 'is-active',
-                menuOpen : 'menu-is-open'
-            },
-            photo         = $('.photo'),
-            overlay       = $('.overlay'),
-            lastOpenedMenu;
+                menuOpen : 'menu-is-open',
+                infoOpen : 'info-is-open'
+            };
 
         closeBtn.on('click', function() {
             hideMenuContainer();
+            hideInfoBlock();
+            setTimeout(function() {
+                menuItems.removeClass(classes.active);
+            }, 300);
         });
 
         menu.each(function(index) {
             var el        = $(this),
                 elName    = el.data('menu'),
-                menuItems = el.find('.menu-item');
+                menuItems = el.find(menuItemSelector);
 
             menuList[elName] = el;
-
-            menuItems.on('click', function() {
-                menuItems.removeClass(classes.active);
-                $(this).addClass(classes.active);
-            });
         });
 
         function showMenu(el) {
             el.addClass(classes.visible);
             lastOpenedMenu = el;
+            activeMenu = el;
         }
 
         function hideMenu(el) {
@@ -88,45 +50,76 @@ head.ready(function() {
 
         function showMenuContainer() {
             menuContainer.addClass(classes.visible);
-            root.addClass(classes.menuOpen);
+            app.addClass(classes.menuOpen);
         }
 
         function hideMenuContainer() {
             menuContainer.removeClass(classes.visible);
-            root.removeClass(classes.menuOpen);
+            app.removeClass(classes.menuOpen);
             category.removeClass(classes.active);
         }
 
-        function showInfo(text, photo) {
+        function showInfoBlock() {
             overlay.addClass(classes.visible);
             photo.addClass(classes.visible);
-            info.addClass(classes.visible);
+            infoBlock.addClass(classes.visible);
+            app.addClass(classes.infoOpen);
         }
 
-        function hideInfo() {
+        function hideInfoBlock() {
             overlay.removeClass(classes.visible);
             photo.removeClass(classes.visible);
-            info.removeClass(classes.visible);
+            infoBlock.removeClass(classes.visible);
+            app.removeClass(classes.infoOpen);
         }
 
-        // function showInfo(activeMenu) {
-        //     $(activeMenu).find('.menu__items').
-        // }
+        function calculateOrigin(category) {
+            var c = category,
+                originY = ((category.offset().top + category.height() / 2) / $(window).height() * 100).toFixed(0);
+                console.log(originY);
+            menuContainer.css({
+                '-webkit-transform-origin' : '100% ' + originY + '%',
+                        'transform-origin' : '100% ' + originY + '%'
+            });
+        }
+
+        function menuFunctionality() {
+            menuItems = activeMenu.find(menuItemSelector);
+            var menuItemInfo = {};
+
+            menuItems.on('click', function() {
+                menuItems.removeClass(classes.active);
+                $(this).addClass(classes.active);
+                // get info about current menu item
+                menuItemInfo.name = $(this).find('.menu-item__name').html();
+                menuItemInfo.text = $(this).find('.menu-item__about').text();
+                // write info about current menu item to info block
+                infoBlockName.html(menuItemInfo.name);
+                infoBlockText.html(menuItemInfo.text);
+
+                if ( !app.hasClass(classes.infoOpen) ) {
+                    showInfoBlock();
+                }
+            });
+        }
 
         category.each(function() {
             var el         = $(this);
             var targetMenu = el.data('menu');
+
             el.on('click', function(event) {
                 event.preventDefault();
                 category.removeClass(classes.active);
                 el.addClass(classes.active);
-                if (!menuContainer.hasClass(classes.visible)) {
+                if ( !menuContainer.hasClass(classes.visible) ) {
                     showMenuContainer();
                 }
-                if (lastOpenedMenu) {
-                    hideMenu(lastOpenedMenu);
+                if ( activeMenu ) {
+                    hideMenu(activeMenu);
                 }
                 showMenu(menuList[targetMenu]);
+                menuFunctionality();
+                calculateOrigin(el);
             });
         });
 

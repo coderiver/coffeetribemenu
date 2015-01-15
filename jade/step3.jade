@@ -17,10 +17,7 @@ block content
 
     .info
       .info__name
-        | « <small>Les</small> Plaisirs Simples <small>de la</small> Vie »
-      | French toast with maple syrup
-      | Volume 150gr., Calories 155.15 kkg
-      | Hot Serving, Not Spice.
+      .info__text
 
     .photo(style="background-image:url('img/photo.jpg')")
 
@@ -72,8 +69,15 @@ block content
     .menu-container
       button.menu-container__close.js-hide-menu
       header.menu-container__header
-        span.header-breakfast
-        img(src="img/headers/breakfast.png", alt="breakfast")
+        span.icon-head-coffee(data-menu="coffee")
+        span.icon-head-breakfast(data-menu="breakfast")
+        span.icon-head-salad-bar(data-menu="salad-bar")
+        span.icon-head-soups-sandwiches(data-menu="soups-sandwiches")
+        span.icon-head-thai-corner(data-menu="thai-corner")
+        span.icon-head-juices-smoothies(data-menu="juices-smoothies")
+        span.icon-head-deserts-gelato(data-menu="deserts-gelato")
+        span.icon-head-drinks(data-menu="drinks")
+        //- img(src="img/headers/breakfast.png", alt="breakfast")
 
       .menu(data-menu="coffee")
         .menu__inner
@@ -85,11 +89,18 @@ block content
                 | 159
               span.menu-item__name
                 | «Short Stack Jack»
-            li.menu-item.is-active
+              span.menu-item__about
+                | French toast with maple syrup
+                | Volume 150gr., Calories 155.15 kkg
+                | Hot Serving, Not Spice.
+            li.menu-item
               span.menu-item__price
                 | 159
               span.menu-item__name
                 | «<small>Les</small> Plaisirs Simples <small>de la</small> Vie»
+              span.menu-item__about
+                | French toast with maple syrup
+                | Volume 150gr
             li.menu-item
               span.menu-item__price
                 | 1259
@@ -145,7 +156,7 @@ block content
                 | 159
               span.menu-item__name
                 | «Short Stack Jack»
-            li.menu-item.is-active
+            li.menu-item
               span.menu-item__price
                 | 159
               span.menu-item__name
@@ -181,7 +192,7 @@ block content
                 | 159
               span.menu-item__name
                 | «Short Stack Jack»
-            li.menu-item.is-active
+            li.menu-item
               span.menu-item__price
                 | 159
               span.menu-item__name
@@ -311,7 +322,7 @@ block content
                 span.menu-item__name
                   | «Hangover Paradisee»
 
-      .menu(data-menu="soups-sandwiches")
+      .menu(data-menu="thai-corner")
         .menu__inner
           .menu__title
             strong Breakfast
@@ -342,6 +353,118 @@ block content
                 span.menu-item__name
                   | «Good Morning, Amigo!»
 
+      .menu(data-menu="juices-smoothies")
+        .menu__inner
+          .menu__title
+            strong Breakfast
+          ul.menu__list
+            li.menu-item
+              span.menu-item__price
+                | 454
+              span.menu-item__name
+                | «Wake Up and Go»
+            li.menu-item
+              span.menu-item__price
+                | 3450
+              span.menu-item__name
+                | «Sabai Sabai Breakfast»
+            li.menu-item
+              span.menu-item__price
+                | 99999
+              span.menu-item__name
+                | «Hangover Paradisee»
+
+          .menu__title
+            strong Fresh
+          ul.menu__list
+            li.menu-item
+              li.menu-item
+                span.menu-item__price
+                  | 454
+                span.menu-item__name
+                  | «Good Morning, Amigo!»
+
+          .menu__title
+            strong Breakfast
+          ul.menu__list
+            li.menu-item
+              span.menu-item__price
+                | 454
+              span.menu-item__name
+                | «Wake Up and Go»
+            li.menu-item
+              span.menu-item__price
+                | 3450
+              span.menu-item__name
+                | «Sabai Sabai Breakfast»
+            li.menu-item
+              span.menu-item__price
+                | 99999
+              span.menu-item__name
+                | «Hangover Paradisee»
+
+      .menu(data-menu="deserts-gelato")
+        .menu__inner
+          .menu__title
+            strong Breakfast
+          ul.menu__list
+            li.menu-item
+              span.menu-item__price
+                | 454
+              span.menu-item__name
+                | «Wake Up and Go»
+            li.menu-item
+              span.menu-item__price
+                | 3450
+              span.menu-item__name
+                | «Sabai Sabai Breakfast»
+            li.menu-item
+              span.menu-item__price
+                | 99999
+              span.menu-item__name
+                | «Hangover Paradisee»
+
+      .menu(data-menu="drinks")
+        .menu__inner
+          .menu__title
+            strong Breakfast
+          ul.menu__list
+            li.menu-item
+              span.menu-item__price
+                | 454
+              span.menu-item__name
+                | «Wake Up and Go»
+            li.menu-item
+              span.menu-item__price
+                | 3450
+              span.menu-item__name
+                | «Sabai Sabai Breakfast»
+            li.menu-item
+              span.menu-item__price
+                | 99999
+              span.menu-item__name
+                | «Hangover Paradisee»
+
+          .menu__title
+            strong Fresh
+          ul.menu__list
+            li.menu-item
+              li.menu-item
+                span.menu-item__price
+                  | 454
+                span.menu-item__name
+                  | «Good Morning, Amigo!»
+              li.menu-item
+                span.menu-item__price
+                  | 3450
+                span.menu-item__name
+                  | «Sabai Sabai Breakfast»
+              li.menu-item
+                span.menu-item__price
+                  | 99999
+                span.menu-item__name
+                  | «Hangover Paradisee»
+
       footer.menu-container__footer
         span.wave
     //end menu
@@ -362,7 +485,7 @@ block content
     //-             | 159
     //-           span.menu-item__name
     //-             | «Short Stack Jack»
-    //-         li.menu-item.is-active
+    //-         li.menu-item
     //-           span.menu-item__price
     //-             | 159
     //-           span.menu-item__name
@@ -407,7 +530,7 @@ block content
     //-             | 159
     //-           span.menu-item__name
     //-             | «Short Stack Jack»
-    //-         li.menu-item.is-active
+    //-         li.menu-item
     //-           span.menu-item__price
     //-             | 159
     //-           span.menu-item__name
