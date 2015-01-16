@@ -83,7 +83,7 @@ body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; min-wi
 .icon-drinks:after { background: url('../img/icons.png') 0 -337px no-repeat; width: 11px; height: 32px; }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .icon-drinks:after { background: url('../img/icons@2x.png') 0 -558px no-repeat; background-position: 0 -279px; width: 11px; height: 33px; background-size: 347px 1140px; } }
 
-.head { display: block; position: absolute; z-index: -1; opacity: 0; top: 0; left: 0; bottom: 0; right: 0; text-align: center; font-size: 0; -webkit-transition: all 0.2s linear; transition: all 0.2s linear; }
+.head { display: block; position: absolute; z-index: -1; opacity: 0; top: 0; left: 0; bottom: 0; right: 0; text-align: center; font-size: 0; white-space: nowrap; -webkit-transition: all 0.2s linear; transition: all 0.2s linear; }
 .head:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
 .head:after { content: ""; display: inline-block; vertical-align: middle; }
 .head.is-visible { opacity: 1; z-index: 1; }
@@ -158,7 +158,7 @@ body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; min-wi
 .bg { position: absolute; background-image: url("../img/bg-menu.jpg"); background-repeat: no-repeat; background-position: bottom left; background-size: cover; color: #FFF; width: 100%; height: 100%; }
 .bg:before { content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.3); }
 
-.center-logo { position: absolute; top: 0; left: 0; right: 0; bottom: 0; text-align: center; font-size: 0; }
+.center-logo { position: absolute; top: 0; left: 0; right: 0; bottom: 0; text-align: center; font-size: 0; white-space: nowrap; }
 .center-logo:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
 .center-logo:after { content: ""; display: inline-block; vertical-align: middle; position: relative; -webkit-transition: all 0.5s linear; transition: all 0.5s linear; background: url('../img/icons.png') 0 -1016px no-repeat; width: 348px; height: 256px; }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .center-logo:after { background: url('../img/icons@2x.png') 0 -1766px no-repeat; background-position: 0 -883px; width: 346.5px; height: 256.5px; background-size: 347px 1140px; } }
@@ -226,9 +226,9 @@ body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; min-wi
 .menu-item.is-active { background: #F2713D; }
 .menu-item.is-active:before { content: ""; position: absolute; top: 50%; right: 100%; width: 0px; height: 0px; border-style: solid; border-width: 7px 5px 7px 0; border-color: transparent #f47134 transparent transparent; margin-top: -7px; }
 
-.menu-item__price { float: right; width: 32px; text-align: right; }
+.menu-item__price { display: block; float: right; width: 32px; text-align: right; }
 
-.menu-item__name { padding-right: 37px; }
+.menu-item__name { display: block; padding-right: 37px; }
 .menu-item__name small { font-size: 15px; text-transform: none; }
 
 .menu-item__about { display: none; }

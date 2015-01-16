@@ -21,19 +21,30 @@ head.ready(function() {
             },
 
             activeMenu,
-            menuItems,
+
             menuList         = [],
             headIconList     = [],
             menuItemsList    = [];
 
+        // parameter is name of menu that need to show
         function showMenu(menu) {
-            menu.addClass(classes.visible);
-            // lastOpenedMenu = menu;
+            menuList[menu].addClass(classes.visible);
             activeMenu = menu;
+            console.log('Active menu: ' + activeMenu);
         }
 
-        function hideMenu(menu) {
-            menu.removeClass(classes.visible);
+        function hideMenu() {
+            if ( checkActiveMenu() ) {
+                menuList[activeMenu].removeClass(classes.visible);
+            }
+        }
+
+        function checkActiveMenu() {
+            if ( typeof(activeMenu) !== 'undefined' ) {
+                return true;
+            } else {
+                return false;
+            }
         }
 
         function showMenuContainer() {
@@ -61,48 +72,36 @@ head.ready(function() {
             app.removeClass(classes.infoOpen);
         }
 
-        function calculateOrigin(category) {
-            var c = category,
-                originY = ((category.offset().top + category.height() / 2) / $(window).height() * 100).toFixed(0);
-            menuContainer.css({
-                '-webkit-transform-origin' : '100% ' + originY + '%',
-                        'transform-origin' : '100% ' + originY + '%'
-            });
-        }
-
+        // parameter is name of menu that will be showed
         function changeHeadIcon(menu) {
-            headIcon.removeClass(classes.visible);
+            if ( checkActiveMenu() ) {
+                    headIconList[activeMenu].removeClass(classes.visible);
+            }
+
             headIconList[menu].addClass(classes.visible);
         }
 
-        function menuFunctionality() {
-            menuItems = activeMenu.find(menuItemSelector);
-            var menuItemInfo = {};
+        // parameters is name of active menu and index of item that was clicked
+        function showMenuItemInfo(menu, itemIndex) {
+            var selectedMenuItem = menuItemsList[menu][itemIndex];
 
-            menuItems.on('click', function() {
-                menuItems.removeClass(classes.active);
-                $(this).addClass(classes.active);
-                // get info about current menu item
-                menuItemInfo.name = $(this).find('.menu-item__name').html();
-                menuItemInfo.text = $(this).find('.menu-item__about').text();
-                // write info about current menu item to info block
-                infoBlockName.html(menuItemInfo.name);
-                infoBlockText.html(menuItemInfo.text);
+            console.log('Selected item: ' + menu + '[' + itemIndex + ']');
 
-                if ( !app.hasClass(classes.infoOpen) ) {
-                    showInfoBlock();
-                }
-            });
+            if ( checkActiveMenu() ) {
+                $(menuItemsList[activeMenu]).removeClass(classes.active);
+            }
+
+            $(selectedMenuItem).addClass(classes.active);
+
+            infoBlockName.html(selectedMenuItem.infoName);
+            infoBlockText.html(selectedMenuItem.infoText);
+
+            if ( !app.hasClass(classes.infoOpen) ) {
+                showInfoBlock();
+            }
         }
 
-        closeBtn.on('click', function() {
-            hideMenuContainer();
-            hideInfoBlock();
-            setTimeout(function() {
-                menuItems.removeClass(classes.active);
-            }, 300);
-        });
-
+        // add each head icon as jQuery object to associative array
         headIcon.each(function() {
             var el     = $(this),
                 elName = el.data('menu');
@@ -110,12 +109,10 @@ head.ready(function() {
             headIconList[elName] = el;
         });
 
-        console.log(headIconList);
-
         // open menu
         category.each(function() {
             var el         = $(this),
-                targetMenu = el.data('menu');
+                menuToOpen = el.data('menu');
 
             el.on('click', function() {
                 category.removeClass(classes.active);
@@ -125,51 +122,51 @@ head.ready(function() {
                     showMenuContainer();
                 }
 
-                if ( activeMenu ) {
-                    hideMenu(activeMenu);
-                }
+                hideMenu();
+
                 setTimeout(function() {
-                    showMenu(menuList[targetMenu]);
-                    // menuFunctionality();
-                    changeHeadIcon(targetMenu);
-                }, 200);
-                // calculateOrigin(el);
+                    changeHeadIcon(menuToOpen);
+                    showMenu(menuToOpen);
+                }, 300);
             });
         });
 
         // select menu item
         menu.each(function() {
             var el     = $(this),
-                elName = el.data('menu');
+                elName = el.data('menu'),
                 menuItems = el.find(menuItemSelector);
 
+            // add each menu as jQuery object to associative array
             menuList[elName] = el;
-
+            // add each menu item as jQuery object to associative array
             menuItemsList[elName] = menuItems;
+
 
             menuItems.each(function(index) {
                 var menuItem = $(this);
+
                 var prop = {
                     infoName : menuItem.find('.menu-item__name').html(),
                     infoText : menuItem.find('.menu-item__about').text()
                 };
 
+                // add additional property with data for information block to each menu item in array
                 $.extend(true, menuItemsList[elName][index], prop);
-                // $.extend(true, menuItemsList, object1);
 
-
-                // menuItemsList[elName] = menuItem;
-
-                // console.log(typeof(menuItem));
-                // console.log(prop);
-
-                $(this).on('click', function() {
-                    console.log(menuItemsList[elName][index]);
+                menuItem.on('click', function() {
+                    showMenuItemInfo(elName, index);
                 });
             });
         });
-        console.log(menuItemsList);
 
+        closeBtn.on('click', function() {
+            hideMenuContainer();
+            hideInfoBlock();
+            setTimeout(function() {
+                menuItemsList[activeMenu].removeClass(classes.active);
+            }, 300);
+        });
 
     })();
 
