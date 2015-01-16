@@ -54,10 +54,10 @@ block content
             i.icon.icon-juices
             span juices& smoothies
       li.category-list__cell
-        .category(data-menu="deserts-gelato")
+        .category(data-menu="desserts-gelato")
           .category__in
-            i.icon.icon-deserts
-            span deserts& gelato
+            i.icon.icon-desserts
+            span desserts& gelato
       li.category-list__cell
         .category(data-menu="drinks")
           .category__in
@@ -69,14 +69,14 @@ block content
     .menu-container
       button.menu-container__close.js-hide-menu
       header.menu-container__header
-        span.icon-head-coffee(data-menu="coffee")
-        span.icon-head-breakfast(data-menu="breakfast")
-        span.icon-head-salad-bar(data-menu="salad-bar")
-        span.icon-head-soups-sandwiches(data-menu="soups-sandwiches")
-        span.icon-head-thai-corner(data-menu="thai-corner")
-        span.icon-head-juices-smoothies(data-menu="juices-smoothies")
-        span.icon-head-deserts-gelato(data-menu="deserts-gelato")
-        span.icon-head-drinks(data-menu="drinks")
+        span.head.head-coffee(data-menu="coffee")
+        span.head.head-breakfast(data-menu="breakfast")
+        span.head.head-salad(data-menu="salad-bar")
+        span.head.head-soups(data-menu="soups-sandwiches")
+        span.head.head-thai(data-menu="thai-corner")
+        span.head.head-juices(data-menu="juices-smoothies")
+        span.head.head-desserts(data-menu="desserts-gelato")
+        span.head.head-drinks(data-menu="drinks")
         //- img(src="img/headers/breakfast.png", alt="breakfast")
 
       .menu(data-menu="coffee")
@@ -347,11 +347,10 @@ block content
             strong Fresh
           ul.menu__list
             li.menu-item
-              li.menu-item
-                span.menu-item__price
-                  | 454
-                span.menu-item__name
-                  | «Good Morning, Amigo!»
+              span.menu-item__price
+                | 454
+              span.menu-item__name
+                | «Good Morning, Amigo!»
 
       .menu(data-menu="juices-smoothies")
         .menu__inner
@@ -403,7 +402,7 @@ block content
               span.menu-item__name
                 | «Hangover Paradisee»
 
-      .menu(data-menu="deserts-gelato")
+      .menu(data-menu="desserts-gelato")
         .menu__inner
           .menu__title
             strong Breakfast
@@ -468,248 +467,5 @@ block content
       footer.menu-container__footer
         span.wave
     //end menu
-
-    //- //begin menu
-    //- .menu-container(data-menu="breakfast")
-    //-   button.menu-container__close.js-hide-menu
-    //-   header.menu-container__header
-    //-     span.header-breakfast
-    //-     img(src="img/headers/breakfast.png", alt="breakfast")
-    //-   .menu-container__content
-    //-     .menu
-    //-       .menu__title
-    //-         strong Breakfast
-    //-       ul.menu__list
-    //-         li.menu-item
-    //-           span.menu-item__price
-    //-             | 159
-    //-           span.menu-item__name
-    //-             | «Short Stack Jack»
-    //-         li.menu-item
-    //-           span.menu-item__price
-    //-             | 159
-    //-           span.menu-item__name
-    //-             | «<small>Les</small> Plaisirs Simples <small>de la</small> Vie»
-    //-         li.menu-item
-    //-           span.menu-item__price
-    //-             | 454
-    //-           span.menu-item__name
-    //-             | «Good Morning, Amigo!»
-    //-         li.menu-item
-    //-           span.menu-item__price
-    //-             | 454
-    //-           span.menu-item__name
-    //-             | «Wake Up and Go»
-    //-         li.menu-item
-    //-           span.menu-item__price
-    //-             | 3450
-    //-           span.menu-item__name
-    //-             | «Sabai Sabai Breakfast»
-    //-         li.menu-item
-    //-           span.menu-item__price
-    //-             | 99999
-    //-           span.menu-item__name
-    //-             | «Hangover Paradisee»
-    //-   footer.menu-container__footer
-    //-     span.wave
-    //- //end menu
-
-    //- //begin menu
-    //- .menu-container(data-menu="salad-bar")
-    //-   button.menu-container__close.js-hide-menu
-    //-   header.menu-container__header
-    //-     span.header-breakfast
-    //-     img(src="img/headers/breakfast.png", alt="breakfast")
-    //-   .menu-container__content
-    //-     .menu
-    //-       .menu__title
-    //-         strong Breakfast
-    //-       ul.menu__list
-    //-         li.menu-item
-    //-           span.menu-item__price
-    //-             | 159
-    //-           span.menu-item__name
-    //-             | «Short Stack Jack»
-    //-         li.menu-item
-    //-           span.menu-item__price
-    //-             | 159
-    //-           span.menu-item__name
-    //-             | «<small>Les</small> Plaisirs Simples <small>de la</small> Vie»
-    //-         li.menu-item
-    //-           span.menu-item__price
-    //-             | 1259
-    //-           span.menu-item__name
-    //-             | «Energizer  Bunny»
-    //-         li.menu-item
-    //-           span.menu-item__price
-    //-             | 9
-    //-           span.menu-item__name
-    //-             | «Rise and Shine»
-    //-         li.menu-item
-    //-           span.menu-item__price
-    //-             | 2290
-    //-           span.menu-item__name
-    //-             | «Northern Exposure»
-    //-         li.menu-item
-    //-           span.menu-item__price
-    //-             | 454
-    //-           span.menu-item__name
-    //-             | «Good Morning, Amigo!»
-    //-         li.menu-item
-    //-           span.menu-item__price
-    //-             | 454
-    //-           span.menu-item__name
-    //-             | «Wake Up and Go»
-    //-         li.menu-item
-    //-           span.menu-item__price
-    //-             | 3450
-    //-           span.menu-item__name
-    //-             | «Sabai Sabai Breakfast»
-    //-         li.menu-item
-    //-           span.menu-item__price
-    //-             | 99999
-    //-           span.menu-item__name
-    //-             | «Hangover Paradisee»
-
-    //-       .menu__title
-    //-         strong Fresh
-    //-       ul.menu__list
-    //-         li.menu-item
-    //-           span.menu-item__name
-    //-             | Plain Croissant, Pain Au Chocolat, Pain Au Raisin, Cinnamon Roll, Apple, Blueberry or Cherry Danish
-    //-           span.menu-item__price
-    //-             | 45
-    //-           li.menu-item
-    //-             span.menu-item__price
-    //-               | 2290
-    //-             span.menu-item__name
-    //-               | «Northern Exposure»
-    //-           li.menu-item
-    //-             span.menu-item__price
-    //-               | 454
-    //-             span.menu-item__name
-    //-               | «Good Morning, Amigo!»
-    //-           li.menu-item
-    //-             span.menu-item__price
-    //-               | 454
-    //-             span.menu-item__name
-    //-               | «Wake Up and Go»
-    //-           li.menu-item
-    //-             span.menu-item__price
-    //-               | 3450
-    //-             span.menu-item__name
-    //-               | «Sabai Sabai Breakfast»
-    //-           li.menu-item
-    //-             span.menu-item__price
-    //-               | 99999
-    //-             span.menu-item__name
-    //-               | «Hangover Paradisee»
-    //-   footer.menu-container__footer
-    //-     span.wave
-    //- //end menu
-
-    //- //begin menu
-    //- .menu-container(data-menu="soups-sandwiches")
-    //-   button.menu-container__close.js-hide-menu
-    //-   header.menu-container__header
-    //-     span.header-breakfast
-    //-     img(src="img/headers/breakfast.png", alt="breakfast")
-    //-   .menu-container__content
-    //-     .menu
-    //-       .menu__title
-    //-         strong Breakfast
-    //-       ul.menu__list
-    //-         li.menu-item
-    //-           span.menu-item__price
-    //-             | 454
-    //-           span.menu-item__name
-    //-             | «Wake Up and Go»
-    //-         li.menu-item
-    //-           span.menu-item__price
-    //-             | 3450
-    //-           span.menu-item__name
-    //-             | «Sabai Sabai Breakfast»
-    //-         li.menu-item
-    //-           span.menu-item__price
-    //-             | 99999
-    //-           span.menu-item__name
-    //-             | «Hangover Paradisee»
-
-    //-       .menu__title
-    //-         strong Fresh
-    //-       ul.menu__list
-    //-         li.menu-item
-    //-           span.menu-item__name
-    //-             | Plain Croissant, Pain Au Chocolat, Pain Au Raisin, Cinnamon Roll, Apple, Blueberry or Cherry Danish
-    //-           span.menu-item__price
-    //-             | 45
-    //-           li.menu-item
-    //-             span.menu-item__price
-    //-               | 2290
-    //-             span.menu-item__name
-    //-               | «Northern Exposure»
-    //-           li.menu-item
-    //-             span.menu-item__price
-    //-               | 454
-    //-             span.menu-item__name
-    //-               | «Good Morning, Amigo!»
-    //-           li.menu-item
-    //-             span.menu-item__price
-    //-               | 454
-    //-             span.menu-item__name
-    //-               | «Wake Up and Go»
-    //-           li.menu-item
-    //-             span.menu-item__price
-    //-               | 3450
-    //-             span.menu-item__name
-    //-               | «Sabai Sabai Breakfast»
-    //-           li.menu-item
-    //-             span.menu-item__price
-    //-               | 99999
-    //-             span.menu-item__name
-    //-               | «Hangover Paradisee»
-    //-   footer.menu-container__footer
-    //-     span.wave
-    //- //end menu
-
-    //- //begin menu
-    //- .menu-container(data-menu="soups-sandwiches")
-    //-   button.menu-container__close.js-hide-menu
-    //-   header.menu-container__header
-    //-     span.header-breakfast
-    //-     img(src="img/headers/breakfast.png", alt="breakfast")
-    //-   .menu-container__content
-    //-     .menu
-    //-       .menu__title
-    //-         strong Breakfast
-    //-       ul.menu__list
-    //-         li.menu-item
-    //-           span.menu-item__price
-    //-             | 454
-    //-           span.menu-item__name
-    //-             | «Wake Up and Go»
-    //-         li.menu-item
-    //-           span.menu-item__price
-    //-             | 3450
-    //-           span.menu-item__name
-    //-             | «Sabai Sabai Breakfast»
-    //-         li.menu-item
-    //-           span.menu-item__price
-    //-             | 99999
-    //-           span.menu-item__name
-    //-             | «Hangover Paradisee»
-
-    //-       .menu__title
-    //-         strong Fresh
-    //-       ul.menu__list
-    //-         li.menu-item
-    //-           li.menu-item
-    //-             span.menu-item__price
-    //-               | 454
-    //-             span.menu-item__name
-    //-               | «Good Morning, Amigo!»
-    //-   footer.menu-container__footer
-    //-     span.wave
-    //- //end menu
 
   //end out

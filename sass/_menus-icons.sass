@@ -1,0 +1,57 @@
+$menus: coffee,breakfast,salad,soups,thai,juices,desserts,drinks
+
+.icon
+  display: inline-block
+  position: relative
+  &:before
+    content: ""
+    display: block
+    opacity: 1
+    +tr(all 0.1s linear)
+  &:after
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    opacity: 0
+    +tr(all 0.1s linear)
+  &:hover
+    &:before
+      opacity: 0
+    &:after
+      opacity: 1
+
+@each $i in $menus
+  .icon-#{$i}
+    &:before
+      +sprite(#{$i})
+    &:after
+      +sprite(#{$i}-h)
+
+.head
+  display: block
+  position: absolute
+  z-index: -1
+  opacity: 0
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+  +vertical
+  +transition(all 0.2s linear)
+  &:after
+    content: ""
+    display: inline-block
+    vertical-align: middle
+  &.is-visible
+    opacity: 1
+    z-index: 1
+
+
+@each $i in $menus
+  .head-#{$i}
+    &:after
+      +s(#{$i}, $headers-eng)
+      +retina
+        +sr(#{$i}, $headers-eng-retina)
+

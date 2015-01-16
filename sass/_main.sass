@@ -18,13 +18,24 @@
 
 .center-logo
   position: absolute
-  +sprite(welcome)
-  top: 50%
-  left: 50%
-  +transform(translate3d(-50%, -50%, 0))
-  +tr(all 0.7s linear)
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  // top: 50%
+  // left: 50%
+  // +transform(translate3d(-50%, -50%, 0))
+  +vertical
+  &:after
+    content: ""
+    display: inline-block
+    vertical-align: middle
+    position: relative
+    +tr(all 0.5s linear)
+    +sprite(welcome)
   .menu-is-open &
-    left: 35%
+    &:after
+      margin-left: -25%
 
 
 .category-list
@@ -105,35 +116,6 @@
   max-width: 80px
 
 
-.icon
-  display: inline-block
-  position: relative
-  &:before
-    content: ""
-    display: block
-    opacity: 1
-    +tr(all 0.1s linear)
-  &:after
-    content: ""
-    position: absolute
-    top: 0
-    left: 0
-    opacity: 0
-    +tr(all 0.1s linear)
-  &:hover
-    &:before
-      opacity: 0
-    &:after
-      opacity: 1
-
-@each $s in coffee,breakfast,salad,soups,thai,juices,deserts,drinks
-  .icon-#{$s}
-    &:before
-      +sprite(#{$s})
-    &:after
-      +sprite(#{$s}-h)
-
-
 .logo-small
   position: absolute
   z-index: 2
@@ -160,13 +142,13 @@
   // min-width: 256px
   background: #FFF
   color: #1A1818
-  +tr(all 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55))
-  +transform(translate3d(200%, 0, 0) scale(0.1))
-  -webkit-transform-origin: 100% 100%
-  transform-origin: 100% 100%
+  +tr(all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55))
+  +transform(translate3d(200%, 0, 0))
+  -webkit-transform-origin: 100% 50%
+  transform-origin: 100% 50%
   opacity: 0
   &.is-visible
-    +transform(translate3d(0, 0, 0) scale(1))
+    +transform(translate3d(0, 0, 0))
     opacity: 1
 
 .menu-container__header
@@ -278,11 +260,11 @@
   overflow-y: auto
   -webkit-overflow-scrolling: touch
   +tr(all 0.2s linear)
-  +transform(scale(0.8))
+  +transform(translateY(50px))
   &.is-visible
     opacity: 1
     z-index: 1
-    +transform(scale(1))
+    +transform(translateY(0))
 
 
 // .menu__head
@@ -365,7 +347,7 @@
   text-align: right
 
 .menu-item__name
-  margin-right: 37px
+  padding-right: 37px
   small
     font-size: 15px
     text-transform: none
@@ -400,11 +382,13 @@
   background-position: center center
   +transition(all 0.2s linear)
   +transform(translateY(110%))
+  opacity: 0
   img
     display: block
     max-width: 100%
   &.is-visible
     +transform(translateY(0))
+    opacity: 1
 
 
 .info
@@ -422,6 +406,7 @@
   +lunch-b
   +transition(all 0.2s linear)
   +transform(translateY(-200%))
+  opacity: 0
   &:after
     content: ""
     position: absolute
@@ -430,12 +415,14 @@
     +arr(16,6,$orange,b)
   &.is-visible
     +transform(translateY(0))
+    opacity: 1
 
 .info__name
   display: block
   position: relative
-  margin: 0 0 13px -12px
-  margin: 0 0 0.722em -0.667em
+  // margin: 0 0 13px -12px
+  // margin: 0 0 0.722em -0.667em
+  margin-bottom: 0.722em
   font-size: inherit
   text-transform: uppercase
   small
@@ -445,5 +432,6 @@
     content: ""
     display: block
     +sprite(info-line)
-    margin: 13px 0 0 12px
-    margin: 0.722em 0 0 0.667em
+    // margin: 13px 0 0 12px
+    // margin: 0.722em 0 0 0.667em
+    margin-top: 0.722em

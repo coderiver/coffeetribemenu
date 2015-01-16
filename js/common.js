@@ -7,45 +7,33 @@ head.ready(function() {
             closeBtn         = menuContainer.find('.menu-container__close'),
             menu             = $('.menu'),
             menuItemSelector = '.menu-item',
-            menuList         = [],
+            headIcon         = $('.head'),
             infoBlock        = $('.info'),
             infoBlockName    = infoBlock.find('.info__name'),
             infoBlockText    = infoBlock.find('.info__text'),
             photo            = $('.photo'),
             overlay          = $('.overlay'),
-            activeMenu,
-            menuItems,
             classes = {
                 visible  : 'is-visible',
                 active   : 'is-active',
                 menuOpen : 'menu-is-open',
                 infoOpen : 'info-is-open'
-            };
+            },
 
-        closeBtn.on('click', function() {
-            hideMenuContainer();
-            hideInfoBlock();
-            setTimeout(function() {
-                menuItems.removeClass(classes.active);
-            }, 300);
-        });
+            activeMenu,
+            menuItems,
+            menuList         = [],
+            headIconList     = [],
+            menuItemsList    = [];
 
-        menu.each(function(index) {
-            var el        = $(this),
-                elName    = el.data('menu'),
-                menuItems = el.find(menuItemSelector);
-
-            menuList[elName] = el;
-        });
-
-        function showMenu(el) {
-            el.addClass(classes.visible);
-            lastOpenedMenu = el;
-            activeMenu = el;
+        function showMenu(menu) {
+            menu.addClass(classes.visible);
+            // lastOpenedMenu = menu;
+            activeMenu = menu;
         }
 
-        function hideMenu(el) {
-            el.removeClass(classes.visible);
+        function hideMenu(menu) {
+            menu.removeClass(classes.visible);
         }
 
         function showMenuContainer() {
@@ -76,11 +64,15 @@ head.ready(function() {
         function calculateOrigin(category) {
             var c = category,
                 originY = ((category.offset().top + category.height() / 2) / $(window).height() * 100).toFixed(0);
-                console.log(originY);
             menuContainer.css({
                 '-webkit-transform-origin' : '100% ' + originY + '%',
                         'transform-origin' : '100% ' + originY + '%'
             });
+        }
+
+        function changeHeadIcon(menu) {
+            headIcon.removeClass(classes.visible);
+            headIconList[menu].addClass(classes.visible);
         }
 
         function menuFunctionality() {
@@ -103,25 +95,81 @@ head.ready(function() {
             });
         }
 
-        category.each(function() {
-            var el         = $(this);
-            var targetMenu = el.data('menu');
+        closeBtn.on('click', function() {
+            hideMenuContainer();
+            hideInfoBlock();
+            setTimeout(function() {
+                menuItems.removeClass(classes.active);
+            }, 300);
+        });
 
-            el.on('click', function(event) {
-                event.preventDefault();
+        headIcon.each(function() {
+            var el     = $(this),
+                elName = el.data('menu');
+
+            headIconList[elName] = el;
+        });
+
+        console.log(headIconList);
+
+        // open menu
+        category.each(function() {
+            var el         = $(this),
+                targetMenu = el.data('menu');
+
+            el.on('click', function() {
                 category.removeClass(classes.active);
                 el.addClass(classes.active);
+
                 if ( !menuContainer.hasClass(classes.visible) ) {
                     showMenuContainer();
                 }
+
                 if ( activeMenu ) {
                     hideMenu(activeMenu);
                 }
-                showMenu(menuList[targetMenu]);
-                menuFunctionality();
-                calculateOrigin(el);
+                setTimeout(function() {
+                    showMenu(menuList[targetMenu]);
+                    // menuFunctionality();
+                    changeHeadIcon(targetMenu);
+                }, 200);
+                // calculateOrigin(el);
             });
         });
+
+        // select menu item
+        menu.each(function() {
+            var el     = $(this),
+                elName = el.data('menu');
+                menuItems = el.find(menuItemSelector);
+
+            menuList[elName] = el;
+
+            menuItemsList[elName] = menuItems;
+
+            menuItems.each(function(index) {
+                var menuItem = $(this);
+                var prop = {
+                    infoName : menuItem.find('.menu-item__name').html(),
+                    infoText : menuItem.find('.menu-item__about').text()
+                };
+
+                $.extend(true, menuItemsList[elName][index], prop);
+                // $.extend(true, menuItemsList, object1);
+
+
+                // menuItemsList[elName] = menuItem;
+
+                // console.log(typeof(menuItem));
+                // console.log(prop);
+
+                $(this).on('click', function() {
+                    console.log(menuItemsList[elName][index]);
+                });
+            });
+        });
+        console.log(menuItemsList);
+
 
     })();
 
