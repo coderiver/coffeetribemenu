@@ -82,14 +82,14 @@
   cursor: pointer
   +user-select(none)
   +vertical
-  &:after
-    display: none
-    content: ""
-    position: absolute
-    top: 50%
-    left: 0
-    +arr(11,22,#FFF,r)
-    margin-top: -11px
+  // &:after
+  //   display: none
+  //   content: ""
+  //   position: absolute
+  //   top: 50%
+  //   left: 0
+  //   +arr(11,22,#FFF,r)
+  //   margin-top: -11px
   span
     display: block
     margin-top: 10px
@@ -100,8 +100,8 @@
       &:after
         opacity: 1
   &.is-active
-    &:after
-      display: block
+    // &:after
+    //   display: block
     .icon
       &:before
         opacity: 0
@@ -135,7 +135,7 @@
 
 .menu-container
   position: absolute
-  z-index: 2
+  z-index: 4
   top: 0
   bottom: 0
   right: 13.4%
@@ -144,12 +144,14 @@
   background: #FFF
   color: #1A1818
   +tr(all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55))
-  +transform(translate3d(200%, 0, 0))
+  +transform(translate3d(150%, 0, 0))
+  // +transform(translateX(150%))
   -webkit-transform-origin: 100% 50%
   transform-origin: 100% 50%
   opacity: 0
   &.is-visible
     +transform(translate3d(0, 0, 0))
+    // +transform(translateX(0))
     opacity: 1
 
 .menu-container__header
@@ -235,6 +237,7 @@
   top: 50px
   left: -25px
   +sprite(close)
+  +gpu
   &:before
     opacity: 0
     content: ""
@@ -246,6 +249,14 @@
   &:hover, &:active
     &:before
       opacity: 1
+
+.menu-container__arrow
+  position: absolute
+  top: -20px
+  left: 100%
+  +arr(11,22,#FFF,r)
+  margin-top: -11px
+  +tr(all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275))
 
 .menu
   position: absolute
@@ -261,7 +272,7 @@
   overflow-y: auto
   -webkit-overflow-scrolling: touch
   +tr(all 0.2s linear)
-  +transform(translateY(50px))
+  +transform(translateY(30px))
   &.is-visible
     opacity: 1
     z-index: 1
@@ -331,6 +342,7 @@
   font-size: 15px
   line-height: 1.1
   text-transform: uppercase
+  +tr(background 0.15s linear)
   &.is-active
     // background: #f47134
     background: $orange
@@ -355,8 +367,9 @@
     font-size: 15px
     text-transform: none
 
-.menu-item__about
-  display: none
+.menu-item__about,
+.menu-item__photo
+  display: none !important
 
 .overlay
   opacity: 0
@@ -379,10 +392,6 @@
   left: 0
   right: 38%
   height: percentage(500/768)
-  -webkit-background-size: cover
-  -o-background-size: cover
-  background-size: cover
-  background-position: center center
   +transition(all 0.2s linear)
   +transform(translateY(110%))
   opacity: 0
@@ -393,6 +402,17 @@
     +transform(translateY(0))
     opacity: 1
 
+.photo__inner
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  -webkit-background-size: cover
+  background-size: cover
+  background-position: center center
+  +tr(all 0.2s linear)
+
 
 .info
   position: absolute
@@ -401,7 +421,7 @@
   left: percentage(265/1024)
   padding: 35px 45px
   box-sizing: border-box
-  max-width: percentage(300/1024)
+  width: percentage(300/1024)
   background: $orange
   color: #020303
   font-size: 18px

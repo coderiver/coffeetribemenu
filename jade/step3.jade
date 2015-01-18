@@ -19,7 +19,9 @@ block content
       .info__name
       .info__text
 
-    .photo(style="background-image:url('img/photo.jpg')")
+    .photo
+      .photo__inner
+    //- .photo(style="background-image:url('img/photo.jpg')")
 
     //begin categories
     ul.category-list
@@ -67,7 +69,8 @@ block content
 
     //begin menu
     .menu-container
-      button.menu-container__close.js-hide-menu
+      button.menu-container__close
+      .menu-container__arrow
       header.menu-container__header
         span.head.head-coffee(data-menu="coffee")
         span.head.head-breakfast(data-menu="breakfast")
@@ -93,6 +96,7 @@ block content
                 | French toast with maple syrup
                 | Volume 150gr., Calories 155.15 kkg
                 | Hot Serving, Not Spice.
+              img.menu-item__photo(src="img/photos/photo.jpg", alt="")
             li.menu-item
               span.menu-item__price
                 | 159
@@ -101,16 +105,19 @@ block content
               span.menu-item__about
                 | French toast with maple syrup
                 | Volume 150gr
+              img.menu-item__photo(src="img/photos/photo2.png", alt="")
             li.menu-item
               span.menu-item__price
                 | 1259
               span.menu-item__name
                 | «Energizer  Bunny»
+              img.menu-item__photo(src="img/photos/photo3.jpg", alt="")
             li.menu-item
               span.menu-item__price
                 | 9
               span.menu-item__name
                 | «Rise and Shine»
+              img.menu-item__photo(src="img/photos/photo4.jpg", alt="")
             li.menu-item
               span.menu-item__price
                 | 2290

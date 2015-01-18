@@ -5,13 +5,15 @@ head.ready(function() {
             category         = $('.category'),
             menuContainer    = $('.menu-container'),
             closeBtn         = menuContainer.find('.menu-container__close'),
+            arrow            = menuContainer.find('.menu-container__arrow'),
             menu             = $('.menu'),
             menuItemSelector = '.menu-item',
             headIcon         = $('.head'),
             infoBlock        = $('.info'),
             infoBlockName    = infoBlock.find('.info__name'),
             infoBlockText    = infoBlock.find('.info__text'),
-            photo            = $('.photo'),
+            photoBlock       = $('.photo'),
+            photoBlockImg    = photoBlock.find('.photo__inner'),
             overlay          = $('.overlay'),
             classes = {
                 visible  : 'is-visible',
@@ -36,6 +38,7 @@ head.ready(function() {
         function hideMenu() {
             if ( checkActiveMenu() ) {
                 menuList[activeMenu].removeClass(classes.visible);
+                $(menuItemsList[activeMenu]).removeClass(classes.active);
             }
         }
 
@@ -60,14 +63,14 @@ head.ready(function() {
 
         function showInfoBlock() {
             overlay.addClass(classes.visible);
-            photo.addClass(classes.visible);
+            photoBlock.addClass(classes.visible);
             infoBlock.addClass(classes.visible);
             app.addClass(classes.infoOpen);
         }
 
         function hideInfoBlock() {
             overlay.removeClass(classes.visible);
-            photo.removeClass(classes.visible);
+            photoBlock.removeClass(classes.visible);
             infoBlock.removeClass(classes.visible);
             app.removeClass(classes.infoOpen);
         }
@@ -79,6 +82,12 @@ head.ready(function() {
             }
 
             headIconList[menu].addClass(classes.visible);
+        }
+
+        // parameter is active category
+        function changeArrowPosition(category) {
+            var topPos = (category.offset().top + category.height() / 2).toFixed(0);
+            arrow.css('top', topPos + 'px');
         }
 
         // parameters is name of active menu and index of item that was clicked
@@ -93,8 +102,11 @@ head.ready(function() {
 
             $(selectedMenuItem).addClass(classes.active);
 
+            photoBlockImg.css('background-image', 'url(' + selectedMenuItem.infoPhoto + ')');
+
             infoBlockName.html(selectedMenuItem.infoName);
             infoBlockText.html(selectedMenuItem.infoText);
+
 
             if ( !app.hasClass(classes.infoOpen) ) {
                 showInfoBlock();
@@ -127,6 +139,7 @@ head.ready(function() {
                 setTimeout(function() {
                     changeHeadIcon(menuToOpen);
                     showMenu(menuToOpen);
+                    changeArrowPosition(el);
                 }, 300);
             });
         });
@@ -147,15 +160,18 @@ head.ready(function() {
                 var menuItem = $(this);
 
                 var prop = {
-                    infoName : menuItem.find('.menu-item__name').html(),
-                    infoText : menuItem.find('.menu-item__about').text()
+                    infoName  : menuItem.find('.menu-item__name').html(),
+                    infoText  : menuItem.find('.menu-item__about').text(),
+                    infoPhoto : menuItem.find('.menu-item__photo').attr('src')
                 };
 
                 // add additional property with data for information block to each menu item in array
                 $.extend(true, menuItemsList[elName][index], prop);
 
                 menuItem.on('click', function() {
-                    showMenuItemInfo(elName, index);
+                    if ( !menuItem.hasClass(classes.active) ) {
+                        showMenuItemInfo(elName, index);
+                    }
                 });
             });
         });
