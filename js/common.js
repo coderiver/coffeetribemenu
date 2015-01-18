@@ -12,8 +12,9 @@ head.ready(function() {
             infoBlock        = $('.info'),
             infoBlockName    = infoBlock.find('.info__name'),
             infoBlockText    = infoBlock.find('.info__text'),
-            photoBlock       = $('.photo'),
-            photoBlockImg    = photoBlock.find('.photo__inner'),
+            photoBlock       = $('.photo-container'),
+            // photoBlockImg    = photoBlock.find('.photo__inner'),
+            defaultPhoto     = 'img/photos/default.jpg',
             overlay          = $('.overlay'),
             classes = {
                 visible  : 'is-visible',
@@ -22,11 +23,13 @@ head.ready(function() {
                 infoOpen : 'info-is-open'
             },
 
-            activeMenu,
-
             menuList         = [],
             headIconList     = [],
-            menuItemsList    = [];
+            menuItemsList    = [],
+            photosList       = [],
+
+            activeMenu,
+            activeMenuItemIndex;
 
         // parameter is name of menu that need to show
         function showMenu(menu) {
@@ -96,13 +99,17 @@ head.ready(function() {
 
             console.log('Selected item: ' + menu + '[' + itemIndex + ']');
 
-            if ( checkActiveMenu() ) {
-                $(menuItemsList[activeMenu]).removeClass(classes.active);
+            // hide previous information
+            if ( typeof(activeMenuItemIndex) !== 'undefined' ) {
+                var activeMenuItem  = menuItemsList[activeMenu][activeMenuItemIndex];
+                menuItemsList[activeMenu][activeMenuItemIndex].removeClass(classes.active);
+                photosList[activeMenu][activeMenuItemIndex].removeClass(classes.visible);
             }
 
-            $(selectedMenuItem).addClass(classes.active);
-
-            photoBlockImg.css('background-image', 'url(' + selectedMenuItem.infoPhoto + ')');
+            // add active class to selected menu item
+            menuItemsList[menu][itemIndex].addClass(classes.active);
+            // show photo which corresponds to the selected menu item
+            photosList[menu][itemIndex].addClass(classes.visible);
 
             infoBlockName.html(selectedMenuItem.infoName);
             infoBlockText.html(selectedMenuItem.infoText);
@@ -111,6 +118,8 @@ head.ready(function() {
             if ( !app.hasClass(classes.infoOpen) ) {
                 showInfoBlock();
             }
+
+            activeMenuItemIndex = itemIndex;
         }
 
         // add each head icon as jQuery object to associative array
@@ -146,27 +155,42 @@ head.ready(function() {
 
         // select menu item
         menu.each(function() {
-            var el     = $(this),
-                elName = el.data('menu'),
+            var el        = $(this),
+                elName    = el.data('menu'),
                 menuItems = el.find(menuItemSelector);
 
-            // add each menu as jQuery object to associative array
+            // create associative arrays with jQuery object
             menuList[elName] = el;
-            // add each menu item as jQuery object to associative array
-            menuItemsList[elName] = menuItems;
-
+            menuItemsList[elName] = [];
+            photosList[elName] = [];
 
             menuItems.each(function(index) {
-                var menuItem = $(this);
+                var menuItem  = $(this),
+                    itemPhoto = $('<li class="photo" data-menu="' + elName + '" data-item="' + index + '"></li>'),
+                    itemPhotoSrc = menuItem.find('.menu-item__photo').attr('src');
+
+                // add photo from each menus item to global photo-container
+                itemPhoto.appendTo(photoBlock);
+
+                if ( itemPhotoSrc ) {
+                    itemPhoto.css('background-image', 'url(' + itemPhotoSrc + ')');
+                } else {
+                    itemPhoto.css('background-image', 'url(' + defaultPhoto + ')');
+                }
 
                 var prop = {
                     infoName  : menuItem.find('.menu-item__name').html(),
-                    infoText  : menuItem.find('.menu-item__about').text(),
-                    infoPhoto : menuItem.find('.menu-item__photo').attr('src')
+                    infoText  : menuItem.find('.menu-item__about').text()
                 };
 
                 // add additional property with data for information block to each menu item in array
-                $.extend(true, menuItemsList[elName][index], prop);
+                $.extend(true, menuItem, prop);
+
+                // add photo to array as jQuery object
+                menuItemsList[elName][index] = menuItem;
+
+                // add photo to array as jQuery object
+                photosList[elName][index] = itemPhoto;
 
                 menuItem.on('click', function() {
                     if ( !menuItem.hasClass(classes.active) ) {
@@ -183,6 +207,10 @@ head.ready(function() {
                 menuItemsList[activeMenu].removeClass(classes.active);
             }, 300);
         });
+
+        // console.log(menuList);
+        // console.log(menuItemsList);
+        // console.log(photosList);
 
     })();
 

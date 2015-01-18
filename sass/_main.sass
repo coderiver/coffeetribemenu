@@ -144,7 +144,7 @@
   background: #FFF
   color: #1A1818
   +tr(all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55))
-  +transform(translate3d(150%, 0, 0))
+  +transform(translate3d(170%, 0, 0))
   // +transform(translateX(150%))
   -webkit-transform-origin: 100% 50%
   transform-origin: 100% 50%
@@ -342,7 +342,7 @@
   font-size: 15px
   line-height: 1.1
   text-transform: uppercase
-  +tr(background 0.15s linear)
+  // +tr(background 0.15s linear)
   &.is-active
     // background: #f47134
     background: $orange
@@ -385,7 +385,7 @@
   &.is-visible
     opacity: 1
 
-.photo
+.photo-container
   position: absolute
   z-index: 1
   bottom: 0
@@ -402,16 +402,21 @@
     +transform(translateY(0))
     opacity: 1
 
-.photo__inner
+.photo
   position: absolute
+  z-index: -1
   top: 0
   left: 0
   right: 0
   bottom: 0
+  opacity: 0
   -webkit-background-size: cover
   background-size: cover
   background-position: center center
   +tr(all 0.2s linear)
+  &.is-visible
+    opacity: 1
+    z-index: 1
 
 
 .info
