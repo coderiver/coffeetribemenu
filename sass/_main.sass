@@ -32,7 +32,7 @@
     display: inline-block
     vertical-align: middle
     position: relative
-    +tr(all 0.5s linear)
+    +tr(all 0.3s ease)
     +sprite(welcome)
   .menu-is-open &
     &:after
@@ -393,7 +393,7 @@
   left: 0
   right: 38%
   height: percentage(500/768)
-  +transition(all 0.2s linear)
+  +transition(all 0.3s ease)
   +transform(translateY(110%))
   opacity: 0
   img
@@ -414,7 +414,7 @@
   -webkit-background-size: cover
   background-size: cover
   background-position: center center
-  +tr(all 0.2s linear)
+  +tr(all 0.3s linear)
   &.is-visible
     opacity: 1
     z-index: 1
@@ -433,7 +433,7 @@
   font-size: 18px
   line-height: 1.15
   +lunch-b
-  +transition(all 0.2s linear)
+  +transition(all 0.3s ease)
   +transform(translateY(-200%))
   opacity: 0
   &:after
