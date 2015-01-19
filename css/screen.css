@@ -188,7 +188,7 @@ body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; min-wi
 .menu-btn { position: absolute; z-index: 2; top: 8px; left: 8px; background: url('../img/icons.png') 0 -684px no-repeat; width: 48px; height: 49px; }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .menu-btn { background: url('../img/icons@2x.png') 0 -1188px no-repeat; background-position: 0 -594px; width: 48px; height: 48px; background-size: 347px 1140px; } }
 
-.menu-container { position: absolute; z-index: 4; top: 0; bottom: 0; right: 13.4%; width: 25%; background: #FFF; color: #1A1818; -webkit-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55); transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55); -ms-transform: translate3d(170%, 0, 0); -webkit-transform: translate3d(170%, 0, 0); transform: translate3d(170%, 0, 0); -webkit-transform-origin: 100% 50%; -ms-transform-origin: 100% 50%; transform-origin: 100% 50%; opacity: 0; }
+.menu-container { position: absolute; z-index: 4; top: 0; bottom: 0; right: 13.4%; width: 25%; background: #FFF; color: #1A1818; -webkit-transition: all 0.3s ease; transition: all 0.3s ease; -ms-transform: translate3d(170%, 0, 0); -webkit-transform: translate3d(170%, 0, 0); transform: translate3d(170%, 0, 0); -webkit-transform-origin: 100% 50%; -ms-transform-origin: 100% 50%; transform-origin: 100% 50%; opacity: 0; }
 .menu-container.is-visible { -ms-transform: translate3d(0, 0, 0); -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); opacity: 1; }
 
 .menu-container__header { position: absolute; top: 0; left: 0; right: 0; z-index: 2; height: 72px; line-height: 72px; margin-bottom: 3px; background-color: #FBB040; text-align: center; font-size: 0; }

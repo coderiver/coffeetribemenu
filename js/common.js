@@ -13,7 +13,6 @@ head.ready(function() {
             infoBlockName    = infoBlock.find('.info__name'),
             infoBlockText    = infoBlock.find('.info__text'),
             photoBlock       = $('.photo-container'),
-            // photoBlockImg    = photoBlock.find('.photo__inner'),
             defaultPhoto     = 'img/photos/default.jpg',
             overlay          = $('.overlay'),
             classes = {
@@ -41,7 +40,6 @@ head.ready(function() {
         function hideMenu() {
             if ( checkActiveMenu() ) {
                 menuList[activeMenu].removeClass(classes.visible);
-                $(menuItemsList[activeMenu]).removeClass(classes.active);
             }
         }
 
@@ -60,8 +58,9 @@ head.ready(function() {
 
         function hideMenuContainer() {
             menuContainer.removeClass(classes.visible);
-            app.removeClass(classes.menuOpen);
             category.removeClass(classes.active);
+            headIconList[activeMenu].removeClass(classes.visible);
+            app.removeClass(classes.menuOpen);
         }
 
         function showInfoBlock() {
@@ -72,9 +71,10 @@ head.ready(function() {
         }
 
         function hideInfoBlock() {
-            overlay.removeClass(classes.visible);
-            photoBlock.removeClass(classes.visible);
+            clearInfoBlock();
             infoBlock.removeClass(classes.visible);
+            photoBlock.removeClass(classes.visible);
+            overlay.removeClass(classes.visible);
             app.removeClass(classes.infoOpen);
         }
 
@@ -93,27 +93,32 @@ head.ready(function() {
             arrow.css('top', topPos + 'px');
         }
 
+        function clearInfoBlock() {
+            if ( typeof(activeMenuItemIndex) !== 'undefined' ) {
+                menuItemsList[activeMenu][activeMenuItemIndex].removeClass(classes.active);
+                photosList[activeMenu][activeMenuItemIndex].removeClass(classes.visible);
+                infoBlockName.html('');
+                infoBlockText.html('');
+                activeMenuItemIndex = undefined;
+            }
+        }
+
         // parameters is name of active menu and index of item that was clicked
         function showMenuItemInfo(menu, itemIndex) {
             var selectedMenuItem = menuItemsList[menu][itemIndex];
 
             console.log('Selected item: ' + menu + '[' + itemIndex + ']');
 
-            // hide previous information
-            if ( typeof(activeMenuItemIndex) !== 'undefined' ) {
-                var activeMenuItem  = menuItemsList[activeMenu][activeMenuItemIndex];
-                menuItemsList[activeMenu][activeMenuItemIndex].removeClass(classes.active);
-                photosList[activeMenu][activeMenuItemIndex].removeClass(classes.visible);
-            }
+            // clear info block from previous information
+            clearInfoBlock();
 
             // add active class to selected menu item
             menuItemsList[menu][itemIndex].addClass(classes.active);
             // show photo which corresponds to the selected menu item
             photosList[menu][itemIndex].addClass(classes.visible);
-
+            // write text about menu item into info block
             infoBlockName.html(selectedMenuItem.infoName);
-            infoBlockText.html(selectedMenuItem.infoText);
-
+            infoBlockText.text(selectedMenuItem.infoText);
 
             if ( !app.hasClass(classes.infoOpen) ) {
                 showInfoBlock();
@@ -142,8 +147,9 @@ head.ready(function() {
                 if ( !menuContainer.hasClass(classes.visible) ) {
                     showMenuContainer();
                 }
-
+                // hide previous menu and info block
                 hideMenu();
+                hideInfoBlock();
 
                 setTimeout(function() {
                     changeHeadIcon(menuToOpen);
@@ -202,10 +208,8 @@ head.ready(function() {
 
         closeBtn.on('click', function() {
             hideMenuContainer();
+            hideMenu();
             hideInfoBlock();
-            setTimeout(function() {
-                menuItemsList[activeMenu].removeClass(classes.active);
-            }, 300);
         });
 
         // console.log(menuList);
