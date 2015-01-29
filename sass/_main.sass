@@ -18,26 +18,34 @@
 
 .center-logo
   position: absolute
-  top: 0
-  left: 0
+  top: 50%
+  left: 50%
   right: 0
   bottom: 0
-  // top: 50%
-  // left: 50%
-  // +transform(translate3d(-50%, -50%, 0))
-  +vertical
-  white-space: nowrap
-  &:after
-    content: ""
-    display: inline-block
-    vertical-align: middle
-    position: relative
-    +tr(all 0.3s ease)
-    +sprite(welcome)
+  +sprite(welcome)
+  margin: (-256px/2) 0 0 (-348px/2)
+  +transform(translate3d(0,0,0))
+  +tr(all $dur-center-logo ease)
   .menu-is-open &
-    &:after
-      margin-left: -25%
+    +transform(translate3d(-30%, 0, 0))
 
+.category-wrapper
+  position: absolute
+  z-index: 3
+  top: 0
+  right: 0
+  bottom: 0
+  width: 13.4%
+
+.category-arrow
+  position: absolute
+  z-index: 4
+  top: -20px
+  left: -2px
+  +arr(12,22,#FFF,r)
+  margin-top: -11px
+  +gpu
+  +tr(all $dur-arrow cubic-bezier(0.175, 0.885, 0.32, 1.275))
 
 .category-list
   position: absolute
@@ -45,7 +53,7 @@
   top: 0
   right: 0
   bottom: 0
-  width: 13.4%
+  left: 0
   // min-width: 80px
   // max-width: 140px
 
@@ -82,6 +90,7 @@
   cursor: pointer
   +user-select(none)
   +vertical
+  +gpu
   // &:after
   //   display: none
   //   content: ""
@@ -90,9 +99,6 @@
   //   left: 0
   //   +arr(11,22,#FFF,r)
   //   margin-top: -11px
-  span
-    display: block
-    margin-top: 10px
   &:hover
     .icon
       &:before
@@ -108,13 +114,20 @@
       &:after
         opacity: 1
 
-
 .category__in
   display: inline-block
   vertical-align: middle
   font-size: 17px
   white-space: normal
   max-width: 80px
+
+.category__name
+  display: block
+  margin-top: 10px
+
+.category_two-lines
+  .category__name
+    margin-top: 3px
 
 
 .logo-small
@@ -131,31 +144,40 @@
 .menu-btn
   position: absolute
   z-index: 2
-  top: 8px
+  top: 25px
   left: 8px
   +sprite(menu)
 
-
-.menu-container
+.menu-container-wrapper
   position: absolute
   z-index: 4
   top: 0
   bottom: 0
   right: 13.4%
   width: 25%
+  padding-left: 25px
   min-width: 256px
+  overflow: hidden
+
+.menu-container
+  position: absolute
+  z-index: 4
+  top: 0
+  bottom: 0
+  right: 0
+  left: 25px
+  // right: 13.4%
+  // width: 25%
+  // min-width: 256px
   background: #FFF
   color: #1A1818
-  // +tr(all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55))
-  +tr(all 0.3s ease)
-  +transform(translate3d(170%, 0, 0))
-  // +transform(translateX(150%))
+  +tr(all $dur-menu ease)
+  +transform(translate3d(110%, 0, 0))
   -webkit-transform-origin: 100% 50%
   transform-origin: 100% 50%
   opacity: 0
   &.is-visible
     +transform(translate3d(0, 0, 0))
-    // +transform(translateX(0))
     opacity: 1
 
 .menu-container__header
@@ -249,18 +271,18 @@
     top: 0
     left: 0
     +sprite(close-h)
-    +tr(opacity 0.1s linear)
+    // +tr(opacity 0.1s linear)
   &:hover, &:active
     &:before
       opacity: 1
 
-.menu-container__arrow
-  position: absolute
-  top: -20px
-  left: 100%
-  +arr(11,22,#FFF,r)
-  margin-top: -11px
-  +tr(all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275))
+// .menu-container__arrow
+//   position: absolute
+//   top: -20px
+//   left: 100%
+//   +arr(11,22,#FFF,r)
+//   margin-top: -11px
+//   +tr(all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275))
 
 .menu
   position: absolute
@@ -276,11 +298,11 @@
   overflow-y: auto
   -webkit-overflow-scrolling: touch
   +tr(all 0.2s linear)
-  +transform(translateY(30px))
+  +transform(translate3d(0,30px,0))
   &.is-visible
     opacity: 1
     z-index: 1
-    +transform(translateY(0))
+    +transform(translate3d(0,0,0))
 
 
 // .menu__head
@@ -385,7 +407,7 @@
   right: 38%
   background: #000
   color: #FFF
-  +tr(opacity 0.2s linear)
+  +tr(opacity $dur-overlay linear)
   &.is-visible
     opacity: 1
 
@@ -396,14 +418,15 @@
   left: 0
   right: 38%
   height: percentage(500/768)
-  +transition(all 0.3s ease)
-  +transform(translateY(110%))
+  +tr(all $dur-photo ease)
+  +transform(translate3d(0,110%,0))
   opacity: 0
+  overflow: hidden
   img
     display: block
     max-width: 100%
   &.is-visible
-    +transform(translateY(0))
+    +transform(translate3d(0,0,0))
     opacity: 1
 
 .photo
@@ -417,7 +440,7 @@
   -webkit-background-size: cover
   background-size: cover
   background-position: center center
-  +tr(all 0.3s linear)
+  +tr(all $dur-photo-change linear)
   &.is-visible
     opacity: 1
     z-index: 1
@@ -436,9 +459,10 @@
   font-size: 18px
   line-height: 1.15
   +lunch-b
-  +transition(all 0.3s ease)
-  +transform(translateY(-200%))
+  +tr(all $dur-info ease)
+  +transform(translate3d(0,-200%,0))
   opacity: 0
+  overflow: hidden
   &:after
     content: ""
     position: absolute
@@ -450,7 +474,7 @@
     left: percentage(60/768)
     width: percentage(300/768)
   &.is-visible
-    +transform(translateY(0))
+    +transform(translate3d(0,0,0))
     opacity: 1
 
 

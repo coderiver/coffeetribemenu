@@ -113,15 +113,15 @@
 
 .lang__left,
 .lang__right
+  display: block
   position: relative
   width: 50%
   box-sizing: border-box
   fill: #FFF
   color: #FFF
   line-height: 56px
-  +tr(0.1s linear)
-  cursor: pointer
-  &:hover, &:focus
+  text-decoration: none
+  &:hover, &:focus, &:active
     fill: $orange
     color: $orange
 
@@ -152,7 +152,7 @@
       left: 45px
       bottom: auto
 
-.lang__link
+.lang__text
   font-size: 18px
   +lunch-b
   text-transform: uppercase
@@ -164,10 +164,12 @@
 
 //begin lang-extra
 .lang-extra
+  display: block
   position: relative
   margin-top: 20px
   line-height: 1
   fill: #FFF
+  text-decoration: none
   &:before
     content: ""
     position: absolute
@@ -195,7 +197,7 @@
     height: 11px
     line-height: 1
 
-.lang-extra__link
+.lang-extra__text
   display: inline-block
   vertical-align: middle
   margin: 0 15px
@@ -203,7 +205,6 @@
   font-size: 20px
   color: #FFF
   text-decoration: none
-  +tr(color 0.1s linear)
   +tap
   &:hover
     color: $orange

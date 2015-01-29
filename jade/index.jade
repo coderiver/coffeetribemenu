@@ -1,7 +1,7 @@
 extends _layout
 
 block title
-  title Intro
+  title Menu
 
 block sprite
   include ../img/svgdefs.svg
@@ -25,11 +25,11 @@ block content
           .icon-logo-bottom
             svg.svg-icon
               use(xlink:href="#icon-logo-bottom")
-          .lang__left
+          a(href="eng.html").lang__left
             .icon-line-left
               svg.svg-icon
                 use(xlink:href="#icon-line-left")
-            a(href="eng.html").lang__link
+            span.lang__text
               | english
             .icon.icon-line-left
               svg.svg-icon
@@ -38,17 +38,17 @@ block content
             .icon-line-right
               svg.svg-icon
                 use(xlink:href="#icon-line-right")
-            a(href="#").lang__link
+            span.lang__text
               | русский
-            .icon.icon-line-right
+            a(href="#").icon.icon-line-right
               svg.svg-icon
                 use(xlink:href="#icon-line-right")
 
-        .lang-extra
+        a(href="#").lang-extra
           .icon-arrows-left
             svg.svg-icon
               use(xlink:href="#icon-arrows-left")
-          a(href="#").lang-extra__link
+          .lang-extra__text
             | ภาษาไทย
           .icon-arrows-right
             svg.svg-icon

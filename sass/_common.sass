@@ -1,6 +1,15 @@
 // $orange: #EF5A28
 $orange: #F2713D
 
+//transitions durations
+$dur-menu: 0.7s
+$dur-info: 0.7s
+$dur-photo: 0.7s
+$dur-arrow: 0.3s
+$dur-overlay: 0.2s
+$dur-photo-change: 0.2s
+$dur-center-logo: 0.7s
+
 +font("lunchbox", lunchbox)
 +font("lunchbox_bold", lunchbox_bold)
 +font("wisdom_script", wisdom_script)
@@ -29,7 +38,6 @@ $orange: #F2713D
   @media only screen and (orientation:portrait)
     @content
 
-
 *
   +tap
 
@@ -54,14 +62,16 @@ body
   font-size: 12px
   line-height: 1.4
   min-width: 670px
-  position: fixed
-  top: 0
-  left: 0
+  position: relative
   width: 100%
   height: 100%
+  height: 100vh
   overflow: hidden
 
 .out
+  position: absolute
+  top: 0
+  left: 0
   width: 100%
   height: 100%
   overflow: hidden
