@@ -9,6 +9,8 @@
   height: 100%
   display: table
   table-layout: fixed
+  opacity: 1
+  +tr(opacity $dur-bg ease $deley-intro-bg)
 
 .intro__outer
   display: table-cell
@@ -24,6 +26,8 @@
   max-width: 580px
   padding: 20px
   box-sizing: border-box
+  opacity: 1
+  +tr(opacity $dur-center-logo ease $delay-intro-inner)
 
 
 // begin logo
@@ -59,27 +63,6 @@
     letter-spacing: 0.12em
     text-transform: uppercase
     +lunch
-
-
-// .curved-text
-//   display: inline-block
-//   margin-bottom: 40px
-//   position: relative
-//   right: 15px
-//   font-size: 18px
-//   line-height: 1
-//   +lunch-b
-//   text-transform: uppercase
-//   letter-spacing: 0.13em
-//   span
-//     height: 150px
-//     position: absolute
-//     width: 20px
-//     left: 0
-//     top: 0
-//     transform-origin: bottom center
-//   +rotated-text(23, 90deg, -45deg)
-
 
 //begin lang
 .lang

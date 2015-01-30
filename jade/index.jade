@@ -8,49 +8,51 @@ block sprite
 
 block content
   //begin intro
-  .out.intro
-    .intro__outer
-      .intro__inner
-        .curved-container
-          include ../img/svg/text.svg
+  .out
+    .loader
+    .intro
+      .intro__outer
+        .intro__inner
+          .curved-container
+            include ../img/svg/text.svg
 
-        .logo
-          .logo__top
-            svg.svg-icon
-              use(xlink:href="#icon-logo-top")
-          .logo__main
-            include ../img/svg/logo.svg
+          .logo
+            .logo__top
+              svg.svg-icon
+                use(xlink:href="#icon-logo-top")
+            .logo__main
+              include ../img/svg/logo.svg
 
-        .lang
-          .icon-logo-bottom
-            svg.svg-icon
-              use(xlink:href="#icon-logo-bottom")
-          a(href="eng.html").lang__left
-            .icon-line-left
+          .lang
+            .icon-logo-bottom
               svg.svg-icon
-                use(xlink:href="#icon-line-left")
-            span.lang__text
-              | english
-            .icon.icon-line-left
-              svg.svg-icon
-                use(xlink:href="#icon-line-left")
-          .lang__right
-            .icon-line-right
-              svg.svg-icon
-                use(xlink:href="#icon-line-right")
-            span.lang__text
-              | русский
-            a(href="#").icon.icon-line-right
-              svg.svg-icon
-                use(xlink:href="#icon-line-right")
+                use(xlink:href="#icon-logo-bottom")
+            a(href="eng.html").lang__left
+              .icon-line-left
+                svg.svg-icon
+                  use(xlink:href="#icon-line-left")
+              span.lang__text
+                | english
+              .icon.icon-line-left
+                svg.svg-icon
+                  use(xlink:href="#icon-line-left")
+            .lang__right
+              .icon-line-right
+                svg.svg-icon
+                  use(xlink:href="#icon-line-right")
+              span.lang__text
+                | русский
+              a(href="#").icon.icon-line-right
+                svg.svg-icon
+                  use(xlink:href="#icon-line-right")
 
-        a(href="#").lang-extra
-          .icon-arrows-left
-            svg.svg-icon
-              use(xlink:href="#icon-arrows-left")
-          .lang-extra__text
-            | ภาษาไทย
-          .icon-arrows-right
-            svg.svg-icon
-              use(xlink:href="#icon-arrows-right")
+          a(href="#").lang-extra
+            .icon-arrows-left
+              svg.svg-icon
+                use(xlink:href="#icon-arrows-left")
+            .lang-extra__text
+              | ภาษาไทย
+            .icon-arrows-right
+              svg.svg-icon
+                use(xlink:href="#icon-arrows-right")
   //end intro

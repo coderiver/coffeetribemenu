@@ -1,15 +1,3 @@
-// $orange: #EF5A28
-$orange: #F2713D
-
-//transitions durations
-$dur-menu: 0.7s
-$dur-info: 0.7s
-$dur-photo: 0.7s
-$dur-arrow: 0.3s
-$dur-overlay: 0.2s
-$dur-photo-change: 0.2s
-$dur-center-logo: 0.7s
-
 +font("lunchbox", lunchbox)
 +font("lunchbox_bold", lunchbox_bold)
 +font("wisdom_script", wisdom_script)
@@ -74,6 +62,7 @@ body
   left: 0
   width: 100%
   height: 100%
+  background: #000
   overflow: hidden
 
 .svg-icon
@@ -81,6 +70,22 @@ body
   height: 100%
   background: inherit
   fill: inherit
+
+.loader
+  position: absolute
+  top: 50%
+  left: 50%
+  width: 32px
+  height: 32px
+  margin: -16px 0 0 -16px
+  background: url('../img/loader.svg') no-repeat center center
+  -webkit-background-size: cover
+  -o-background-size: cover
+  background-size: cover
+  .is-loaded &
+    display: none !important
+
+
 
 
 

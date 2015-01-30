@@ -7,6 +7,8 @@
   color: #FFF
   width: 100%
   height: 100%
+  opacity: 1
+  +tr(opacity $dur-bg ease $delay-bg)
   &:before
     content: ""
     position: absolute
@@ -18,16 +20,23 @@
 
 .center-logo
   position: absolute
-  top: 50%
-  left: 50%
+  top: 0
+  left: 0
   right: 0
   bottom: 0
-  +sprite(welcome)
-  margin: (-256px/2) 0 0 (-348px/2)
-  +transform(translate3d(0,0,0))
-  +tr(all $dur-center-logo ease)
-  .menu-is-open &
-    +transform(translate3d(-30%, 0, 0))
+  opacity: 1
+  +tr(opacity $dur-center-logo ease $delay-center-logo)
+  &:before
+    content: ""
+    top: 50%
+    left: 50%
+    position: absolute
+    +sprite(welcome)
+    margin: (-256px/2) 0 0 (-348px/2)
+    +transform(translate3d(0,0,0))
+    +tr(all $dur-center-logo ease)
+    .menu-is-open &
+      +transform(translate3d(-30%, 0, 0))
 
 .category-wrapper
   position: absolute
@@ -36,6 +45,9 @@
   right: 0
   bottom: 0
   width: 13.4%
+  opacity: 1
+  +tr(all $dur-categories ease $delay-categories)
+  +transform(translate3d(0, 0, 0))
 
 .category-arrow
   position: absolute
@@ -54,8 +66,6 @@
   right: 0
   bottom: 0
   left: 0
-  // min-width: 80px
-  // max-width: 140px
 
 .category-list__cell
   position: relative
@@ -91,14 +101,6 @@
   +user-select(none)
   +vertical
   +gpu
-  // &:after
-  //   display: none
-  //   content: ""
-  //   position: absolute
-  //   top: 50%
-  //   left: 0
-  //   +arr(11,22,#FFF,r)
-  //   margin-top: -11px
   &:hover
     .icon
       &:before
@@ -106,8 +108,6 @@
       &:after
         opacity: 1
   &.is-active
-    // &:after
-    //   display: block
     .icon
       &:before
         opacity: 0
@@ -136,6 +136,8 @@
   top: percentage(70/768)
   left: percentage(60/1024)
   +sprite(logo-small)
+  opacity: 1
+  +tr(opacity $dur-logo ease $delay-logo)
   +r(1000)
     top: percentage(25/1024)
     left: percentage(60/768)
@@ -147,6 +149,9 @@
   top: 25px
   left: 8px
   +sprite(menu)
+  opacity: 1
+  +tr(all $dur-lang-btn ease $delay-lang-btn)
+  +transform(translate3d(0,0,0))
 
 .menu-container-wrapper
   position: absolute
@@ -166,9 +171,6 @@
   bottom: 0
   right: 0
   left: 25px
-  // right: 13.4%
-  // width: 25%
-  // min-width: 256px
   background: #FFF
   color: #1A1818
   +tr(all $dur-menu ease)
@@ -248,15 +250,6 @@
         // background-image: url('../img/wave-bottom@2x.png')
         background-size: 11px 3px
 
-// .menu-container__content
-//   height: 100%
-//   margin-left: -6px
-//   padding: 75px 0 50px 6px
-//   box-sizing: border-box
-//   overflow-x: visible
-//   overflow-y: auto
-//   -webkit-overflow-scrolling: touch
-
 .menu-container__close
   position: absolute
   z-index: 4
@@ -275,14 +268,6 @@
   &:hover, &:active
     &:before
       opacity: 1
-
-// .menu-container__arrow
-//   position: absolute
-//   top: -20px
-//   left: 100%
-//   +arr(11,22,#FFF,r)
-//   margin-top: -11px
-//   +tr(all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275))
 
 .menu
   position: absolute
@@ -303,22 +288,6 @@
     opacity: 1
     z-index: 1
     +transform(translate3d(0,0,0))
-
-
-// .menu__head
-//   position: absolute
-//   z-index:  3
-//   top: 0
-//   left: 0
-//   right: 0
-//   height: 75px
-//   line-height: 70px
-//   text-align: center
-  // &:before
-  //   content: ""
-  //   display: inline-block
-  //   vertical-align: middle
-  //   +sprite(header-breakfast)
 
 .menu__title
   position: relative
@@ -496,3 +465,33 @@
     // margin: 13px 0 0 12px
     // margin: 0.722em 0 0 0.667em
     margin-top: 0.722em
+
+
+
+.out
+  .bg,
+  .center-logo,
+  .logo-small,
+  .category-wrapper,
+  .menu-btn,
+  .intro,
+  .intro__inner
+    opacity: 0
+  .category-wrapper
+    +transform(translate3d(100%,0,0))
+  .menu-btn
+    +transform(translate3d(-120%,0,0))
+
+  &.is-loaded
+    .bg,
+    .center-logo,
+    .logo-small,
+    .category-wrapper,
+    .menu-btn,
+    .intro,
+    .intro__inner
+      opacity: 1
+    .category-wrapper
+      +transform(translate3d(0,0,0))
+    .menu-btn
+      +transform(translate3d(0,0,0))
