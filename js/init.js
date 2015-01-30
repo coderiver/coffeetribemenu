@@ -1,5 +1,4 @@
 head.load("js/lib/jquery.js",
-          // "js/touch.js",
-          // "js/webapp.js",
-          // "js/overscroll.js",
+          // "js/touche.js",
+          "js/webapp.js",
 					"js/app.js");

@@ -21,7 +21,7 @@
                         StoredLocation = localStorage.getItem("location");
                     if (StoredLocation && StoredLocation!=CurrentLocation) window.location = StoredLocation;
                 }
-                $('a').live('click',function(e) {
+                $('a').on('click',function(e) {
                     e.preventDefault();
                     if (persist && this.host==window.location.host)
                     localStorage.setItem("location",this.pathname+this.search);
@@ -47,6 +47,3 @@
     });
 
 })( jQuery );
-
-$.fixLinks();
-$.fixLinks(false);

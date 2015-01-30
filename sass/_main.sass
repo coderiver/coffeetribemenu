@@ -101,12 +101,12 @@
   +user-select(none)
   +vertical
   +gpu
-  &:hover
-    .icon
-      &:before
-        opacity: 0
-      &:after
-        opacity: 1
+  // &:hover
+  //   .icon
+  //     &:before
+  //       opacity: 0
+  //     &:after
+  //       opacity: 1
   &.is-active
     .icon
       &:before
@@ -148,10 +148,24 @@
   z-index: 2
   top: 25px
   left: 8px
-  +sprite(menu)
   opacity: 1
-  +tr(all $dur-lang-btn ease $delay-lang-btn)
+  +tr(transform $dur-lang-btn ease $delay-lang-btn)
   +transform(translate3d(0,0,0))
+  &:before
+    content: ""
+    display: block
+    +sprite(menu)
+  &:after
+    content: ""
+    display: none
+    +sprite(menu-h)
+  &:hover,
+  &:active,
+  &.is-clicked
+    &:before
+      display: none
+    &:after
+      display: block
 
 .menu-container-wrapper
   position: absolute

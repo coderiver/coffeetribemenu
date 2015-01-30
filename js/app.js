@@ -1,13 +1,27 @@
 head.ready(function() {
 
-    $('a').on('click', function(e) {
-        e.preventDefault();
-        window.location = $(this).attr('href');
-    });
+    // $('a').on('click', function(e) {
+    //     e.preventDefault();
+    //     window.location = $(this).attr('href');
+    // });
 
     $(window).load(function() {
         $('.out').addClass('is-loaded');
+        $.fixLinks();
     });
+
+    // (function(){
+    //     var menuBtn = $('.menu-btn');
+    //     if (menuBtn) {
+    //         menuBtn.on('touchstart', function(event) {
+    //             event.stopPropagation();
+    //             $(this).toggleClass('is-clicked');
+    //         });
+    //         $(document).on('touchstart', function() {
+    //             menuBtn.removeClass('is-clicked');
+    //         });
+    //     }
+    // })();
 
     if ( $('.app').length ) {
         (function() {
@@ -16,7 +30,6 @@ head.ready(function() {
                 category         = $('.category'),
                 menuContainer    = $('.menu-container'),
                 closeBtn         = menuContainer.find('.menu-container__close'),
-                // arrow            = menuContainer.find('.menu-container__arrow'),
                 arrow            = $('.category-arrow'),
                 menu             = $('.menu'),
                 menuItemSelector = '.menu-item',
@@ -224,7 +237,7 @@ head.ready(function() {
                 });
             });
 
-            closeBtn.on('click', function(event) {
+            closeBtn.on('touchend click', function(event) {
                 event.preventDefault();
                 hideMenuContainer();
                 hideMenu();

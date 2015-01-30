@@ -1,8 +1,11 @@
 CACHE MANIFEST
+# Cache manifest version 0.0.1
 
-CACHE:
-js/lib/jquery.js
 index.html
+
+js/lib/jquery.js
+js/lib/head.js
+js/webapp.js
 
 fonts/book_akhanake.woff
 fonts/lunchbox_bold.woff
@@ -11,8 +14,7 @@ fonts/wisdom_script.woff
 
 img/bg-intro.jpg
 img/bg-menu.jpg
-img/headers-eng.png
-img/headers-eng@2x.png
-img/icons.png
-img/icons@2x.png
 img/loader.svg
+
+NETWORK:
+*
