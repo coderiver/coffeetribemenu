@@ -156,7 +156,7 @@ head.ready(function() {
                 var el         = $(this),
                     menuToOpen = el.data('menu');
 
-                el.on('touchstart click', function(event) {
+                el.on('click', function(event) {
                     event.preventDefault();
                     category.removeClass(classes.active);
                     el.addClass(classes.active);
@@ -215,7 +215,7 @@ head.ready(function() {
                     // add photo to array as jQuery object
                     photosList[elName][index] = itemPhoto;
 
-                    menuItem.on('touchtart click', function(event) {
+                    menuItem.on('click', function(event) {
                         event.preventDefault();
                         if ( !menuItem.hasClass(classes.active) ) {
                             showMenuItemInfo(elName, index);
@@ -224,7 +224,7 @@ head.ready(function() {
                 });
             });
 
-            closeBtn.on('touchstart click', function(event) {
+            closeBtn.on('click', function(event) {
                 event.preventDefault();
                 hideMenuContainer();
                 hideMenu();
