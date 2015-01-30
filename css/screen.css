@@ -159,6 +159,7 @@ body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; min-wi
 .center-logo:before { content: ""; top: 50%; left: 50%; position: absolute; background: url('../img/icons.png') 0 -1014px no-repeat; width: 348px; height: 256px; margin: -128px 0 0 -174px; -ms-transform: translate3d(0, 0, 0); -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); -webkit-transition: all 0.7s ease; transition: all 0.7s ease; }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .center-logo:before { background: url('../img/icons@2x.png') 0 -1766px no-repeat; background-position: 0 -883px; width: 346.5px; height: 256.5px; background-size: 347px 1140px; } }
 .menu-is-open .center-logo:before { -ms-transform: translate3d(-30%, 0, 0); -webkit-transform: translate3d(-30%, 0, 0); transform: translate3d(-30%, 0, 0); }
+@media only screen and (max-width: 1000px) { .menu-is-open .center-logo:before { -ms-transform: translate3d(-50%, 0, 0); -webkit-transform: translate3d(-50%, 0, 0); transform: translate3d(-50%, 0, 0); } }
 
 .category-wrapper { position: absolute; z-index: 3; top: 0; right: 0; bottom: 0; width: 13.4%; opacity: 1; -moz-transition: all 0.7s ease 3s; -o-transition: all 0.7s ease 3s; -webkit-transition: all 0.7s ease; -webkit-transition-delay: 3s; -webkit-transition: all 0.7s ease 3s; transition: all 0.7s ease 3s; -ms-transform: translate3d(0, 0, 0); -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
 
