@@ -2,6 +2,7 @@ CACHE MANIFEST
 
 CACHE:
 js/lib/jquery.js
+index.html
 
 fonts/book_akhanake.woff
 fonts/lunchbox_bold.woff
