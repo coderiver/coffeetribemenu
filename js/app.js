@@ -1,9 +1,38 @@
 head.ready(function() {
 
-    $(window).load(function() {
-        $('.out').addClass('is-loaded');
-        $.fixLinks();
-    });
+    (function() {
+
+        var time = new Date(),
+            newTime,
+            timeDelta,
+            timeout;
+
+        var pageIsLoaded = function() {
+            $('.out').addClass('is-loaded');
+        };
+
+        $(window).load(function() {
+            $.fixLinks();
+
+            newTime   = new Date();
+            timeDelta = newTime - time;
+
+
+            if ( timeDelta <= 1000 ) {
+
+                timeout = 1000 - timeDelta;
+
+                setTimeout(function() {
+                    pageIsLoaded();
+                }, timeout);
+
+            } else {
+                pageIsLoaded();
+            }
+        });
+
+    })();
+
 
     if ( $('.app').length ) {
         (function() {
