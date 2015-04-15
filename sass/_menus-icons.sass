@@ -1,4 +1,4 @@
-$menus: coffee,breakfast,salad,soups,thai,juices,desserts,drinks
+$menus: coffee,breakfast,salad,soups,lunch,thai,juices,desserts
 
 .icon
   display: inline-block
@@ -24,9 +24,18 @@ $menus: coffee,breakfast,salad,soups,thai,juices,desserts,drinks
 @each $i in $menus
   .icon-#{$i}
     &:before
-      +sprite(#{$i})
+      +s(#{$i})
     &:after
-      +sprite(#{$i}-h)
+      +s(#{$i}-h)
+
++retina
+  @each $i in $menus
+    .icon-#{$i}
+      &:before
+        +sr(#{$i}, $icons-retina)
+      &:after
+        +sr(#{$i}-h, $icons-retina)
+
 
 .head
   display: block
@@ -50,9 +59,23 @@ $menus: coffee,breakfast,salad,soups,thai,juices,desserts,drinks
 
 
 @each $i in $menus
-  .head-#{$i}
-    &:after
-      +s(#{$i}, $headers-eng)
-      +retina
-        +sr(#{$i}, $headers-eng-retina)
+  .head-#{$i}:after
+    +s(#{$i}, $headers-eng)
+
+  .lang-rus .head-#{$i}:after
+    +s(#{$i}, $headers-rus)
+
+  .lang-thai .head-#{$i}:after
+    +s(#{$i}, $headers-thai)
+
++retina
+  @each $i in $menus
+    .head-#{$i}:after
+      +sr(#{$i}, $headers-eng-retina)
+
+    .lang-rus .head-#{$i}:after
+      +sr(#{$i}, $headers-rus-retina)
+
+    .lang-thai .head-#{$i}:after
+      +sr(#{$i}, $headers-thai-retina)
 

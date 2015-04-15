@@ -1,11 +1,11 @@
 extends _layout
 
 block title
-  title Coffee Tribe Menu
+  title Coffee Tribe Меню
 
 block content
   //begin out
-  .out.app
+  .out.app.lang-rus
     .loader
     .bg
     .center-logo
@@ -31,49 +31,49 @@ block content
             .category__in
               i.icon.icon-coffee
               span.category__name
-                | coffee
+                | кофе
         li.category-list__cell
           .category(data-menu="breakfast")
             .category__in
               i.icon.icon-breakfast
               span.category__name
-                | breakfast
+                | завтрак
         li.category-list__cell
           .category(data-menu="salad-bar")
             .category__in
               i.icon.icon-salad
               span.category__name
-                | salad bar
+                | салат бар
         li.category-list__cell
           .category.category_two-lines(data-menu="soups-starters")
             .category__in
               i.icon.icon-soups
               span.category__name
-                | starters &soups
+                | закуски<br> <small>и</small> супы
         li.category-list__cell
           .category.category_two-lines(data-menu="lunch-dinner")
             .category__in
               i.icon.icon-lunch
               span.category__name
-                | lunch& dinner
+                | обед<br> <small>и</small> ужин
         li.category-list__cell
-          .category(data-menu="thai-corner")
+          .category.category_two-lines(data-menu="thai-corner")
             .category__in
               i.icon.icon-thai
               span.category__name
-                | thai corner
+                | тайское меню
         li.category-list__cell
           .category.category_two-lines(data-menu="juices-smoothies")
             .category__in
               i.icon.icon-juices
               span.category__name
-                | juices& smoothies
+                | соки <small>и</small><br> фреши
         li.category-list__cell
           .category.category_two-lines(data-menu="desserts-gelato")
             .category__in
               i.icon.icon-desserts
               span.category__name
-                | desserts& gelato
+                | десерты <small>и</small> мороженное
     //end categories
 
     //begin menu
@@ -93,7 +93,7 @@ block content
         .menu(data-menu="coffee")
           .menu__inner
             .menu__title
-              strong Breakfast
+              strong Завтрак
             ul.menu__list
               li.menu-item
                 span.menu-item__price
@@ -153,7 +153,7 @@ block content
                   | «Hangover Paradisee»
 
             .menu__title
-              strong Fresh
+              strong Фреши
             ul.menu__list
               li.menu-item
                 span.menu-item__price

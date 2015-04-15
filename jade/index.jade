@@ -1,7 +1,7 @@
 extends _layout
 
 block title
-  title Menu
+  title Coffe Tribe Menu
 
 block sprite
   include ../img/svgdefs.svg
@@ -21,13 +21,13 @@ block content
               svg.svg-icon
                 use(xlink:href="#icon-logo-top")
             .logo__main
-              include ../img/svg/logo.svg
+              //- include ../img/svg/logo.svg
 
           .lang
             .icon-logo-bottom
               svg.svg-icon
                 use(xlink:href="#icon-logo-bottom")
-            a(href="eng.html").lang__left
+            a(href="/eng.html").lang__left
               .icon-line-left
                 svg.svg-icon
                   use(xlink:href="#icon-line-left")
@@ -36,17 +36,17 @@ block content
               .icon.icon-line-left
                 svg.svg-icon
                   use(xlink:href="#icon-line-left")
-            .lang__right
+            a(href="/rus.html").lang__right
               .icon-line-right
                 svg.svg-icon
                   use(xlink:href="#icon-line-right")
               span.lang__text
                 | русский
-              a(href="#").icon.icon-line-right
+              .icon.icon-line-right
                 svg.svg-icon
                   use(xlink:href="#icon-line-right")
 
-          a(href="#").lang-extra
+          a(href="/thai.html").lang-extra
             .icon-arrows-left
               svg.svg-icon
                 use(xlink:href="#icon-arrows-left")
