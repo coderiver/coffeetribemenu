@@ -23,6 +23,7 @@ table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 @font-face { font-family: "lunchbox_bold"; src: url("../fonts/lunchbox_bold.eot"); src: url("../fonts/lunchbox_bold.eot?#iefix") format("embedded-opentype"), url("../fonts/lunchbox_bold.woff2") format("woff2"), url("../fonts/lunchbox_bold.woff") format("woff"), url("../fonts/lunchbox_bold.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: "wisdom_script"; src: url("../fonts/wisdom_script.eot"); src: url("../fonts/wisdom_script.eot?#iefix") format("embedded-opentype"), url("../fonts/wisdom_script.woff2") format("woff2"), url("../fonts/wisdom_script.woff") format("woff"), url("../fonts/wisdom_script.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: "book_akhanake"; src: url("../fonts/book_akhanake.eot"); src: url("../fonts/book_akhanake.eot?#iefix") format("embedded-opentype"), url("../fonts/book_akhanake.woff2") format("woff2"), url("../fonts/book_akhanake.woff") format("woff"), url("../fonts/book_akhanake.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "blk"; src: url("../fonts/blk_bang_li_ko_sa_na.eot"); src: url("../fonts/blk_bang_li_ko_sa_na.eot?#iefix") format("embedded-opentype"), url("../fonts/blk_bang_li_ko_sa_na.woff2") format("woff2"), url("../fonts/blk_bang_li_ko_sa_na.woff") format("woff"), url("../fonts/blk_bang_li_ko_sa_na.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 * { -webkit-tap-highlight-color: transparent; }
 
 body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; min-width: 670px; position: relative; width: 100%; height: 100%; height: 100vh; overflow: hidden; }
@@ -279,12 +280,14 @@ body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; min-wi
 .menu__title:before { content: ""; position: absolute; top: 50%; left: 16px; right: 16px; height: 4px; margin-top: -2px; background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAECAMAAABvJDXBAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAVFBMVEX7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED///8Xk/46AAAAG3RSTlMAAj1lVQ8bveq40exPMuejDFjxlj7eyl0mqeTKVND0AAAAAWJLR0QbAmDUpAAAAAlwSFlzAAALEgAACxIB0t1+/AAAADBJREFUCNdjYGBgYGRiZmFlAAM2dg5OLm4eIIuXmY9fgIFBUEhYhEFUTBwsKyEpBQAWIwFjCIqrtwAAAABJRU5ErkJggg=="); background-repeat: repeat-x; background-position: 0 50%; }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { .menu__title:before { background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAHCAMAAADQ1/Y0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAmVBMVEX7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED7sED///+ZUh9iAAAAMXRSTlMABlyp0d3KnEYBQNvEIm37+qxxZnq/7UQQn80rSOd3BGqW66cJHIrzcP3Xt3YWKYjAEQTjGgAAAAFiS0dEMkDSTMgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAABmSURBVAjXY2CAAEYmZhZWNnYOTgYkwMVtCAE8vAhBPn5DAUEhYRFRQ0MxcaiYhKShoZQ0mCkja8gvJ8/AIKygqGRoqKwCVaEqZWjIrcYAMkxdA2GJiqKmoSEDt5a2ji6yxQx6+gYAexUJoAAP8NsAAAAASUVORK5CYII="); background-size: 11px 4px; } }
 .menu__title > strong { display: inline-block; font-weight: normal; position: relative; padding: 0 16px; background: #fff; }
+.lang-thai .menu__title { font-family: "blk", Arial, sans-serif; font-weight: normal; }
 
 .menu__list { border: dashed #FDE5C6; border-width: 1px 0; border-bottom-color: #FBD196; }
 
 .menu-item { position: relative; box-sizing: border-box; padding: 15px 16px; border: dashed #FBD196; border-width: 1px 0; border-bottom-color: #FDE5C6; font-family: "lunchbox_bold", Arial, sans-serif; font-weight: normal; font-size: 15px; line-height: 1.1; text-transform: uppercase; }
 .menu-item.is-active { background: #F2713D; }
 .menu-item.is-active:before { content: ""; position: absolute; top: 50%; right: 100%; width: 0px; height: 0px; border-style: solid; border-width: 7px 5px 7px 0; border-color: transparent #f47134 transparent transparent; margin-top: -7px; }
+.lang-thai .menu-item { font-family: "book_akhanake", Arial, sans-serif; font-weight: normal; }
 
 .menu-item__price { display: block; float: right; width: 32px; text-align: right; }
 
@@ -307,6 +310,7 @@ body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; min-wi
 .info:after { content: ""; position: absolute; top: 100%; left: 16.3%; width: 0px; height: 0px; border-style: solid; border-width: 6px 8px 0 8px; border-color: #F2713D transparent transparent transparent; }
 @media only screen and (max-width: 1000px) { .info { top: 15.625%; left: 7.8125%; width: 39.0625%; } }
 .info.is-visible { -ms-transform: translate3d(0, 0, 0); -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); opacity: 1; }
+.lang-thai .info { font-family: "book_akhanake", Arial, sans-serif; font-weight: normal; }
 
 .info__name { display: block; position: relative; margin-bottom: 0.722em; font-size: inherit; text-transform: uppercase; }
 .info__name small { text-transform: none; font-size: inherit; }
